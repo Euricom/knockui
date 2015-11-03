@@ -19,6 +19,9 @@ $sidebar-width: 200px;
   line-height: 80px;
   font-size: 30px;
   text-align: center;
+  color: inherit;
+  text-decoration: inherit;
+  display: block;
 }
 
 .sidebar__item {
@@ -77,4 +80,34 @@ $sidebar-width: 200px;
   font-family: 'Raleway', sans-serif;
   color: #999;
   margin-top: 30px;
+}
+
+.text {
+  margin: 20px 0;
+}
+
+.intro {
+  margin-top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: $primary-color;
+}
+
+.intro__logo {
+  font-family: 'Bangers', cursive;
+  font-size: 90px;
+}
+
+.intro__subtitle {
+  font-size: 24px;
+  color: #999;
+}
+
+.intro__link {
+  display: inline-block;
+  text-decoration: inherit;
+  color: inherit;
+  padding: 20px 30px;
+  border: solid thin $primary-color;
+  margin-top: 20px;
 }
