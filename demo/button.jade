@@ -1,7 +1,16 @@
 extends ./template
 
-block title
-    title KnockUI - Button
+block variables
+    - var url = './button.html';
 
-block content
-    a.btn My Button 3
+block component-name
+    | Button
+
+block component
+    h4.title Default Button
+    :source
+        a.btn My Button
+
+    h4.title Primary Button
+    :source
+        a.btn.btn-primary My Button

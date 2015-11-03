@@ -5,9 +5,11 @@ var del = require('del');
 var connect = require('gulp-connect');
 var run = require('gulp-run-sequence');
 var plumber = require('gulp-plumber');
+var escape = require('escape-html');
 
 // Compilation
-var jade = require('gulp-jade');
+var jade = require('jade');
+var compileJade = require('gulp-jade');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -39,9 +41,15 @@ gulp.task('styles', function () {
         .pipe(connect.reload());
 });
 
+jade.filters.source =  function(src, options){
+    return '<div class="example">' + jade.render(src, options) + '</div><pre class="code"><code class="html">' + escape(jade.render(src, options)) + '</code></pre>';
+};
+
 gulp.task('views', function () {
     return gulp.src(paths.demo.views)
-        .pipe(jade())
+        .pipe(compileJade({
+            jade: jade
+        }))
         .pipe(gulp.dest(paths.tmp))
         .pipe(connect.reload());
 });

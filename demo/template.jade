@@ -1,8 +1,30 @@
 doctype html
+block variables
+    - var url = '';
+
+
+mixin sidebar-item(itemUrl, itemText)
+    - var activeClass = '';
+    if (url == itemUrl)
+        - activeClass = 'sidebar__item--active'
+    a.sidebar__item(href=itemUrl class=activeClass) #{itemText}
+
 html
     head
-        block title
-            title KnockUI
+        title KnockUI -
+            block component-name
         link(rel="stylesheet" href="style.css")
+        link(rel="stylesheet" href="../bower_components/highlightjs/styles/github.css")
     body
-        block content
+        div.sidebar
+            h1.sidebar__logo Knock UI
+            +sidebar-item('./button.html', 'Button')
+            +sidebar-item('./typography.html', 'Typography')
+        div.content
+            h1.content__title
+                block component-name
+            block component
+
+        script(src="../bower_components/highlightjs/highlight.pack.min.js")
+        script.
+            hljs.initHighlightingOnLoad();
