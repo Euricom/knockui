@@ -7,6 +7,7 @@ var run = require('gulp-run-sequence');
 var plumber = require('gulp-plumber');
 
 // Compilation
+var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -14,7 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var paths = {
     demo: {
         styles: 'demo/**/*.scss',
-        views: 'demo/**/*.html'
+        views: 'demo/**/*.jade'
     },
     lib: 'lib/**/*.scss',
     tmp: '.tmp'
@@ -40,6 +41,7 @@ gulp.task('styles', function () {
 
 gulp.task('views', function () {
     return gulp.src(paths.demo.views)
+        .pipe(jade())
         .pipe(gulp.dest(paths.tmp))
         .pipe(connect.reload());
 });
