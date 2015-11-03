@@ -13,11 +13,11 @@ html
     head
         title KnockUI -
             block component-name
-        link(rel="stylesheet" href="style.css")
-        link(rel="stylesheet" href="../bower_components/highlightjs/styles/github.css")
+        link(rel="stylesheet" href="../style.css")
+        link(rel="stylesheet" href="../../bower_components/highlightjs/styles/github.css")
     body
         div.sidebar
-            a(href="./index.html").sidebar__logo Knock UI
+            a(href="../").sidebar__logo Knock UI
             +sidebar-item('./button.html', 'Button')
             +sidebar-item('./typography.html', 'Typography')
         div.content
@@ -25,6 +25,6 @@ html
                 block component-name
             block component
 
-        script(src="../bower_components/highlightjs/highlight.pack.min.js")
+        script(src="../../bower_components/highlightjs/highlight.pack.min.js")
         script.
             hljs.initHighlightingOnLoad();
