@@ -1,8 +1,9 @@
+$primary-color: #1C79EF;
+$sidebar-width: 200px;
+
 @import '../lib/knockui';
 @import url(https://fonts.googleapis.com/css?family=Bangers);
 
-$primary-color: #1C79EF;
-$sidebar-width: 200px;
 
 .sidebar {
   position: fixed;
@@ -45,6 +46,12 @@ $sidebar-width: 200px;
   }
 }
 
+.sidebar__title {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 5px #fff;
+}
+
 .content {
   margin-left: $sidebar-width;
   padding: 20px;
@@ -54,13 +61,20 @@ $sidebar-width: 200px;
   padding: 20px;
   border: solid thin #e5e5e5;
   margin-top: 20px;
+
+  + .code {
+    border-top: none;
+    margin-top: 0;
+  }
 }
 
 .code {
   background-color: #f5f5f5;
   border: solid thin #e5e5e5;
-  border-top: none;
   padding: 15px;
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 16px;
 
   code {
     background-color: #f5f5f5;
@@ -82,12 +96,19 @@ $sidebar-width: 200px;
   margin-top: 30px;
 }
 
+.subtitle {
+  font-family: 'Raleway', sans-serif;
+  color: $primary-color;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
 .text {
   margin: 20px 0;
 }
 
 .intro {
-  margin-top: 50%;
+  margin-top: 50vh;
   transform: translateY(-50%);
   text-align: center;
   color: $primary-color;
@@ -110,4 +131,8 @@ $sidebar-width: 200px;
   padding: 20px 30px;
   border: solid thin $primary-color;
   margin-top: 20px;
+}
+
+body {
+  color: #333;
 }

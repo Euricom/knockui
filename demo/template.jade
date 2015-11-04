@@ -18,8 +18,11 @@ html
     body
         div.sidebar
             a(href="../").sidebar__logo Knock UI
-            +sidebar-item('./button.html', 'Button')
-            +sidebar-item('./typography.html', 'Typography')
+            .sidebar__title Documentation
+            +sidebar-item('../docs/getting-started.html', 'Getting Started')
+            .sidebar__title Components
+            +sidebar-item('../components/button.html', 'Button')
+            +sidebar-item('../components/typography.html', 'Typography')
         div.content
             h1.content__title
                 block component-name
