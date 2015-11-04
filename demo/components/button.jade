@@ -8,9 +8,17 @@ block component-name
 
 block component
     h4.title Default Button
-    :source
-        a.btn My Button
+    :jade
+        div.btn
+            | My Button
+            p.test
+    :html
+        <div class="btn">
+            My Button
+            <p class="test"></p>
+        </div>
 
-    h4.title Primary Button
-    :source
-        a.btn.btn-primary My Button
+    :scss
+        .custom-button {
+            @extend .knock-btn;
+        }

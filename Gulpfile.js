@@ -6,6 +6,8 @@ var connect = require('gulp-connect');
 var run = require('gulp-run-sequence');
 var plumber = require('gulp-plumber');
 var escape = require('escape-html');
+var tidy = require('htmltidy2').tidy;
+var deasync = require('deasync');
 
 // Compilation
 var jade = require('jade');
@@ -41,8 +43,44 @@ gulp.task('styles', function () {
         .pipe(connect.reload());
 });
 
-jade.filters.source =  function(src, options){
-    return '<div class="example">' + jade.render(src, options) + '</div><pre class="code"><code class="html">' + escape(jade.render(src, options)) + '</code></pre>';
+jade.filters.jade =  function(content){
+    var htmlContent = jade.render(content);
+    var done = false;
+    tidy(htmlContent, {
+        'show-body-only': 'auto',
+        hideComments: false,
+        indent: true
+    }, function(err, html) {
+        htmlContent = html;
+        done = true;
+    });
+
+    deasync.loopWhile(function(){
+        return !done;
+    });
+    return '<div class="example">' + jade.render(content) + '</div><pre class="code"><span class="code__copy">copy to clipboard</span><code class="html">' + escape(htmlContent) + '</code></pre>';
+};
+
+jade.filters.html =  function(content){
+    var htmlContent = content;
+    var done = false;
+    tidy(htmlContent, {
+        'show-body-only': 'auto',
+        hideComments: false,
+        indent: true
+    }, function(err, html) {
+        htmlContent = html;
+        done = true;
+    });
+
+    deasync.loopWhile(function(){
+        return !done;
+    });
+    return '<div class="example">' + content + '</div><pre class="code"><span class="code__copy">copy to clipboard</span><code class="html">' + escape(htmlContent) + '</code></pre>';
+};
+
+jade.filters.scss =  function(content){
+    return '<pre class="code"><span class="code__copy">copy to clipboard</span><code class="scss">' + content + '</code></pre>';
 };
 
 gulp.task('views', function () {

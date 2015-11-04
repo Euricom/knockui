@@ -18,11 +18,41 @@ html
     body
         div.sidebar
             a(href="../").sidebar__logo Knock UI
+
             .sidebar__title Documentation
             +sidebar-item('../docs/getting-started.html', 'Getting Started')
+
+            .sidebar__title Utils
+            +sidebar-item('../utils/grid.html', 'Grid')
+            +sidebar-item('../utils/typography.html', 'Typography')
+
             .sidebar__title Components
+            +sidebar-item('../components/avatar.html', 'Avatar')
+            +sidebar-item('../components/breadcrumbs.html', 'Breadcrumbs')
             +sidebar-item('../components/button.html', 'Button')
-            +sidebar-item('../components/typography.html', 'Typography')
+            +sidebar-item('../components/checkbox.html', 'Checkbox')
+            +sidebar-item('../components/definition.html', 'Definition')
+            +sidebar-item('../components/divider.html', 'Divider')
+            +sidebar-item('../components/footer.html', 'Footer')
+            +sidebar-item('../components/group.html', 'Group')
+            +sidebar-item('../components/header.html', 'Header')
+            +sidebar-item('../components/input.html', 'Input')
+            +sidebar-item('../components/link.html', 'Link')
+            +sidebar-item('../components/list.html', 'List')
+            +sidebar-item('../components/media.html', 'Media')
+            +sidebar-item('../components/menu.html', 'Menu')
+            +sidebar-item('../components/month-picker.html', 'Month Picker')
+            +sidebar-item('../components/panel.html', 'Panel')
+            +sidebar-item('../components/popover.html', 'Popover')
+            +sidebar-item('../components/progress-bar.html', 'Progress Bar')
+            +sidebar-item('../components/progress-circle.html', 'Progress Circle')
+            +sidebar-item('../components/quote.html', 'Quote')
+            +sidebar-item('../components/table.html', 'Table')
+            +sidebar-item('../components/tag.html', 'Tag')
+            +sidebar-item('../components/textarea.html', 'Textarea')
+            +sidebar-item('../components/topbar.html', 'Topbar')
+            +sidebar-item('../components/sidebar.html', 'Sidebar')
+
         div.content
             h1.content__title
                 block component-name
@@ -31,3 +61,29 @@ html
         script(src="../../bower_components/highlightjs/highlight.pack.min.js")
         script.
             hljs.initHighlightingOnLoad();
+            var codeBlocks = document.querySelectorAll('.code__copy');
+            for (var i = 0; i<codeBlocks.length; i++) {
+                var codeBlock = codeBlocks[i];
+                codeBlock.addEventListener('click', function(event){
+                    event.target.nextSibling.classList.add('code--copying');
+                    if (document.selection) {
+                        var range = document.body.createTextRange();
+                        range.moveToElementText(event.target.nextSibling);
+                        range.select();
+                    } else if (window.getSelection) {
+                        var range = document.createRange();
+                        range.selectNode(event.target.nextSibling);
+                        window.getSelection().removeAllRanges();
+                        window.getSelection().addRange(range);
+                    }
+                    setTimeout(function(){
+                        if (document.execCommand) {
+                            document.execCommand('copy');
+                        }
+                        if (window.getSelection) {
+                            event.target.nextSibling.classList.remove('code--copying');
+                            window.getSelection().removeAllRanges();
+                        }
+                    }, 300);
+                });
+            }
