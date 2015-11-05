@@ -28,3 +28,15 @@ $ko-font-header-size-lg: ceil(($ko-font-size-base * 1.7)) !default; // 28
 $ko-font-header-size-md: ceil(($ko-font-size-base * 1.35)) !default; // 22
 $ko-font-header-size-sm: $ko-font-size-base !default;                // 16
 $ko-font-header-size-xs: ceil(($ko-font-size-base * 0.85)) !default; // 14
+
+$ko-button-border-radius : 4px !default;
+$ko-button-color : $ko-color-primary !default;
+$ko-button-text-color : $ko-color-white !default;
+$ko-button-color-success : $ko-color-success !default;
+$ko-button-text-color-success : $ko-color-white !default;
+$ko-button-color-danger : $ko-color-danger !default;
+$ko-button-text-color-danger : $ko-color-white !default;
+$ko-button-color-warning : $ko-color-warning !default;
+$ko-button-text-color-warning : $ko-color-white !default;
+$ko-button-color-info : $ko-color-info !default;
+$ko-button-text-color-info : $ko-color-white !default;

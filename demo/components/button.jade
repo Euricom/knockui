@@ -9,16 +9,38 @@ block component-name
 block component
     h4.title Default Button
     :jade
-        div.custom-button
+        .ko-button--primary
             | My Button
-            p.test
-    :html
-        <div class="custom-button">
-            My Button
-            <p class="test"></p>
-        </div>
-
-    :scss
-        .custom-button {   
-            color: hotpink;
-        }
+        .ko-button--success
+            | My Button
+        .ko-button--warning
+            | My Button
+        .ko-button--danger
+            | My Button
+        .ko-button--info
+            | My Button
+        .ko-button--outline-primary
+            | My Button
+        .ko-button--outline-success
+            | My Button
+        .ko-button--outline-warning
+            | My Button
+        .ko-button--outline-info
+            | My Button
+        .ko-button--outline-danger
+            | My Button
+        .ko-button--special-primary
+                       i(class='ko-button__icon--primary') test
+                       | My Button
+        .ko-button--special-success
+            i(class='ko-button__icon--success') test
+            | My Button
+        .ko-button--special-warning
+            i(class='ko-button__icon--warning') test
+            | My Button
+        .ko-button--special-info
+            i(class='ko-button__icon--info') test
+            | My Button
+        .ko-button--special-danger
+            i(class='ko-button__icon--danger') test
+            | My Button
