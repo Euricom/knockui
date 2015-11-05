@@ -19,7 +19,7 @@ block component
         After installing KnockUI, we can now include it into our own .scss files. For example, in our app.scss file.
     pre.code
         code.scss.
-            @import '../node_modules/knockui/lib/knockui';
+            @import '../bower_components/knockui/lib/knockui';
 
     h4.title Usage
     p.text.
@@ -28,39 +28,39 @@ block component
     h5.subtitle Classes
     pre.code
         code.html.
-            &lt;a class="knock-btn--primary"&gt;I'm a primary button&lt;/a&gt;
+            &lt;a class="ko-btn--primary"&gt;I'm a primary button&lt;/a&gt;
 
     h5.subtitle Variables
     pre.code
         code.scss.
-            @import '../node_modules/knockui/lib/knockui';
+            @import '../bower_components/knockui/lib/knockui';
 
             .custom__element {
-                background-color: $knock-primary-color;
+                background-color: $ko-primary-color;
             }
 
     h5.subtitle Overriding Variables
     pre.code
         code.scss.
-            $knock-primary-color: #bada55;
+            $ko-primary-color: #bada55;
 
-            @import '../node_modules/knockui/lib/knockui';
+            @import '../bower_components/knockui/lib/knockui';
 
     h5.subtitle Mixins
     pre.code
         code.scss.
-            @import '../node_modules/knockui/lib/knockui';
+            @import '../bower_components/knockui/lib/knockui';
 
             .custom__element {
-                @include knock-mixin;
+                @include ko-mixin;
             }
 
     h5.subtitle Placeholder Classes
     pre.code
         code.scss.
-            @import '../node_modules/knockui/lib/knockui';
+            @import '../bower_components/knockui/lib/knockui';
 
             .custom__element {
-                @extend knock-col-sm-12, knock-col-md-6, knock-col-l-4;
+                @extend ko-col-sm-12, ko-col-md-6, ko-col-l-4;
             }
 

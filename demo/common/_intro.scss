@@ -1,0 +1,25 @@
+.intro {
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  text-align: center;
+  color: $primary-color;
+}
+
+.intro__logo {
+  font-family: 'Bangers', cursive;
+  font-size: 90px;
+}
+
+.intro__subtitle {
+  font-size: 24px;
+  color: #999;
+}
+
+.intro__link {
+  display: inline-block;
+  text-decoration: inherit;
+  color: inherit;
+  padding: 20px 30px;
+  border: solid thin $primary-color;
+  margin-top: 20px;
+}

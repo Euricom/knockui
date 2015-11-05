@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+.content__title {
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 40px;
+  padding-bottom: 20px;
+  border-bottom: solid thin #e5e5e5;
+  color: $primary-color;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  color: #999;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-family: 'Raleway', sans-serif;
+  color: $primary-color;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.text {
+  margin: 20px 0;
+}
+
+body {
+  color: #333;
+}
