@@ -1,25 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Bangers);
 
 .content__title {
-  font-size: 24px;
+  border-bottom: solid thin $demo-color-shade-20;
+  color: $demo-color-primary;
   font-family: 'Raleway', sans-serif;
+  font-size: 24px;
   line-height: 40px;
   padding-bottom: 20px;
-  border-bottom: solid thin #e5e5e5;
-  color: $primary-color;
 }
 
 .title {
+  color: $demo-color-shade-80;
   font-family: 'Raleway', sans-serif;
-  color: #999;
   margin-top: 30px;
 }
 
 .subtitle {
+  color: $demo-color-primary;
   font-family: 'Raleway', sans-serif;
-  color: $primary-color;
-  margin-top: 30px;
   font-size: 14px;
+  margin-top: 30px;
 }
 
 .text {
@@ -27,5 +27,5 @@
 }
 
 body {
-  color: #333;
+  color: $demo-color-shade-60;
 }

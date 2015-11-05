@@ -1,5 +1,7 @@
-@import 'utils/reset';
-@import 'utils/variables';
+@import 'shared/reset';
+@import 'shared/variables';
 
+@import "utils/grid";
 @import 'utils/typography';
+
 @import 'components/button';

@@ -17,7 +17,15 @@ git clone https://github.com/Euricom/knockui.git
 After you've cloned the repo, it is necessary to install the dependencies.
 
 ```
-npm install
+npm install && bower install
+```
+
+### Setup SCSS linter
+
+Before running the app, you should also install the scsslint ruby gem.
+
+```
+gem install scss_lint
 ```
 
 ### Starting the application

@@ -1,57 +1,57 @@
 $sidebar-width: 200px;
 
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: $demo-color-primary;
   bottom: 0;
-  width: $sidebar-width;
-  background-color: $primary-color;
-  color: white;
+  color: $demo-color-white;
+  left: 0;
   overflow: auto;
   padding: 80px 0 40px;
+  position: fixed;
+  top: 0;
+  width: $sidebar-width;
 }
 
 .sidebar__logo {
-  font-family: 'Bangers', cursive;
-  line-height: 80px;
-  font-size: 30px;
-  text-align: center;
+  background-color: $demo-color-primary;
+  box-shadow: 0 1px 1px rgba(darken($demo-color-primary, 10%), .5);
   color: inherit;
-  text-decoration: inherit;
   display: block;
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+  line-height: 80px;
   position: fixed;
+  text-align: center;
+  text-decoration: inherit;
   top: 0;
   width: $sidebar-width;
-  background-color: $primary-color;
-  box-shadow: 0 1px 1px rgba(darken($primary-color, 10%), .5);
 }
 
 .sidebar__item {
-  color: inherit;
-  text-decoration: inherit;
-  padding: 10px 20px;
-  display: inline-block;
   box-sizing: border-box;
+  color: inherit;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: inherit;
   width: 100%;
 
   &:hover {
-    background-color: lighten($primary-color, 10%);
+    background-color: lighten($demo-color-primary, 10%);
   }
 
   &:active {
-    background-color: lighten($primary-color, 15%);
+    background-color: lighten($demo-color-primary, 15%);
   }
 
   &.sidebar__item--active {
-    background-color: lighten($primary-color, 10%);
+    background-color: lighten($demo-color-primary, 10%);
   }
 }
 
 .sidebar__title {
+  border-bottom: solid 5px $demo-color-white;
   margin: 20px;
   padding-bottom: 10px;
-  border-bottom: solid 5px #fff;
 }
 
 .content {
