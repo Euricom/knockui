@@ -1,4 +1,6 @@
 $border-size: 5px;
+$popover-background: $ko-color-white;
+$popover-border: darken($ko-color-dark-gray, 5%);
 
 @mixin _ko-arrowpos() {
   &::after, &::before {
@@ -9,9 +11,9 @@ $border-size: 5px;
 // default (no arrow)
 .ko-popover {
   background: $ko-color-white;
-  border: 1px solid $ko-color-gray;
-  border-radius: 5%;
-  box-shadow: 1px 2px 3px rgba($ko-color-black, 0.3);
+  border: 1px solid $popover-border;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px rgba($popover-border, 0.5);
   display: inline-block;
   padding: 10px;
   position: relative;
@@ -43,7 +45,7 @@ $border-size: 5px;
   @extend %ko-popover--arrow;
 
   &::before {
-    border-bottom-color: $ko-color-gray;
+    border-bottom-color: $popover-border;
     margin-left: -($border-size+1);
   }
 
@@ -58,7 +60,7 @@ $border-size: 5px;
   @extend %ko-popover--arrow;
 
   &::before {
-    border-right-color: $ko-color-gray;
+    border-right-color: $popover-border;
     margin-top: $border-size;
   }
 
@@ -73,7 +75,7 @@ $border-size: 5px;
   @extend %ko-popover--arrow;
 
   &::before {
-    border-top-color: $ko-color-gray;
+    border-top-color: $popover-border;
     margin-left: -($border-size+1);
   }
 
@@ -88,7 +90,7 @@ $border-size: 5px;
   @extend %ko-popover--arrow;
 
   &::before {
-    border-left-color: $ko-color-gray;
+    border-left-color: $popover-border;
     margin-top: $border-size;
   }
 
