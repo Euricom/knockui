@@ -6,25 +6,7 @@ block variables
 block component-name
     | Typography
 
-    block util
-    h4.title Default Header
-    :jade
-        h4.custom-title
-            | Header
-    :scss
-        .custom-title {
-            @extend %ko-font--uppercase;
-        }
-    h4.title Highlighted Header
-    :jade
-        h4.custom-title-hl
-            | Header
-    :scss
-        .custom-title-hl {
-            @extend %ko-font--uppercase;
-            @extend %ko-font--highlighted;
-        }
-    h4.title  Font Sizes
+    h4.title Text
     :jade
         p
             | This is base
@@ -43,14 +25,15 @@ block component-name
             @extend %ko-font--small;
         }
 
-    h4.title  Font Colors
+    h4.title Text Colors
     :jade
         p.success
             | This is success text
     :scss
         .success {
             @extend %ko-font--success;
-         }
+        }
+
     :jade
         p.danger
             | This is danger text
@@ -67,12 +50,14 @@ block component-name
         }
     :jade
         p.info
-            | This is info text
+        | This is info text
+
     :scss
         .info {
             @extend %ko-font--info;
         }
-    h4.title  Header Sizes
+
+    h4.title Headers
     :jade
         h1
             | Header 1
@@ -86,3 +71,21 @@ block component-name
             | Header 5
         h6
             | Header 6
+
+    h4.title Uppercase Headers
+    :jade
+        h4.custom-header
+            | Header
+    :scss
+        .custom-header {
+            @extend %ko-font--uppercase;
+        }
+
+    h4.title Highlighted Header
+    :jade
+        h4.custom-header-2
+            | Header
+    :scss
+        .custom-header-2 {
+            @extend %ko-font--highlighted;
+        }

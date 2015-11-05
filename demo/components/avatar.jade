@@ -5,3 +5,37 @@ block variables
 
 block component-name
     | Avatar
+
+block component
+    h5.subtitle small avatar
+
+    :jade
+        img(class="smallAvatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/abinav_t/128.jpg")
+
+    :scss
+        .smallAvatar{
+            @extend %ko-avatar--small;
+        }
+
+    h5.subtitle default avatar
+
+    :jade
+        img(class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/abinav_t/128.jpg")
+
+    :scss
+        .avatar {
+            @extend %ko-avatar;
+        }
+
+    h5.subtitle large avatar
+
+    :jade
+        img(class="largeAvatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/abinav_t/128.jpg")
+
+    :scss
+        .largeAvatar {
+            @extend %ko-avatar--large;
+        }
+
+
+
