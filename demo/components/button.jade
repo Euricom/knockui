@@ -9,16 +9,16 @@ block component-name
 block component
     h4.title Default Button
     :jade
-        div.btn
+        div.custom-button
             | My Button
             p.test
     :html
-        <div class="btn">
+        <div class="custom-button">
             My Button
             <p class="test"></p>
         </div>
 
     :scss
-        .custom-button {
-            @extend .knock-btn;
+        .custom-button {   
+            color: hotpink;
         }

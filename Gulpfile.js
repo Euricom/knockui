@@ -15,6 +15,7 @@ var compileJade = require('gulp-jade');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var scsslint = require('gulp-scss-lint');
+var nodesass = require('node-sass');
 
 
 // Config
@@ -85,7 +86,22 @@ jade.filters.html =  function(content){
 };
 
 jade.filters.scss =  function(content){
-    return '<pre class="code"><span class="code__copy">copy to clipboard</span><code class="scss">' + content + '</code></pre>';
+    var done = false;
+
+    var cssContent = '@import "./lib/knockui";' + content;
+
+    nodesass.render({
+        data: cssContent
+    }, function(error, result) { // node-style callback from v3.0.0 onwards 
+        cssContent = result.css.toString();
+        done = true;
+    });
+
+    deasync.loopWhile(function(){
+        return !done;
+    });
+
+    return '<pre class="code"><span class="code__copy">copy to clipboard</span><code class="scss">' + content + '</code></pre><style>' + cssContent + '</style>';
 };
 
 gulp.task('views', function () {
