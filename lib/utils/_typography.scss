@@ -41,16 +41,16 @@
   text-transform: uppercase;
 }
 
-%ko-font--highlighted {
-  color: $ko-font-highlighted-color;
-}
-
 %ko-font--large {
   font-size: $ko-font-size-large;
 }
 
 %ko-font--small {
   font-size: $ko-font-size-small;
+}
+
+%ko-font--primary {
+  color: $ko-font-primary;
 }
 
 %ko-font--success {
