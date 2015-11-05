@@ -25,7 +25,7 @@ npm install && bower install
 Before running the app, you should also install the scsslint ruby gem.
 
 ```
-gem install scss_lint
+sudo gem install scss_lint
 ```
 
 ### Starting the application
