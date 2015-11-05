@@ -24,14 +24,7 @@ $ko-font-size-giant: ceil(($ko-font-size-base * 3.15)) !default; // 50px
 $ko-font-line-height-base: 1.5 !default;
 $ko-font-line-height-header: 1 !default;
 
-$ko-font-size-h1: ceil(($ko-font-size-base * 2.6)) !default;
-$ko-font-size-h2: ceil(($ko-font-size-base * 2.15)) !default;
-$ko-font-size-h3: ceil(($ko-font-size-base * 1.7)) !default; // 28
-$ko-font-size-h4: ceil(($ko-font-size-base * 1.35)) !default; // 22
-$ko-font-size-h5: $ko-font-size-base !default;                // 16
-$ko-font-size-h6: ceil(($ko-font-size-base * 0.85)) !default; // 14
-
-$ko-font-bold:500 !default;
+$ko-font-bold: 500 !default;
 $ko-font-regular: 400 !default;
 $ko-font-thin: 300 !default;
 
