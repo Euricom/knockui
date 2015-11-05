@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'ko-icon';
+  src:  url('#{$ko-font-path}ko-icon.eot');
+  src:  url('#{$ko-font-path}ko-icon.eot?#iefix') format('eot'),
+        url('#{$ko-font-path}ko-icon.woff') format('woff'),
+        url('#{$ko-font-path}ko-icon.ttf') format('truetype'),
+        url('#{$ko-font-path}ko-icon.svg#ko-icon') format('svg');
+}
+
+%_ko-icon {
+  font-family: 'ko-icon', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.ko-icon--enveloppe {
+  @extend %_ko-icon;
+  &::after {
+    content: '\E001';
+  }
+}

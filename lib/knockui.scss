@@ -1,10 +1,12 @@
 @import 'shared/reset';
 @import 'shared/variables';
 
-@import "utils/grid";
+@import 'utils/icons';
+@import 'utils/grid';
 @import 'utils/typography';
 
 @import 'components/button';
 @import 'components/quote';
 @import 'components/avatar';
+@import 'components/divider';
 @import 'components/menu';
