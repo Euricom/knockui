@@ -1,5 +1,5 @@
-@import '_reset';
-@import '_variables';
+@import 'utils/reset';
+@import 'utils/variables';
 
-@import '_typography';
-@import '_button';
+@import 'utils/typography';
+@import 'components/button';
