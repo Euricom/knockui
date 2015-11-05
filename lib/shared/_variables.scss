@@ -1,1 +1,30 @@
-$ko-primary-color: rebeccapurple !default;
+$ko-color-primary: #1291d4 !default;
+$ko-color-black: #262626 !default;
+$ko-color-white: #fff !default;
+$ko-color-gray: #d9d9d9 !default;
+
+$ko-color-success:  #16c77c; // green
+$ko-color-danger: #d41212; // red
+$ko-color-warning: #fc5b19; // orange
+$ko-color-info: #8f16c7; // purple
+
+$ko-font-success:  $ko-color-success !default;
+$ko-font-danger: $ko-color-danger !default;
+$ko-font-warning: $ko-color-warning !default;
+$ko-font-info: $ko-color-info !default;
+
+$ko-font-highlighted-color: $ko-color-primary !default;
+
+$ko-font-size-base: 16px !default;
+$ko-font-size-small: ceil(($ko-font-size-base * 0.85)) !default; // 14px
+$ko-font-size-large: ceil(($ko-font-size-base * 1.25)) !default; // 20px
+
+$ko-font-line-height-base: 1.5 !default;
+$ko-font-line-height-header: 1 !default;
+
+$ko-font-size-h1: ceil(($ko-font-size-base * 2.6)) !default;
+$ko-font-size-h2: ceil(($ko-font-size-base * 2.15)) !default;
+$ko-font-size-h3: ceil(($ko-font-size-base * 1.7)) !default; // 28
+$ko-font-size-h4: ceil(($ko-font-size-base * 1.35)) !default; // 22
+$ko-font-size-h5: $ko-font-size-base !default;                // 16
+$ko-font-size-h6: ceil(($ko-font-size-base * 0.85)) !default; // 14

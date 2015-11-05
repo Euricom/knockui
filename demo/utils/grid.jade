@@ -18,14 +18,16 @@ block component
                 .skill
 
     :scss
-        .skills {
-            @extend %ko-grid;
-        }
+        .three__column {
+            .skills {
+                @extend %ko-grid;
+            }
 
-        .skill {
-            @extend %ko-grid__cell--4;
-            background-color: red;
-            height: 30px;
+            .skill {
+                @extend %ko-grid__cell--4;
+                background-color: red;
+                height: 30px;
+            }
         }
 
     h5.subtitle Alternating Column Grid
@@ -36,18 +38,20 @@ block component
                 .skill
 
     :scss
-        .skills {
-            @extend %ko-grid;
-        }
+        .alternating__column {
+            .skills {
+                @extend %ko-grid;
+            }
 
-        .skill {
-            @extend %ko-grid__cell--4;
-            background-color: red;
-            height: 30px;
-        }
+            .skill {
+                @extend %ko-grid__cell--4;
+                background-color: red;
+                height: 30px;
+            }
 
-        .skill:nth-child(2) {
-            @extend %ko-grid__cell--8;
+            .skill:nth-child(2) {
+                @extend %ko-grid__cell--8;
+            }
         }
 
     h5.subtitle Offset Column Grid
@@ -60,18 +64,20 @@ block component
 
 
     :scss
-        .skills {
-            @extend %ko-grid;
-        }
+        .offset__column {
+            .skills {
+                @extend %ko-grid;
+            }
 
-        .skill {
-            @extend %ko-grid__cell--6;
-            background-color: red;
-            height: 30px;
-        }
+            .skill {
+                @extend %ko-grid__cell--6;
+                background-color: red;
+                height: 30px;
+            }
 
-        .skill:nth-child(3) {
-            @extend %ko-grid__cell--offset-6;
+            .skill:nth-child(3) {
+                @extend %ko-grid__cell--offset-6;
+            }
         }
 
     h4.title Responsive Grid
@@ -84,12 +90,14 @@ block component
                 .skill
 
     :scss
-        .skills {
-            @extend %ko-grid;
-        }
+        .responsive__column {
+            .skills {
+                @extend %ko-grid;
+            }
 
-        .responsive__column .skill {
-            @extend %ko-grid__cell_s--12, %ko-grid__cell_m--6, %ko-grid__cell_l--4;
-            background-color: $demo-grid-color;
-            height: 30px;
+            .skill {
+                @extend %ko-grid__cell_s--12, %ko-grid__cell_m--6, %ko-grid__cell_l--4;
+                background-color: red;
+                height: 30px;
+            }
         }
