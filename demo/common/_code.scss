@@ -18,8 +18,8 @@
   position: relative;
 }
 
-code {
-  background-color: $demo-color-shade-10;
+.hljs {
+  background-color: $demo-color-shade-10 !important;
   font-family: monospace;
 
   &.code--copying {

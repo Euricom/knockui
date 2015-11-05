@@ -90,8 +90,10 @@ jade.filters.scss =  function(content){
     var cssContent = '@import "./lib/knockui";' + content;
     nodesass.render({
         data: cssContent
-    }, function(error, result) { // node-style callback from v3.0.0 onwards 
-        cssContent = result.css.toString();
+    }, function(error, result) { // node-style callback from v3.0.0 onwards
+        if (result) {
+            cssContent = result.css.toString();
+        }
         done = true;
     });
 
