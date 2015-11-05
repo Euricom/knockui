@@ -18,15 +18,9 @@
   text-transform: none;
 }
 
-.ko-icon--second {
+.ko-icon--enveloppe {
   @extend %_ko-icon;
   &::after {
     content: '\E001';
-  }
-}
-.ko-icon--sousage {
-  @extend %_ko-icon;
-  &::after {
-    content: '\E002';
   }
 }
