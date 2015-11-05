@@ -2,6 +2,7 @@ $ko-color-primary: #1291d4 !default;
 $ko-color-black: #262626 !default;
 $ko-color-white: #fff !default;
 $ko-color-gray: #d9d9d9 !default;
+$ko-color-dark-gray: darken($ko-color-gray, 7%) !default;
 
 $ko-color-success:  #16c77c; // green
 $ko-color-danger: #d41212; // red
@@ -29,3 +30,7 @@ $ko-font-size-h3: ceil(($ko-font-size-base * 1.7)) !default; // 28
 $ko-font-size-h4: ceil(($ko-font-size-base * 1.35)) !default; // 22
 $ko-font-size-h5: $ko-font-size-base !default;                // 16
 $ko-font-size-h6: ceil(($ko-font-size-base * 0.85)) !default; // 14
+
+$ko-font-bold:500 !default;
+$ko-font-regular: 400 !default;
+$ko-font-thin: 300 !default;

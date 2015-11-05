@@ -57,6 +57,29 @@ block component-name
             @extend %ko-font--info;
         }
 
+    h4.title Font Weights
+    :jade
+        p.some-class
+            | This is regular
+    :scss
+        .some-class {
+            @extend %ko-font--regular;
+        }
+    :jade
+        p.some-class2
+            | This is thin
+    :scss
+        .some-class2 {
+            @extend %ko-font--thin;
+        }
+    :jade
+        p.some-class3
+            | This is bold
+    :scss
+        .some-class3 {
+            @extend %ko-font--bold;
+        }
+
     h4.title Headers
     :jade
         h1
