@@ -3,7 +3,7 @@ $ko-grid-gutter: 10px !default;
 $ko-grid-breakpoints: (
         'd' : 'default',
         's' : '(max-width : 768px)',
-        'm' : '(min-width : 768px) AND (max-width : 1024px)',
+        'm' : '(min-width : 768px) and (max-width : 1024px)',
         'l' : '(min-width : 1024px)'
 ) !default;
 
@@ -19,7 +19,7 @@ $ko-grid-breakpoints: (
   }
 
   @for $i from 1 through $ko-grid-cells {
-    $size: 100%/ $ko-grid-cells*$i;
+    $size: 100% / $ko-grid-cells*$i;
 
     @if ($breakpoint-name != 'd') {
       %ko-grid__cell_#{$breakpoint-name}--#{$i} {
