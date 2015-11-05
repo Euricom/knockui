@@ -13,7 +13,7 @@ $border-size: 5px;
   border-radius: 5%;
   box-shadow: 1px 2px 3px rgba($ko-color-black, 0.3);
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
   position: relative;
 }
 
@@ -28,31 +28,74 @@ $border-size: 5px;
     width: 0;
   }
 
-  &::after {
-    border-bottom-color: $ko-color-white;
-    border-width: $border-size;
-    margin-left: -$border-size;
+  &::before {
+    border-width: $border-size + 1;
   }
 
-  &::before {
-    border-bottom-color: $ko-color-gray;
-    border-width: $border-size + 1;
-    margin-left: -($border-size + 1);
+  &::after {
+    border-width: $border-size;
   }
 }
-
 
 // states
 .ko-popover--top-left, .ko-popover--top-middle, .ko-popover--top-right {
   @extend .ko-popover;
   @extend %ko-popover--arrow;
+
+  &::before {
+    border-bottom-color: $ko-color-gray;
+    margin-left: -($border-size+1);
+  }
+
+  &::after {
+    border-bottom-color: $ko-color-white;
+    margin-left: -$border-size;
+  }
 }
 
-.ko-popover--top-left {
-  @include _ko-arrowpos() {
-    left: 15%;
-    bottom: 100%;
-  };
+.ko-popover--left-top, .ko-popover--left-middle, .ko-popover--left-bottom {
+  @extend .ko-popover;
+  @extend %ko-popover--arrow;
+
+  &::before {
+    border-right-color: $ko-color-gray;
+    margin-top: $border-size;
+  }
+
+  &::after {
+    border-right-color: $ko-color-white;
+    margin-top: $border-size+1;
+  }
+}
+
+.ko-popover--bottom-left, .ko-popover--bottom-middle, .ko-popover--bottom-right {
+  @extend .ko-popover;
+  @extend %ko-popover--arrow;
+
+  &::before {
+    border-top-color: $ko-color-gray;
+    margin-left: -($border-size+1);
+  }
+
+  &::after {
+    border-top-color: $ko-color-white;
+    margin-left: -$border-size;
+  }
+}
+
+.ko-popover--right-top, .ko-popover--right-middle, .ko-popover--right-bottom {
+  @extend .ko-popover;
+  @extend %ko-popover--arrow;
+
+  &::before {
+    border-left-color: $ko-color-gray;
+    margin-top: $border-size;
+  }
+
+  &::after {
+    border-left-color: $ko-color-white;
+    margin-top: $border-size+1;
+  }
 }
 
 .ko-popover--top-left {
@@ -66,6 +109,8 @@ $border-size: 5px;
   @include _ko-arrowpos() {
     left: 50%;
     bottom: 100%;
+    margin-left: 0;
+    transform: translateX(-50%);
   };
 }
 
@@ -76,13 +121,71 @@ $border-size: 5px;
   };
 }
 
-//
-//
-//// top middle
-//%ko-popover--arrow-top-middle {
-//  @extend %ko-popover--arrow;
-//}
-//
-//%ko-popover--arrow::after, %ko-popover--arrow::before {
-//  left: 50%;
-//}
+.ko-popover--left-top {
+  @include _ko-arrowpos() {
+    right: 100%;
+    top: 10%;
+  };
+}
+
+.ko-popover--left-middle {
+  @include _ko-arrowpos() {
+    right: 100%;
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+  };
+}
+
+.ko-popover--left-bottom {
+  @include _ko-arrowpos() {
+    bottom: 10%;
+    right: 100%;
+  };
+}
+
+.ko-popover--bottom-left {
+  @include _ko-arrowpos() {
+    left: 10%;
+    top: 100%;
+  };
+}
+
+.ko-popover--bottom-middle {
+  @include _ko-arrowpos() {
+    left: 50%;
+    top: 100%;
+    margin-left: 0;
+    transform: translateX(-50%);
+  };
+}
+
+.ko-popover--bottom-right {
+  @include _ko-arrowpos() {
+    left: 90%;
+    top: 100%;
+  };
+}
+
+.ko-popover--right-top {
+  @include _ko-arrowpos() {
+    left: 100%;
+    top: 10%;
+  };
+}
+
+.ko-popover--right-middle {
+  @include _ko-arrowpos() {
+    left: 100%;
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+  };
+}
+
+.ko-popover--right-bottom {
+  @include _ko-arrowpos() {
+    bottom: 10%;
+    left: 100%;
+  };
+}
