@@ -27,6 +27,7 @@
     "gulp-plumber": "^1.0.1",
     "gulp-run-sequence": "^0.3.2",
     "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.3.7",
     "htmltidy2": "^0.1.4",
     "jade": "^1.11.0"
   }
