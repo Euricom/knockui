@@ -132,12 +132,13 @@ gulp.task('views', function () {
 
 gulp.task('compile', function (cb) {
     run('clean', [
+        'iconfont',
         'styles',
         'views'
     ], cb);
 });
 
-gulp.task('serve', ['iconfont', 'compile'], function () {
+gulp.task('serve', ['compile'], function () {
     gulp.watch(paths.demo.views, ['views']);
     gulp.watch(paths.demo.styles, ['styles']);
     gulp.watch(paths.lib, ['styles']);
