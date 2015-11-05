@@ -5,3 +5,13 @@ block variables
 
 block component-name
     | Popover
+
+block component
+    h4.title Default Popover
+    :jade
+        .popover
+            p test
+    :scss
+        .popover {
+            @extend %ko-popover;
+        }
