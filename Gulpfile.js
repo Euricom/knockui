@@ -16,7 +16,8 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var scsslint = require('gulp-scss-lint');
 var nodesass = require('node-sass');
-
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
 
 // Config
 var paths = {
@@ -47,6 +48,22 @@ gulp.task('styles', function () {
         .pipe(autoprefixer())
         .pipe(gulp.dest(paths.tmp))
         .pipe(connect.reload());
+});
+
+var fontName = 'ko-icon';
+gulp.task('iconfont', function(){
+    gulp.src(['assets/**/*.svg'])
+        .pipe(iconfontCss({
+            path: 'assets/scss.template',
+            fontName: fontName,
+            targetPath: '../utils/_icons.scss',
+            fontPath: '#{$ko-font-path}',
+            cssClass: 'ko-icon'
+        }))
+        .pipe(iconfont({
+            fontName: fontName
+        }))
+        .pipe(gulp.dest('lib/fonts/'));
 });
 
 jade.filters.jade =  function(content){
@@ -90,7 +107,7 @@ jade.filters.scss =  function(content){
     var cssContent = '@import "./lib/knockui";' + content;
     nodesass.render({
         data: cssContent
-    }, function(error, result) { // node-style callback from v3.0.0 onwards
+    }, function(error, result) {
         if (result) {
             cssContent = result.css.toString();
         }
@@ -115,6 +132,7 @@ gulp.task('views', function () {
 
 gulp.task('compile', function (cb) {
     run('clean', [
+        'iconfont',
         'styles',
         'views'
     ], cb);
