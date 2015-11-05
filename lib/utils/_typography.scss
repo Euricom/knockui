@@ -1,5 +1,76 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:800%7CUbuntu:400italic,300,400);
+@import url(https://fonts.googleapis.com/css?family=Raleway:800);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,300);
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  font-size: $ko-font-size-base;
+  line-height: $ko-font-line-height-base;
+}
+
+%_ko-font-title {
+  font-family: 'Raleway', sans-serif;
+  color: $ko-color-black;
+  line-height: $ko-font-line-height-header;
+}
+
+h1 {
+  @extend %_ko-font-title;
+  font-size: $ko-font-size-h1;
+}
+
+h2 {
+  @extend %_ko-font-title;
+  font-size: $ko-font-size-h2;
+}
+
+h3 {
+  @extend %_ko-font-title;
+  font-size: $ko-font-size-h3;
+}
+
+h4 {
+  @extend %_ko-font-title;
+  font-size: $ko-font-size-h4;
+}
+
+h5 {
+  @extend %_ko-font-title;
+  font-size: $ko-font-size-h5;
+}
+
+h6 {
+  @extend %_ko-font-title;
+  font-size: $ko-font-size-h6;
+}
+
+%ko-font--uppercase {
+  text-transform: uppercase;
+}
+
+%ko-font--highlighted {
+  color: $ko-font-highlighted-color;
+}
+
+%ko-font--large {
+  font-size: $ko-font-size-large;
+}
+
+%ko-font--small {
+  font-size: $ko-font-size-small;
+}
+
+%ko-font--success {
+  color: $ko-font-success;
+}
+
+%ko-font--danger {
+  color: $ko-font-danger;
+}
+
+%ko-font--warning {
+  color: $ko-font-warning;
+}
+
+%ko-font--info {
+  color: $ko-font-info;
 }
