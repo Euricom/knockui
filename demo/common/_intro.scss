@@ -1,5 +1,5 @@
 .intro {
-  color: $primary-color;
+  color: $color-primary;
   margin-top: 50vh;
   text-align: center;
   transform: translateY(-50%);
@@ -11,12 +11,12 @@
 }
 
 .intro__subtitle {
-  color: #999;
+  color: $color-shade-80;
   font-size: 24px;
 }
 
 .intro__link {
-  border: solid thin $primary-color;
+  border: solid thin $color-primary;
   color: inherit;
   display: inline-block;
   margin-top: 20px;

@@ -14,6 +14,8 @@ var jade = require('jade');
 var compileJade = require('gulp-jade');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var scsslint = require('gulp-scss-lint');
+
 
 // Config
 var paths = {
@@ -37,6 +39,9 @@ gulp.task('clean', function () {
 gulp.task('styles', function () {
     return gulp.src(paths.demo.styles)
         .pipe(plumber())
+        .pipe(scsslint({
+            'config': 'scsslint.yml'
+        }))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest(paths.tmp))

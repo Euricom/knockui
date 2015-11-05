@@ -1,56 +1,54 @@
-
-
 .example {
-  padding: 20px;
-  border: solid thin #e5e5e5;
+  border: solid thin $color-shade-20;
   margin-top: 20px;
+  padding: 20px;
 
   + .code {
-    border-top: none;
+    border-top: 0;
     margin-top: 0;
   }
 }
 
 .code {
-  background-color: #f5f5f5;
-  border: solid thin #e5e5e5;
-  padding: 15px;
-  margin-top: 20px;
+  background-color: $color-shade-10;
+  border: solid thin $color-shade-20;
   font-size: 16px;
+  margin-top: 20px;
+  padding: 15px;
   position: relative;
+}
 
-  code {
-    font-family: monospace;
-    background-color: #f5f5f5;
+code {
+  background-color: $color-shade-10;
+  font-family: monospace;
 
-    &.code--copying {
-      &::selection {
-        background-color: transparent;
-        color: inherit;
-      }
+  &.code--copying {
+    &::selection {
+      background-color: transparent;
+      color: inherit;
+    }
 
-      *::selection{
-        background-color: transparent;
-        color: inherit;
-      }
+    *::selection {
+      background-color: transparent;
+      color: inherit;
     }
   }
 }
 
 .code__copy {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: solid thin #e5e5e5;
-  border-top: none;
-  border-right: none;
-  padding: 10px;
-  background-color: #fff;
+  background-color: $color-white;
+  border: solid thin $color-shade-20;
+  border-right: 0;
+  border-top: 0;
   cursor: pointer;
   font-size: 12px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
   text-transform: uppercase;
+  top: 0;
 
   &:hover {
-    background-color: #CAF8FF;
+    background-color: $color-primary-light;
   }
 }
