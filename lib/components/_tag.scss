@@ -1,0 +1,8 @@
+.ko-tag {
+  @extend %ko-font--primary;
+  text-decoration: underline;
+}
+
+.ko-tag--highlighted{
+  @extend %ko-background--primary;
+}
