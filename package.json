@@ -29,6 +29,7 @@
     "gulp-sass": "^2.0.4",
     "gulp-scss-lint": "^0.3.7",
     "htmltidy2": "^0.1.4",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "node-sass": "^3.4.1"
   }
 }
