@@ -1,0 +1,11 @@
+# Configuration inherits from
+# https://github.com/brigade/scss-lint/blob/master/config/default.yml
+
+scss_files: "**/*.scss"
+
+linters:
+  SelectorFormat:
+    convention: hyphenated_BEM # or 'BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+  VendorPrefixes:
+    enabled: false
