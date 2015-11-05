@@ -1,5 +1,5 @@
 .example {
-  border: solid thin $color-shade-20;
+  border: solid thin $demo-color-shade-20;
   margin-top: 20px;
   padding: 20px;
 
@@ -10,8 +10,8 @@
 }
 
 .code {
-  background-color: $color-shade-10;
-  border: solid thin $color-shade-20;
+  background-color: $demo-color-shade-10;
+  border: solid thin $demo-color-shade-20;
   font-size: 16px;
   margin-top: 20px;
   padding: 15px;
@@ -19,7 +19,7 @@
 }
 
 code {
-  background-color: $color-shade-10;
+  background-color: $demo-color-shade-10;
   font-family: monospace;
 
   &.code--copying {
@@ -36,8 +36,8 @@ code {
 }
 
 .code__copy {
-  background-color: $color-white;
-  border: solid thin $color-shade-20;
+  background-color: $demo-color-white;
+  border: solid thin $demo-color-shade-20;
   border-right: 0;
   border-top: 0;
   cursor: pointer;
@@ -49,6 +49,6 @@ code {
   top: 0;
 
   &:hover {
-    background-color: $color-primary-light;
+    background-color: $demo-color-primary-light;
   }
 }

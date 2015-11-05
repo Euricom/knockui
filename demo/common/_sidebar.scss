@@ -1,9 +1,9 @@
 $sidebar-width: 200px;
 
 .sidebar {
-  background-color: $color-primary;
+  background-color: $demo-color-primary;
   bottom: 0;
-  color: $color-white;
+  color: $demo-color-white;
   left: 0;
   overflow: auto;
   padding: 80px 0 40px;
@@ -13,8 +13,8 @@ $sidebar-width: 200px;
 }
 
 .sidebar__logo {
-  background-color: $color-primary;
-  box-shadow: 0 1px 1px rgba(darken($color-primary, 10%), .5);
+  background-color: $demo-color-primary;
+  box-shadow: 0 1px 1px rgba(darken($demo-color-primary, 10%), .5);
   color: inherit;
   display: block;
   font-family: 'Bangers', cursive;
@@ -36,20 +36,20 @@ $sidebar-width: 200px;
   width: 100%;
 
   &:hover {
-    background-color: lighten($color-primary, 10%);
+    background-color: lighten($demo-color-primary, 10%);
   }
 
   &:active {
-    background-color: lighten($color-primary, 15%);
+    background-color: lighten($demo-color-primary, 15%);
   }
 
   &.sidebar__item--active {
-    background-color: lighten($color-primary, 10%);
+    background-color: lighten($demo-color-primary, 10%);
   }
 }
 
 .sidebar__title {
-  border-bottom: solid 5px $color-white;
+  border-bottom: solid 5px $demo-color-white;
   margin: 20px;
   padding-bottom: 10px;
 }
