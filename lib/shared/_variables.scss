@@ -34,3 +34,10 @@ $ko-font-size-h6: ceil(($ko-font-size-base * 0.85)) !default; // 14
 $ko-font-bold:500 !default;
 $ko-font-regular: 400 !default;
 $ko-font-thin: 300 !default;
+
+$ko-font-header-size-xxl: ceil(($ko-font-size-base * 2.6)) !default;
+$ko-font-header-size-xl: ceil(($ko-font-size-base * 2.15)) !default;
+$ko-font-header-size-lg: ceil(($ko-font-size-base * 1.7)) !default; // 28
+$ko-font-header-size-md: ceil(($ko-font-size-base * 1.35)) !default; // 22
+$ko-font-header-size-sm: $ko-font-size-base !default;                // 16
+$ko-font-header-size-xs: ceil(($ko-font-size-base * 0.85)) !default; // 14
