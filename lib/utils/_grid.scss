@@ -1,0 +1,55 @@
+$cells: 12 !default;
+$gutter: 10px !default;
+$breakpoints: (
+        'd' : 'default',
+        's' : '(min-width : 320px)',
+        'm' : '(min-width : 768px)',
+        'l' : '(min-width : 1024px)'
+);
+
+%ko-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin grid($breakpoint-name) {
+  %ko-grid__cell--#{$breakpoint-name} {
+    box-sizing: border-box;
+    margin : $gutter / 2;
+  }
+
+  @for $i from 1 through $cells {
+    $size: 100%/ $cells*$i;
+
+    @if ($breakpoint-name != 'd') {
+      %ko-grid__cell_#{$breakpoint-name}--#{$i} {
+        @extend %ko-grid__cell--#{$breakpoint-name};
+        flex-basis: calc(#{$size} - #{$gutter});
+      }
+
+      %ko-grid__cell_#{$breakpoint-name}--offset-#{$i} {
+
+        margin-left: calc(#{$size} + #{$gutter / 2});
+      }
+    } @else {
+      %ko-grid__cell--#{$i} {
+        @extend %ko-grid__cell--#{$breakpoint-name};
+        flex-basis: calc(#{$size} - #{$gutter});
+      }
+
+      %ko-grid__cell--offset-#{$i} {
+        margin-left: calc(#{$size} + #{$gutter / 2});
+      }
+    }
+  }
+}
+
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @if $breakpoint == 'default' {
+    @include grid($breakpoint-name);
+  } @else {
+    @media #{$breakpoint} {
+      @include grid($breakpoint-name);
+    }
+  }
+}

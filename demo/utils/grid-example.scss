@@ -1,0 +1,37 @@
+$demo-grid-color : #d73737;
+
+.skills {
+  @extend %ko-grid;
+}
+
+.three__column .skill {
+  @extend %ko-grid__cell--4;
+  background-color: $demo-grid-color;
+  height: 30px;
+}
+
+.alternating__column .skill {
+  @extend %ko-grid__cell--4;
+  background-color: $demo-grid-color;
+  height: 30px;
+}
+
+.alternating__column .skill:nth-child(2) {
+  @extend %ko-grid__cell--8;
+}
+
+.offset__column .skill {
+  @extend %ko-grid__cell--6;
+  background-color: $demo-grid-color;
+  height: 30px;
+}
+
+.offset__column .skill:nth-child(3) {
+  @extend %ko-grid__cell--offset-6;
+}
+
+.responsive__column .skill {
+  @extend %ko-grid__cell_s--12, %ko-grid__cell_m--6, %ko-grid__cell_l--4 ;
+  background-color: $demo-grid-color;
+  height: 30px;
+}
