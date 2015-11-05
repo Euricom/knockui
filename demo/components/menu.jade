@@ -1,7 +1,26 @@
 extends ../template
 
 block variables
-    - var url = '../components/month-picker.html';
+    - var url = '../components/menu.html';
 
 block component-name
-    | Month Picker
+    | Menu
+
+block component
+    h5.subtitle Horizontal menu
+    :jade
+        .ko-menu--horizontal
+            a.ko-menu__item--active(href="") summary
+            a.ko-menu__item(href="") experience
+            a.ko-menu__item(href="") education
+            a.ko-menu__item(href="") interests
+
+    h5.subtitle Vertical menu
+
+    :jade
+        .ko-menu--vertical
+            a.ko-menu__item--active(href="") summary
+            a.ko-menu__item(href="") experience
+            a.ko-menu__item(href="") education
+            a.ko-menu__item(href="") interests
+
