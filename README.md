@@ -17,7 +17,7 @@ git clone https://github.com/Euricom/knockui.git
 After you've cloned the repo, it is necessary to install the dependencies.
 
 ```
-npm install
+npm install && bower install
 ```
 
 ### Starting the application
