@@ -7,11 +7,15 @@ block component-name
     | Popover
 
 block component
-    h4.title Default Popover
+    h4.title Default Popover (no arrow)
     :jade
-        .popover
-            p test
-    :scss
-        .popover {
-            @extend %ko-popover;
-        }
+        .ko-popover
+            p lorem ipsum
+    h4.title Popover Top Left
+    :jade
+        .ko-popover--top-left
+            p lorem ipsum
+    h4.title Popover Top Middle
+    :jade
+        .ko-popover--top-middle
+            p lorem ipsum

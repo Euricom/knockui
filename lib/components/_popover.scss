@@ -1,17 +1,88 @@
-%ko-popover {
-  background-color: $ko-color-white;
-  border: 1px solid $ko-color-gray;
-  border-radius: 5%;
-  box-shadow: 1px 2px 5px $ko-color-gray;
-  height: 50px;
-  width: 50px;
+$border-size: 5px;
+
+@mixin _ko-arrowpos() {
+  &::after, &::before {
+    @content;
+  }
 }
 
-%ko-popover::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid $ko-color-black;
+// default (no arrow)
+.ko-popover {
+  background: $ko-color-white;
+  border: 1px solid $ko-color-gray;
+  border-radius: 5%;
+  box-shadow: 1px 2px 3px rgba($ko-color-black, 0.3);
+  display: inline-block;
+  padding: 5px;
+  position: relative;
 }
+
+// placeholder for arrows
+%ko-popover--arrow {
+  &::before, &::after {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+    width: 0;
+  }
+
+  &::after {
+    border-bottom-color: $ko-color-white;
+    border-width: $border-size;
+    margin-left: -$border-size;
+  }
+
+  &::before {
+    border-bottom-color: $ko-color-gray;
+    border-width: $border-size + 1;
+    margin-left: -($border-size + 1);
+  }
+}
+
+
+// states
+.ko-popover--top-left, .ko-popover--top-middle, .ko-popover--top-right {
+  @extend .ko-popover;
+  @extend %ko-popover--arrow;
+}
+
+.ko-popover--top-left {
+  @include _ko-arrowpos() {
+    left: 15%;
+    bottom: 100%;
+  };
+}
+
+.ko-popover--top-left {
+  @include _ko-arrowpos() {
+    left: 10%;
+    bottom: 100%;
+  };
+}
+
+.ko-popover--top-middle {
+  @include _ko-arrowpos() {
+    left: 50%;
+    bottom: 100%;
+  };
+}
+
+.ko-popover--top-right {
+  @include _ko-arrowpos() {
+    left: 90%;
+    bottom: 100%;
+  };
+}
+
+//
+//
+//// top middle
+//%ko-popover--arrow-top-middle {
+//  @extend %ko-popover--arrow;
+//}
+//
+//%ko-popover--arrow::after, %ko-popover--arrow::before {
+//  left: 50%;
+//}
