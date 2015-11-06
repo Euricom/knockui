@@ -9,7 +9,8 @@
   position: relative;
   text-align: center;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     background-color: $ko-color-gray;
     content: '';
     height: 4px;
