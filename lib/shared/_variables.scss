@@ -12,8 +12,6 @@ $ko-color-night: #142736 !default;
 
 // Layout
 $ko-page-width: 960px !default;
-$ko-popover-arrow-size: 5px !default;
-$ko-popover-border-width: 3px !default;
 
 // Grid
 $ko-grid-cells: 12 !default;
@@ -59,14 +57,10 @@ $ko-font-header-size-lg: ceil(($ko-font-size-base * 1.7)) !default;
 $ko-font-header-size-md: ceil(($ko-font-size-base * 1.35)) !default; 
 $ko-font-header-size-sm: $ko-font-size-base !default;                
 $ko-font-header-size-xs: ceil(($ko-font-size-base * .85)) !default;
-$ko-font-path: '../fonts/' !default;$ko-font-header-size-lg: ceil(($ko-font-size-base * 1.7)) !default;
-$ko-font-header-size-md: ceil(($ko-font-size-base * 1.35)) !default;
-$ko-font-header-size-sm: $ko-font-size-base !default;
-$ko-font-header-size-xs: ceil(($ko-font-size-base * .85)) !default;
 $ko-font-path: '../fonts/' !default;
 
 // Popover
 $ko-popover-background-color: $ko-color-white !default;
 $ko-popover-border-color: darken($ko-color-gray, 15%) !default;
 $ko-popover-arrow-size: 5px !default;
-$ko-popover-border-width: 1px !default;
+$ko-popover-border-width: 3px !default;
