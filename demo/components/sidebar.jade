@@ -5,3 +5,24 @@ block variables
 
 block component-name
     | Sidebar
+    h4.title Default Sidebar
+    :jade
+        .body
+            .ko-sidebar
+                .ko-sidebar__logo Sample
+                .ko-sidebar__title sample title
+                .ko-sidebar__item sample item
+
+    h4.title Sidebar Right
+    :jade
+        .body
+            .ko-sidebar--right
+                .ko-sidebar__logo Sample
+                .ko-sidebar__title sample title
+                .ko-sidebar__item sample item
+
+    style.
+        .body {
+            height: 300px;
+            transform: translate(0);
+        }

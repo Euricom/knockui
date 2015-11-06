@@ -1,0 +1,48 @@
+%ko-sidebar {
+  background-color: $ko-color-primary;
+  bottom: 0;
+  color: $ko-color-white;
+  overflow: auto;
+  padding: 80px 0 40px;
+  position: fixed;
+  top: 0;
+  width: $ko-sidebar-width;
+}
+
+.ko-sidebar {
+  @extend %ko-sidebar;
+  left: 0;
+}
+
+.ko-sidebar--right {
+  @extend %ko-sidebar;
+  right: 0;
+}
+
+.ko-sidebar__logo {
+  background-color: $ko-color-primary;
+  box-shadow: 0 1px 1px rgba(14, 113, 165, 0.5);
+  color: inherit;
+  font-size: 2rem;
+  line-height: 2.5em;
+  position: fixed;
+  text-align: center;
+  text-decoration: inherit;
+  top: 0;
+  width: $ko-sidebar-width;
+}
+
+.ko-sidebar__title {
+  border-bottom: solid 5px #fff;
+  margin: 20px;
+  padding-bottom: 10px;
+}
+
+.ko-sidebar__item {
+  box-sizing: border-box;
+  color: inherit;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: inherit;
+  width: 100%;
+}
