@@ -1,0 +1,89 @@
+// VARS
+$ko-progress-duration : 2s !default;
+$ko-progress-border-radius : 5px !default;
+
+// KEYFRAMES
+@keyframes move {
+  0% {
+    max-width: 0;
+  }
+
+  100% {
+    max-width: 100%;
+  }
+}
+
+// PLACEHOLDERS
+%ko-progress-bar {
+  background-color: $ko-color-gray;
+  height: 20px;
+  position: relative;
+}
+
+%ko-progress-bar__progress {
+  background-color: $ko-color-primary;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+// PROGRESS BAR
+.ko-progress-bar {
+  @extend %ko-progress-bar;
+}
+
+.ko-progress-bar--spaced {
+  @extend %ko-progress-bar;
+  padding: 3px;
+}
+
+.ko-progress-bar--rounded {
+  @extend %ko-progress-bar;
+  border-radius: $ko-progress-border-radius;
+
+  .ko-progress-bar__progress,
+  .ko-progress-bar__progress--danger,
+  .ko-progress-bar__progress--info,
+  .ko-progress-bar__progress--success,
+  .ko-progress-bar__progress--warning {
+    border-radius: $ko-progress-border-radius;
+  }
+}
+
+.ko-progress-bar--animated {
+  @extend %ko-progress-bar;
+
+  .ko-progress-bar__progress,
+  .ko-progress-bar__progress--danger,
+  .ko-progress-bar__progress--info,
+  .ko-progress-bar__progress--success,
+  .ko-progress-bar__progress--warning {
+    animation: move $ko-progress-duration linear;
+  }
+}
+
+// PROGRESS
+.ko-progress-bar__progress {
+  @extend %ko-progress-bar__progress;
+}
+
+.ko-progress-bar__progress--success {
+  @extend %ko-progress-bar__progress;
+  background-color: $ko-color-success;
+}
+
+.ko-progress-bar__progress--info {
+  @extend %ko-progress-bar__progress;
+  background-color: $ko-color-info;
+}
+
+.ko-progress-bar__progress--warning {
+  @extend %ko-progress-bar__progress;
+  background-color: $ko-color-warning;
+}
+
+.ko-progress-bar__progress--danger {
+  @extend %ko-progress-bar__progress;
+  background-color: $ko-color-danger;
+}
