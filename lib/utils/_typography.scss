@@ -93,11 +93,11 @@
 }
 
 body {
+  color: $ko-font-base;
   font-family: 'Ubuntu', sans-serif;
   font-size: $ko-font-size-base;
   line-height: $ko-font-line-height-base;
 }
-
 
 h1 {
   @extend %ko-font-header--xxl;

@@ -3,6 +3,7 @@ $ko-color-primary: #1291d4 !default;
 $ko-color-black: #262626 !default;
 $ko-color-white: #fff !default;
 $ko-color-gray: #d9d9d9 !default;
+$ko-color-light-gray: lighten($ko-color-gray, 7%) !default;
 $ko-color-dark-gray: darken($ko-color-gray, 7%) !default;
 $ko-color-success:  #16c77c !default;
 $ko-color-danger: #d41212 !default;
@@ -13,11 +14,12 @@ $ko-color-panel: #f7f9fa !default;
 
 // Layout
 $ko-page-width: 960px !default;
+$ko-border-radius : 4px !default;
 
 // Grid
 $ko-grid-cells: 12 !default;
 $ko-grid-gutter: 10px !default;
-$ko-grid-breakpoints: (
+$ko-grid-breakpoints:(
   'd' : 'default',
   's' : '(max-width : 768px)',
   'm' : '(min-width : 768px) and (max-width : 1024px)',
@@ -25,6 +27,7 @@ $ko-grid-breakpoints: (
 ) !default;
 
 // Fonts
+$ko-font-base: #4c4c4c;
 $ko-font-primary: $ko-color-primary !default;
 $ko-font-success: $ko-color-success !default;
 $ko-font-danger: $ko-color-danger !default;
@@ -47,8 +50,25 @@ $ko-font-header-size-sm: $ko-font-size-base !default;
 $ko-font-header-size-xs: ceil(($ko-font-size-base * .85)) !default;
 $ko-font-path: '../fonts/' !default;
 
+// Buttons
+$ko-button-color : $ko-color-primary !default;
+$ko-button-text-color : $ko-color-white !default;
+$ko-button-color-success : $ko-color-success !default;
+$ko-button-text-color-success : $ko-color-white !default;
+$ko-button-color-danger : $ko-color-danger !default;
+$ko-button-text-color-danger : $ko-color-white !default;
+$ko-button-color-warning : $ko-color-warning !default;
+$ko-button-text-color-warning : $ko-color-white !default;
+$ko-button-color-info : $ko-color-info !default;
+$ko-button-text-color-info : $ko-color-white !default;
+$ko-button-transition-duration: 200ms !default;
+
 // Popover
 $ko-popover-background-color: $ko-color-white !default;
 $ko-popover-border-color: darken($ko-color-gray, 15%) !default;
 $ko-popover-arrow-size: 16px !default; // should always be even
 $ko-popover-border-width: 1px !default;
+
+// Transitions
+$ko-transition-duration: 300ms !default;
+$ko-transition-easing: ease-out !default;
