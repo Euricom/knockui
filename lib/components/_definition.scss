@@ -1,25 +1,27 @@
-.ko-definition {
+%ko-definition {
   @extend %ko-grid;
 }
 
-.ko-definition__title{
+.ko-definition {
+  @extend %ko-definition;
+
+  margin-bottom: 15px;
+}
+
+.ko-definition__title {
+  line-height: $ko-font-line-height-base;
   margin-bottom: 10px;
 }
 
-.ko-definition--aligned {
-  @extend .definition;
-}
+.ko-definition--horizontal {
+  @extend %ko-definition;
 
-%ko-definition--aligned {
-  @extend .ko-definition;
-}
+  .ko-definition__text {
+    @extend %ko-grid__cell--9;
+  }
 
-.ko-definition__text--aligned {
-  @extend %ko-grid__cell--8;
-}
-
-.ko-definition__title--aligned {
-  @extend %ko-grid__cell--4;
-  line-height: $ko-font-line-height-base;
-  text-align: right;
+  .ko-definition__title {
+    @extend %ko-grid__cell--3;
+    text-align: right;
+  }
 }
