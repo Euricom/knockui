@@ -94,7 +94,7 @@
 
 body {
   color: $ko-font-base;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $ko-font;
   font-size: $ko-font-size-base;
   line-height: $ko-font-line-height-base;
 }

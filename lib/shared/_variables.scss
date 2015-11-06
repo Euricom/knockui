@@ -27,6 +27,7 @@ $ko-grid-breakpoints:(
 ) !default;
 
 // Fonts
+$ko-font: 'Ubuntu', sans-serif;
 $ko-font-base: #4c4c4c;
 $ko-font-primary: $ko-color-primary !default;
 $ko-font-success: $ko-color-success !default;
