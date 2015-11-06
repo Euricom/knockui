@@ -3,7 +3,7 @@
 }
 
 .ko-list__item::before {
-  content : '\2022';
   color : $ko-color-primary;
+  content : '\2022';
   padding-right : 15px;
 }
