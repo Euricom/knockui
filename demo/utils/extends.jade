@@ -1,0 +1,64 @@
+extends ../template
+
+block variables
+    - var url = '../utils/extends.html';
+
+block component-name
+    | Extends
+
+block component
+    h3.title Text Alignment
+    :jade
+        .align-element-1 Text
+        .align-element-2 Text
+        .align-element-3 Text
+    :scss
+        .align-element-1 {
+            @extend %ko-text--align-left;
+        }
+
+        .align-element-2 {
+            @extend %ko-text--align-center;
+        }
+
+        .align-element-3 {
+            @extend %ko-text--align-right;
+        }
+
+    h3.title Background Colors
+    :jade
+        .background-element-1 My background is primary
+        .background-element-2 My background is success
+        .background-element-3 My background is warning
+        .background-element-4 My background is danger
+        .background-element-5 My background is info
+    :scss
+        %background-element {
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .background-element-1 {
+            @extend %ko-background--primary;
+            @extend %background-element;
+        }
+
+        .background-element-2 {
+            @extend %ko-background--success;
+            @extend %background-element;
+        }
+
+        .background-element-3 {
+            @extend %ko-background--warning;
+            @extend %background-element;
+        }
+
+        .background-element-4 {
+            @extend %ko-background--danger;
+            @extend %background-element;
+        }
+
+        .background-element-5 {
+            @extend %ko-background--info;
+            @extend %background-element;
+        }

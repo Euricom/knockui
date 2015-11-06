@@ -2,8 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,500);
 
 %_ko-font-header {
-  font-family: 'Raleway', sans-serif;
   color: $ko-color-black;
+  font-family: 'Raleway', sans-serif;
   line-height: $ko-font-line-height-header;
 }
 
@@ -73,6 +73,13 @@
   color: $ko-font-info;
 }
 
+%ko-font--base {
+  color: $ko-color-black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: $ko-font-size-base;
+  line-height: $ko-font-line-height-base;
+}
+
 %ko-font--thin {
   font-weight: $ko-font-thin;
 }
@@ -86,6 +93,7 @@
 }
 
 body {
+  color: $ko-font-base;
   font-family: 'Ubuntu', sans-serif;
   font-size: $ko-font-size-base;
   line-height: $ko-font-line-height-base;

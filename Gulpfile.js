@@ -38,6 +38,13 @@ gulp.task('clean', function () {
     del.sync(paths.tmp);
 });
 
+gulp.task('lint', function() {
+    return gulp.src(paths.lib)
+        .pipe(scsslint({
+            'config': 'scsslint.yml'
+        }));
+});
+
 gulp.task('styles', function () {
     return gulp.src(paths.demo.styles)
         .pipe(plumber())
@@ -61,6 +68,7 @@ gulp.task('iconfont', function(){
             cssClass: 'ko-icon'
         }))
         .pipe(iconfont({
+            formats: ['ttf', 'eot', 'woff', 'svg'],
             fontName: fontName
         }))
         .pipe(gulp.dest('lib/fonts/'));
@@ -132,16 +140,21 @@ gulp.task('views', function () {
 
 gulp.task('compile', function (cb) {
     run('clean', [
-        'iconfont',
+        'lint',
         'styles',
         'views'
     ], cb);
 });
 
+gulp.task('build', [
+    'iconfont',
+    'compile'
+]);
+
 gulp.task('serve', ['compile'], function () {
-    gulp.watch(paths.demo.views, ['views']);
+    gulp.watch(paths.demo.views, ['styles', 'views']);
     gulp.watch(paths.demo.styles, ['styles']);
-    gulp.watch(paths.lib, ['styles']);
+    gulp.watch(paths.lib, ['lint', 'styles']);
 
     // Connect to server
     connect.server({
