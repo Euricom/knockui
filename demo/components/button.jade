@@ -7,18 +7,75 @@ block component-name
     | Button
 
 block component
-    h4.title Default Button
-    :jade
-        div.custom-button
-            | My Button
-            p.test
-    :html
-        <div class="custom-button">
-            My Button
-            <p class="test"></p>
-        </div>
-
-    :scss
-        .custom-button {   
-            color: hotpink;
+    style.
+        button, a {
+            margin-right: 10px;
         }
+    h4.title Default Buttons
+    :jade
+        button.ko-button
+            | My Button
+        button.ko-button--primary
+            | My Button
+        button.ko-button--success
+            | My Button
+
+        button.ko-button--warning
+            | My Button
+
+        button.ko-button--info
+            | My Button
+
+        button.ko-button--danger
+            | My Button
+
+        button.ko-button(disabled)
+            | My Button
+
+
+    h4.title Outlined Buttons
+    :jade
+        button.ko-button--outline
+            | My Button
+
+        button.ko-button--outline-primary
+            | My Button
+
+        button.ko-button--outline-success
+            | My Button
+
+        button.ko-button--outline-warning
+            | My Button
+
+        button.ko-button--outline-info
+            | My Button
+
+        button.ko-button--outline-danger
+            | My Button
+
+        button.ko-button--outline(disabled)
+            | My Button
+
+    h4.title Icon Buttons
+    :jade
+        button.ko-button--icon
+            i(class='ko-button__icon ko-icon--plus')
+            | My Button
+        button.ko-button--icon-primary
+            i(class='ko-button__icon ko-icon--plus')
+            | My Button
+        button.ko-button--icon-success
+            i(class='ko-button__icon ko-icon--plus')
+            | My Button
+        button.ko-button--icon-warning
+            i(class='ko-button__icon ko-icon--plus')
+            | My Button
+        button.ko-button--icon-info
+            i(class='ko-button__icon ko-icon--plus')
+            | My Button
+        button.ko-button--icon-danger
+            i(class='ko-button__icon ko-icon--plus')
+            | My Button
+        button.ko-button--icon(disabled)
+            i(class='ko-button__icon ko-icon--plus')
+            | My Button
