@@ -105,14 +105,13 @@
     }
   }
 
-  &::before {
-    content: '<';
+  &::after {
     display: inline-block;
     font-size: 1em;
-    line-height: 1.1em;
+    line-height: 1.5em;
     pointer-events: none;
     position: absolute;
-    right: 14px;
+    right: 20px;
     top: 0;
   }
 }
