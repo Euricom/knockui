@@ -1,0 +1,39 @@
+extends ../template
+
+block variables
+    - var url = '../utils/extends.html';
+
+block component-name
+    | Icons
+
+block component
+    h3.title Example icons
+    :jade
+        div.ko-icon--arrow-down
+        div.ko-icon--arrow-left
+        div.ko-icon--arrow-right
+        div.ko-icon--arrow-up
+        div.ko-icon--chevron-down
+        div.ko-icon--chevron-left
+        div.ko-icon--chevron-right
+        div.ko-icon--chevron-up
+        div.ko-icon--eye
+        div.ko-icon--linkedin
+        div.ko-icon--lock-closed
+        div.ko-icon--lock-open
+        div.ko-icon--mail
+        div.ko-icon--plus
+        div.ko-icon--tick
+        div.ko-icon--twitter
+        div.ko-icon--user
+        div.ko-icon--web
+
+
+    h3.title Colors
+    :jade
+        div.test.ko-icon--arrow-down
+
+    :scss
+        .test {
+            color: $ko-color-primary;
+        }
