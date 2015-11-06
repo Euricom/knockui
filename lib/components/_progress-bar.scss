@@ -1,0 +1,72 @@
+@keyframes move {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+.ko-progress-bar {
+  background-color: $ko-color-gray;
+  height: 20px; // Can be anything
+  position: relative;
+}
+
+.ko-progress-bar--spaced {
+  @extend .ko-progress-bar;
+  padding: 3px;
+}
+
+.ko-progress-bar--rounded {
+  @extend .ko-progress-bar;
+  border-radius: 5px;
+
+  .ko-progress-bar__progress,
+  .ko-progress-bar__progress--danger,
+  .ko-progress-bar__progress--info,
+  .ko-progress-bar__progress--success,
+  .ko-progress-bar__progress--warning {
+    border-radius: 5px;
+  }
+}
+
+.ko-progress-bar--animated {
+  @extend .ko-progress-bar;
+
+  .ko-progress-bar__progress,
+  .ko-progress-bar__progress--danger,
+  .ko-progress-bar__progress--info,
+  .ko-progress-bar__progress--success,
+  .ko-progress-bar__progress--warning {
+    animation: move 2s linear;
+  }
+}
+
+.ko-progress-bar__progress {
+  background-color: $ko-color-primary;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ko-progress-bar__progress--success {
+  @extend .ko-progress-bar__progress;
+  background-color: $ko-color-success;
+}
+
+.ko-progress-bar__progress--info {
+  @extend .ko-progress-bar__progress;
+  background-color: $ko-color-info;
+}
+
+.ko-progress-bar__progress--warning {
+  @extend .ko-progress-bar__progress;
+  background-color: $ko-color-warning;
+}
+
+.ko-progress-bar__progress--danger {
+  @extend .ko-progress-bar__progress;
+  background-color: $ko-color-danger;
+}
