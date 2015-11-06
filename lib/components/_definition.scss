@@ -1,0 +1,25 @@
+.ko-definition {
+  @extend %ko-grid;
+}
+
+.ko-definition__title{
+  margin-bottom: 10px;
+}
+
+.ko-definition--aligned {
+  @extend .definition;
+}
+
+%ko-definition--aligned {
+  @extend .ko-definition;
+}
+
+.ko-definition__text--aligned {
+  @extend %ko-grid__cell--8;
+}
+
+.ko-definition__title--aligned {
+  @extend %ko-grid__cell--4;
+  line-height: $ko-font-line-height-base;
+  text-align: right;
+}

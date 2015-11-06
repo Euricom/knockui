@@ -5,3 +5,10 @@ block variables
 
 block component-name
     | List
+
+block component
+    h4.title Default list
+    :jade
+        ul
+            each val in ["Football", "Dj'ing", "Running Marathons"]
+                li.ko-list__item= val
