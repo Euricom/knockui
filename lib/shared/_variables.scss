@@ -8,6 +8,7 @@ $ko-color-success:  #16c77c !default;
 $ko-color-danger: #d41212 !default;
 $ko-color-warning: #fc5b19 !default;
 $ko-color-info: #8f16c7 !default;
+$ko-color-night: #142736 !default;
 
 // Layout
 $ko-page-width: 960px !default;
@@ -48,5 +49,5 @@ $ko-font-path: '../fonts/' !default;
 // Popover
 $ko-popover-background-color: $ko-color-white !default;
 $ko-popover-border-color: darken($ko-color-gray, 15%) !default;
-$ko-popover-arrow-size: 5px !default;
-$ko-popover-border-width: 3px !default;
+$ko-popover-arrow-size: 16px !default; // should always be even
+$ko-popover-border-width: 1px !default;
