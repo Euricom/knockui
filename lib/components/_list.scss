@@ -1,0 +1,9 @@
+.ko-list__item {
+  line-height: 28px;
+}
+
+.ko-list__item::before {
+  content : '\2022';
+  color : $ko-color-primary;
+  padding-right : 15px;
+}
