@@ -58,6 +58,7 @@ gulp.task('styles', function () {
 });
 
 var fontName = 'ko-icon';
+var runTimestamp = Math.round(Date.now()/1000);
 gulp.task('iconfont', function(){
     gulp.src(['assets/**/*.svg'])
         .pipe(iconfontCss({
@@ -68,7 +69,9 @@ gulp.task('iconfont', function(){
             cssClass: 'ko-icon'
         }))
         .pipe(iconfont({
-            fontName: fontName
+            formats: ['ttf', 'eot', 'woff', 'svg'],
+            fontName: fontName,
+            timestamp: runTimestamp
         }))
         .pipe(gulp.dest('lib/fonts/'));
 });
@@ -139,12 +142,16 @@ gulp.task('views', function () {
 
 gulp.task('compile', function (cb) {
     run('clean', [
-        'iconfont',
         'lint',
         'styles',
         'views'
     ], cb);
 });
+
+gulp.task('build', [
+    'iconfont',
+    'compile'
+]);
 
 gulp.task('serve', ['compile'], function () {
     gulp.watch(paths.demo.views, ['styles', 'views']);

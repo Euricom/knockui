@@ -5,3 +5,23 @@ block variables
 
 block component-name
     | Input
+
+block component
+    h4.title Default Input
+    :html
+        <input type='text' placeholder="I'm a normal input" class="ko-input" />
+
+    h4.title Read-only Input
+    :html
+        <input type='text' value="I'm a read-only input" class="ko-input" readonly/>
+
+    h4.title Disabled Input
+    :html
+        <input type='text' value="I'm a disabled input" class="ko-input" disabled/>
+
+    h4.title Input States
+    :html
+        <input type="text" placeholder="I'm a success input" class="ko-input--success" />
+        <input type="text" placeholder="I'm a danger input" class="ko-input--danger" />
+        <input type="text" placeholder="I'm a warning input" class="ko-input--warning" />
+        <input type="text" placeholder="I'm a info input" class="ko-input--info" />

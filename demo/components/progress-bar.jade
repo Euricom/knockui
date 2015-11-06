@@ -5,3 +5,83 @@ block variables
 
 block component-name
     | Progress Bar
+
+block component
+
+    h4.title Default Progress Bar
+
+    style.
+        .example .ko-progress-bar {
+            margin: 5px 0px;
+        }
+
+    :jade
+        .ko-progress-bar
+            .ko-progress-bar__progress(style="width : 10%")
+        .ko-progress-bar
+            .ko-progress-bar__progress--success(style="width : 19%")
+        .ko-progress-bar
+            .ko-progress-bar__progress--warning(style="width : 50%")
+        .ko-progress-bar
+            .ko-progress-bar__progress--info(style="width : 63%")
+        .ko-progress-bar
+            .ko-progress-bar__progress--danger(style="width : 100%")
+
+
+    h4.title Spaced Progress Bar
+
+    style.
+        .example .ko-progress-bar--spaced {
+            margin: 5px 0px;
+        }
+
+    :jade
+        .ko-progress-bar--spaced
+            .ko-progress-bar__progress(style="width : 10%")
+        .ko-progress-bar--spaced
+            .ko-progress-bar__progress--success(style="width : 19%")
+        .ko-progress-bar--spaced
+            .ko-progress-bar__progress--warning(style="width : 50%")
+        .ko-progress-bar--spaced
+            .ko-progress-bar__progress--info(style="width : 63%")
+        .ko-progress-bar--spaced
+            .ko-progress-bar__progress--danger(style="width : 100%")
+
+
+    h4.title Rounded Progress Bar
+
+    style.
+        .example .ko-progress-bar--rounded {
+            margin: 5px 0px;
+        }
+
+    :jade
+        .ko-progress-bar--rounded
+            .ko-progress-bar__progress(style="width : 10%")
+        .ko-progress-bar--rounded
+            .ko-progress-bar__progress--success(style="width : 19%")
+        .ko-progress-bar--rounded
+            .ko-progress-bar__progress--warning(style="width : 50%")
+        .ko-progress-bar--rounded
+            .ko-progress-bar__progress--info(style="width : 63%")
+        .ko-progress-bar--rounded
+            .ko-progress-bar__progress--danger(style="width : 100%")
+
+    h4.title Animated Progress Bar
+
+    style.
+        .example .ko-progress-bar--animated{
+            margin: 5px 0px;
+        }
+
+    :jade
+        .ko-progress-bar--animated
+            .ko-progress-bar__progress(style="width : 10%")
+        .ko-progress-bar--animated
+            .ko-progress-bar__progress--success(style="width : 19%")
+        .ko-progress-bar--animated
+            .ko-progress-bar__progress--warning(style="width : 50%")
+        .ko-progress-bar--animated
+            .ko-progress-bar__progress--info(style="width : 63%")
+        .ko-progress-bar--animated
+            .ko-progress-bar__progress--danger(style="width : 100%")

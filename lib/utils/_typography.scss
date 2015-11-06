@@ -73,6 +73,13 @@
   color: $ko-font-info;
 }
 
+%ko-font--base {
+  color: $ko-color-black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: $ko-font-size-base;
+  line-height: $ko-font-line-height-base;
+}
+
 %ko-font--thin {
   font-weight: $ko-font-thin;
 }
@@ -86,6 +93,7 @@
 }
 
 body {
+  color: $ko-font-base;
   font-family: 'Ubuntu', sans-serif;
   font-size: $ko-font-size-base;
   line-height: $ko-font-line-height-base;

@@ -5,3 +5,33 @@ block variables
 
 block component-name
     | Definition
+    h4.title Default Definition
+    :jade
+        .ko-definition
+            h5.ko-definition__title
+                | Example
+            p
+                | Bacon ipsum dolor amet shank aute frankfurter nulla. Tempor short ribs brisket, tri-tip dolore consequat ham hock pork chop do incididunt fugiat nostrud enim alcatra. Cillum enim occaecat, velit ut ground round magna do aute strip steak. Pariatur hamburger enim occaecat prosciutto. Boudin chuck t-bone est adipisicing, aute porchetta duis.
+    :scss
+        .ko-definition__title {
+            @extend %ko-font--success;
+        }
+    h4.title Two Columns Definition
+    :jade
+        .ko-definition--aligned
+            h5.ko-definition__title--aligned
+                | Example
+            p.ko-definition__text--aligned
+                | Bacon ipsum dolor amet shank aute frankfurter nulla. Tempor short ribs brisket, tri-tip dolore consequat ham hock pork chop do incididunt fugiat nostrud enim alcatra. Cillum enim occaecat, velit ut ground round magna do aute strip steak. Pariatur hamburger enim occaecat prosciutto. Boudin chuck t-bone est adipisicing, aute porchetta duis.
+        .my-definition-align
+            h5.ko-definition__title--aligned
+                | Example Long Title
+            p.ko-definition__text--aligned
+                | Bacon ipsum dolor amet shank aute frankfurter nulla. Tempor short ribs brisket, tri-tip dolore consequat ham hock pork chop do incididunt fugiat nostrud enim alcatra. Cillum enim occaecat, velit ut ground round magna do aute strip steak. Pariatur hamburger enim occaecat prosciutto. Boudin chuck t-bone est adipisicing, aute porchetta duis.
+    :scss
+        .ko-definition__title--aligned {
+            @extend %ko-font--success;
+        }
+        .my-definition-align {
+            @extend %ko-definition--aligned;
+        }

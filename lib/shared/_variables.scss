@@ -3,6 +3,7 @@ $ko-color-primary: #1291d4 !default;
 $ko-color-black: #262626 !default;
 $ko-color-white: #fff !default;
 $ko-color-gray: #d9d9d9 !default;
+$ko-color-light-gray: lighten($ko-color-gray, 7%) !default;
 $ko-color-dark-gray: darken($ko-color-gray, 7%) !default;
 $ko-color-success:  #16c77c !default;
 $ko-color-danger: #d41212 !default;
@@ -24,6 +25,7 @@ $ko-grid-breakpoints:(
 ) !default;
 
 // Fonts
+$ko-font-base: #4c4c4c;
 $ko-font-primary: $ko-color-primary !default;
 $ko-font-success: $ko-color-success !default;
 $ko-font-danger: $ko-color-danger !default;
@@ -49,5 +51,5 @@ $ko-font-path: '../fonts/' !default;
 // Popover
 $ko-popover-background-color: $ko-color-white !default;
 $ko-popover-border-color: darken($ko-color-gray, 15%) !default;
-$ko-popover-arrow-size: 5px !default;
-$ko-popover-border-width: 3px !default;
+$ko-popover-arrow-size: 16px !default; // should always be even
+$ko-popover-border-width: 1px !default;
