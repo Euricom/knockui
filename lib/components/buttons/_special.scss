@@ -1,17 +1,8 @@
 .ko-button--special-primary {
   @extend .ko-button--primary;
   @extend %ko-special-button;
+  @extend %ko-transparent-hover;
   color: $ko-color-primary;
-}
-
-.ko-button--special-primary,
-.ko-button--special-success,
-.ko-button--special-warning,
-.ko-button--special-info,
-.ko-button--special-danger {
-  &:hover {
-    background-color: transparent;
-  }
 }
 
 .ko-button__icon--primary {
@@ -21,11 +12,13 @@
 
 .ko-button--special-primary:hover .ko-button__icon--primary {
   @extend .ko-button--primary;
+  @extend %ko-icon-padding;
 }
 
 .ko-button--special-success {
   @extend .ko-button--success;
   @extend %ko-special-button;
+  @extend %ko-transparent-hover;
   color: $ko-color-success;
 }
 
@@ -36,11 +29,13 @@
 
 .ko-button--special-success:hover .ko-button__icon--success {
   @extend .ko-button--success;
+  @extend %ko-icon-padding;
 }
 
 .ko-button--special-warning {
   @extend .ko-button--warning;
   @extend %ko-special-button;
+  @extend %ko-transparent-hover;
   color: $ko-color-warning;
 }
 
@@ -51,11 +46,13 @@
 
 .ko-button--special-warning:hover .ko-button__icon--warning {
   @extend .ko-button--warning;
+  @extend %ko-icon-padding;
 }
 
 .ko-button--special-info {
   @extend .ko-button--info;
   @extend %ko-special-button;
+  @extend %ko-transparent-hover;
   color: $ko-color-info;
 }
 
@@ -66,11 +63,13 @@
 
 .ko-button--special-info:hover .ko-button__icon--info {
   @extend .ko-button--info;
+  @extend %ko-icon-padding;
 }
 
 .ko-button--special-danger {
   @extend .ko-button--danger;
   @extend %ko-special-button;
+  @extend %ko-transparent-hover;
   color: $ko-color-danger;
 }
 
@@ -81,4 +80,5 @@
 
 .ko-button--special-danger:hover .ko-button__icon--danger {
   @extend .ko-button--danger;
+  @extend %ko-icon-padding;
 }

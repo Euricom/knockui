@@ -1,6 +1,10 @@
+%ko-icon-padding {
+  padding : 5px;
+}
+
 %ko-button__icon {
+  @extend %ko-icon-padding;
   border-radius: $ko-border-radius;
-  padding: 5px;
   margin-right: 5px;
 }
 
@@ -37,4 +41,10 @@
   background-color: transparent;
   border: 1px $ko-color-info solid;
   color: $ko-color-info;
+}
+
+%ko-transparent-hover {
+  &:hover {
+    background-color: transparent;
+  }
 }
