@@ -1,10 +1,10 @@
-@mixin _ko-border-color($color) {
+@mixin _ko-link-border-color($color) {
   border-bottom: 1px solid $color;
 }
 
 .ko-link {
   @extend %ko-font--primary;
-  @include _ko-border-color($ko-color-primary);
+  @include _ko-link-border-color($ko-color-primary);
   text-decoration: none;
 
   &:hover {
@@ -15,11 +15,11 @@
 .ko-link--succes {
   @extend .ko-link;
   @extend %ko-font--success;
-  @include _ko-border-color($ko-color-success);
+  @include _ko-link-border-color($ko-color-success);
 }
 
 .ko-link--danger {
   @extend .ko-link;
   @extend %ko-font--danger;
-  @include _ko-border-color($ko-color-danger);
+  @include _ko-link-border-color($ko-color-danger);
 }
