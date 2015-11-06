@@ -1,14 +1,17 @@
 @import 'shared/reset';
 @import 'shared/variables';
+@import 'shared/placeholders';
 
 @import 'utils/icons';
+@import 'utils/layout';
 @import 'utils/grid';
 @import 'utils/typography';
 
 @import 'components/button';
 @import 'components/quote';
 @import 'components/avatar';
+@import 'components/popover';
 @import 'components/divider';
 @import 'components/menu';
-
+@import 'components/tag';
 @import 'components/table';
