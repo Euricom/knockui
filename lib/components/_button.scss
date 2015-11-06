@@ -1,18 +1,18 @@
 .ko-button-primary {
+  @extend %ko-background--primary;
+
   border-radius: $ko-button-border-radius;
-  background-color: $ko-button-color;
+  cursor: pointer;
   display: inline-block;
   padding: 10px;
-  color: $ko-button-text-color;
-  cursor: pointer;
+  transition: background 200ms linear;
 }
 
 %ko-button__icon {
+  border-radius: $ko-button-border-radius;
   padding: 5px;
   margin-right: 5px;
-  border-radius: $ko-button-border-radius;
 }
-
 
 $types: (
         primary : (
@@ -38,17 +38,6 @@ $types: (
 );
 
 @each $type, $color in $types {
-  .ko-button--#{$type} {
-    @extend .ko-button-primary;
-    background-color: map-get($color, color);
-    color: map-get($color, text-color);
-  }
-
-  .ko-button--#{$type}:hover {
-    @extend .ko-button-primary;
-    background-color: darken(map-get($color, color), 5);
-  }
-
   .ko-button--outline-#{$type} {
     @extend .ko-button-primary;
     background-color: transparent;
@@ -69,9 +58,47 @@ $types: (
     color: map-get($color, color);
   }
 
+  .ko-button--special-#{$type}:hover {
+    @extend .ko-button-primary;
+    background-color: transparent;
+
+    color: darken(map-get($color, color), 5);
+  }
+
   .ko-button__icon--#{$type} {
     border: 1px map-get($color, color) solid;
     @extend %ko-button__icon;
     color: map-get($color, color);
   }
+
+  .ko-button--special-#{$type}:hover .ko-button__icon--#{$type} {
+    @extend %ko-button__icon;
+    background-color: map-get($color, color);
+    color : $ko-color-white;
+  }
+
+
+}
+
+
+
+.ko-button--info {
+  @extend .ko-button-primary;
+  @extend %ko-background--info;
+}
+
+
+.ko-button--warning {
+  @extend .ko-button-primary;
+  @extend %ko-background--warning;
+}
+
+.ko-button--danger {
+  @extend .ko-button-primary;
+  @extend %ko-background--danger;
+}
+
+.ko-button--success {
+  @extend .ko-button-primary;
+  @extend %ko-background--success;
 }

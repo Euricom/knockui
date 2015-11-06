@@ -7,18 +7,25 @@ block component-name
     | Button
 
 block component
-    h4.title Default Button
+    h4.title Filled Buttons
     :jade
         .ko-button--primary
             | My Button
+
         .ko-button--success
             | My Button
+
         .ko-button--warning
             | My Button
+
         .ko-button--danger
             | My Button
+
         .ko-button--info
             | My Button
+
+    h4.title Outlined Buttons
+    :jade
         .ko-button--outline-primary
             | My Button
         .ko-button--outline-success
@@ -29,9 +36,12 @@ block component
             | My Button
         .ko-button--outline-danger
             | My Button
+
+    h4.title Special Buttons
+    :jade
         .ko-button--special-primary
-                       i(class='ko-button__icon--primary') test
-                       | My Button
+            i(class='ko-button__icon--primary') test
+            | My Button
         .ko-button--special-success
             i(class='ko-button__icon--success') test
             | My Button
