@@ -5,3 +5,37 @@ block variables
 
 block component-name
     | Layout
+
+block component
+    :jade
+        body
+            .custom-topbar
+                .ko-page__layout
+                    | Header Content
+            .custom-page.ko-page__layout
+                .custom-sidebar
+                    | Sidebar Content
+                .custom-content
+                    | Actual Content
+    :scss
+        .custom-topbar {
+            background-color: $ko-color-primary;
+            color: white;
+            height: 70px;
+        }
+
+        .custom-page {
+            @extend %ko-grid;
+        }
+
+        .custom-sidebar {
+            @extend %ko-grid__cell--3;
+            background-color: $ko-color-gray;
+            height: 200px;
+        }
+
+        .custom-content {
+            @extend %ko-grid__cell--9;
+            background-color: $ko-color-gray;
+            height: 200px;
+        }

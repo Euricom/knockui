@@ -1,5 +1,5 @@
-$demo-color-primary: #1c79ef;
-$demo-color-primary-light: #caf8ff;
+$demo-color-primary: $ko-color-primary;
+$demo-color-primary-light: lighten($demo-color-primary, 10%);
 $demo-color-shade-10: #f5f5f5;
 $demo-color-shade-20: #e5e5e5;
 $demo-color-shade-60: #333;

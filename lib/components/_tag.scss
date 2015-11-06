@@ -1,0 +1,12 @@
+.ko-tag {
+  @extend %ko-font--primary;
+  margin-right: 20px;
+  text-decoration: underline;
+}
+
+.ko-tag--highlighted{
+  @extend %ko-background--primary;
+  border-radius: 2px;
+  margin-right: 20px;
+  padding: 5px;
+}
