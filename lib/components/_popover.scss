@@ -1,4 +1,4 @@
-$_ko-popover-arrow-border: $ko-popover-border-width + 2;
+$_ko-popover-arrow-border: $ko-popover-border-width + 1;
 
 @mixin _ko-arrowpos() {
   &::after, &::before {
@@ -112,7 +112,7 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 2;
 
 .ko-popover--top-left {
   @include _ko-arrowpos() {
-    left: 10%;
+    left: 15px;
     bottom: 100%;
   };
 }
@@ -128,7 +128,8 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 2;
 
 .ko-popover--top-right {
   @include _ko-arrowpos() {
-    left: 90%;
+    left: auto;
+    right: 15px;
     bottom: 100%;
   };
 }
@@ -136,7 +137,7 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 2;
 .ko-popover--left-top {
   @include _ko-arrowpos() {
     right: 100%;
-    top: 10%;
+    top: 0px;
   };
 }
 
@@ -151,14 +152,14 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 2;
 
 .ko-popover--left-bottom {
   @include _ko-arrowpos() {
-    bottom: 10%;
+    bottom: 5px;
     right: 100%;
   };
 }
 
 .ko-popover--bottom-left {
   @include _ko-arrowpos() {
-    left: 10%;
+    left: 15%;
     top: 100%;
   };
 }
@@ -174,7 +175,7 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 2;
 
 .ko-popover--bottom-right {
   @include _ko-arrowpos() {
-    left: 90%;
+    left: 85%;
     top: 100%;
   };
 }
