@@ -58,6 +58,7 @@ gulp.task('styles', function () {
 });
 
 var fontName = 'ko-icon';
+var runTimestamp = Math.round(Date.now()/1000);
 gulp.task('iconfont', function(){
     gulp.src(['assets/**/*.svg'])
         .pipe(iconfontCss({
@@ -69,7 +70,8 @@ gulp.task('iconfont', function(){
         }))
         .pipe(iconfont({
             formats: ['ttf', 'eot', 'woff', 'svg'],
-            fontName: fontName
+            fontName: fontName,
+            timestamp: runTimestamp
         }))
         .pipe(gulp.dest('lib/fonts/'));
 });
