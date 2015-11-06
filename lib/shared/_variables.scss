@@ -8,9 +8,13 @@ $ko-color-success:  #16c77c;
 $ko-color-danger: #d41212;
 $ko-color-warning: #fc5b19;
 $ko-color-info: #8f16c7;
+$ko-popover-background-color: $ko-color-white;
+$ko-popover-border-color: darken($ko-color-gray, 15%) !default;
 
 // Layout
 $ko-page-width: 960px !default;
+$ko-popover-arrow-size: 5px !default;
+$ko-popover-border-width: 3px !default;
 
 // Grid
 $ko-grid-cells: 12 !default;
