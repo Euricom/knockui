@@ -60,9 +60,14 @@ $ko-button-color-warning : $ko-color-warning !default;
 $ko-button-text-color-warning : $ko-color-white !default;
 $ko-button-color-info : $ko-color-info !default;
 $ko-button-text-color-info : $ko-color-white !default;
+$ko-button-transition-duration: 200ms !default;
 
 // Popover
 $ko-popover-background-color: $ko-color-white !default;
 $ko-popover-border-color: darken($ko-color-gray, 15%) !default;
 $ko-popover-arrow-size: 16px !default; // should always be even
 $ko-popover-border-width: 1px !default;
+
+// Transitions
+$ko-transition-duration: 300ms !default;
+$ko-transition-easing: ease-out !default;

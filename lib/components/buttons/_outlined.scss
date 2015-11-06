@@ -1,44 +1,83 @@
-.ko-button--outline-primary {
-  @extend .ko-button--primary;
-  @extend %ko-outline--primary;
+%ko-button--outline {
+  @extend %ko-button;
+  @extend %ko-outline--gray;
+
+  &:hover {
+    @extend %ko-background--gray;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    @extend %ko-outline--light-gray;
+    cursor: not-allowed;
+  }
 }
 
-.ko-button--outline-primary:hover {
-  @extend .ko-button--primary;
+.ko-button--outline {
+  @extend %ko-button--outline;
+}
+
+%ko-button--outline-primary {
+  @extend %ko-button;
+  @extend %ko-outline--primary;
+
+  &:hover {
+    @extend %ko-background--primary;
+  }
+}
+
+.ko-button--outline-primary {
+  @extend %ko-button--outline-primary;
+}
+
+%ko-button--outline-success {
+  @extend %ko-button;
+  @extend %ko-outline--success;
+
+  &:hover {
+    @extend %ko-background--success;
+  }
 }
 
 .ko-button--outline-success {
-  @extend .ko-button--primary;
-  @extend %ko-outline--success;
+  @extend %ko-button--outline-success;
 }
 
-.ko-button--outline-success:hover {
-  @extend .ko-button--success;
+%ko-button--outline-warning {
+  @extend %ko-button;
+  @extend %ko-outline--warning;
+
+  &:hover {
+    @extend %ko-background--warning;
+  }
 }
 
 .ko-button--outline-warning {
-  @extend .ko-button--primary;
-  @extend %ko-outline--warning;
+  @extend %ko-button--outline-warning;
 }
 
-.ko-button--outline-warning:hover {
-  @extend .ko-button--warning;
+%ko-button--outline-danger {
+  @extend %ko-button;
+  @extend %ko-outline--danger;
+
+  &:hover {
+    @extend %ko-background--danger;
+  }
 }
 
 .ko-button--outline-danger {
-  @extend .ko-button--primary;
-  @extend %ko-outline--danger;
+  @extend %ko-button--outline-danger;
 }
 
-.ko-button--outline-danger:hover {
-  @extend .ko-button--danger;
+%ko-button--outline-info {
+  @extend %ko-button--primary;
+  @extend %ko-outline--info;
+
+  &:hover {
+    @extend %ko-background--info;
+  }
 }
 
 .ko-button--outline-info {
-  @extend .ko-button--primary;
-  @extend %ko-outline--info;
-}
-
-.ko-button--outline-info:hover {
-  @extend .ko-button--info;
+  @extend %ko-button--outline-info;
 }
