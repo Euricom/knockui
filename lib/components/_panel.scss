@@ -1,0 +1,9 @@
+$_ko-border-panel-color: #c3c7ca;
+
+.ko-panel{
+  background-color: $ko-color-panel;
+  border-radius: 4px;
+  border: 1px solid $_ko-border-panel-color;
+  box-shadow: 0 2px 4px rgba($ko-color-dark-gray, 0.5);
+  padding: 15px;
+}
