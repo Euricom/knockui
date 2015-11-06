@@ -1,0 +1,19 @@
+.ko-media__img,
+.ko-media__info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.ko-media__img {
+  margin: 5px 10px 0 0;
+  width: 65px;
+}
+
+.ko-media__text {
+  @extend %ko-font--small;
+  display: block;
+}
+
+.ko-media__text:first-of-type {
+  margin-top: 5px;
+}
