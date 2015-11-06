@@ -1,6 +1,6 @@
 %ko-menu__item {
   @extend %ko-font--uppercase;
-  @extend %ko-font--highlighted;
+  @extend %ko-font--primary;
   @extend %ko-font-header--md;
 
   box-sizing: border-box;
@@ -19,12 +19,12 @@
 }
 
 .ko-menu--horizontal .ko-menu__item,
-.ko-menu--horizontal .ko-menu__item--active{
+.ko-menu--horizontal .ko-menu__item--active {
   @extend %ko-menu__item--horizontal;
 }
 
 .ko-menu--vertical .ko-menu__item,
-.ko-menu--vertical .ko-menu__item--active{
+.ko-menu--vertical .ko-menu__item--active {
   @extend %ko-menu__item--vertical;
 }
 

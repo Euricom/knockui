@@ -3,9 +3,19 @@
 
 scss_files: "**/*.scss"
 
+exclude:
+  - 'lib/shared/_reset.scss'
+  - 'lib/utils/_icons.scss'
+
 linters:
+  NameFormat:
+    enabled: false
+
   SelectorFormat:
-    convention: hyphenated_BEM # or 'BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: hyphenated_BEM
 
   VendorPrefixes:
+    enabled: false
+
+  FinalNewline:
     enabled: false

@@ -6,6 +6,7 @@ block variables
 block component-name
     | Typography
 
+block component
     h4.title Text
     :jade
         p
@@ -27,6 +28,14 @@ block component-name
 
     h4.title Text Colors
     :jade
+        p.primary
+            | This is primary text
+    :scss
+        .primary {
+            @extend %ko-font--primary;
+        }
+
+    :jade
         p.success
             | This is success text
     :scss
@@ -41,6 +50,7 @@ block component-name
         .danger {
             @extend %ko-font--danger;
         }
+
     :jade
         p.warning
             | This is warning text
@@ -48,16 +58,40 @@ block component-name
         .warning {
             @extend %ko-font--warning;
         }
+
     :jade
         p.info
-        | This is info text
-
+            | This is info text
     :scss
         .info {
             @extend %ko-font--info;
         }
 
+    h4.title Font Weights
+    :jade
+        p.some-class
+            | This is regular
+    :scss
+        .some-class {
+            @extend %ko-font--regular;
+        }
+    :jade
+        p.some-class2
+            | This is thin
+    :scss
+        .some-class2 {
+            @extend %ko-font--thin;
+        }
+    :jade
+        p.some-class3
+            | This is bold
+    :scss
+        .some-class3 {
+            @extend %ko-font--bold;
+        }
+
     h4.title Headers
+    p.text By default all header tags are styled.
     :jade
         h1
             | Header 1
@@ -71,6 +105,31 @@ block component-name
             | Header 5
         h6
             | Header 6
+    p.text but you can also use the scss placeholder classes.
+    :scss
+        .my-text {
+            @extend %ko-font-header--xxl;
+        }
+
+        .my-text {
+            @extend %ko-font-header--xl;
+        }
+
+        .my-text {
+            @extend %ko-font-header--lg;
+        }
+
+        .my-text {
+            @extend %ko-font-header--md;
+        }
+
+        .my-text {
+            @extend %ko-font-header--sm;
+        }
+
+        .my-text {
+            @extend %ko-font-header--xs;
+        }
 
     h4.title Uppercase Headers
     :jade
@@ -79,13 +138,4 @@ block component-name
     :scss
         .custom-header {
             @extend %ko-font--uppercase;
-        }
-
-    h4.title Highlighted Header
-    :jade
-        h4.custom-header-2
-            | Header
-    :scss
-        .custom-header-2 {
-            @extend %ko-font--highlighted;
         }

@@ -1,36 +1,36 @@
-$_indent: 30px;
+$_ko-quote-indent: 30px;
 
 .ko-quote__text {
-  position: relative;
+  color: $ko-color-dark-gray;
   font-style: italic;
-  color: darken($ko-color-gray, 7%);
   line-height: 1.8;
-  margin-left: $_indent;
+  margin-left: $_ko-quote-indent;
+  position: relative;
 
   &::before {
-    position: absolute;
+    @extend %ko-font--success;
+    @extend %ko-font--giant;
     content: '“';
-    font-size: $ko-font-size-giant;
-    color: $ko-color-success;
-    top: -7px;
     left: -35px;
     line-height: 1;
+    position: absolute;
+    top: -7px;
   }
 }
 
 .ko-quote__author {
+  @extend %ko-font--success;
+  margin-left: $_ko-quote-indent;
   margin-top: 10px;
-  color: $ko-color-success;
-  margin-left: $_indent;
 
   &::before {
-    content: '–';
     color: inherit;
+    content: '–';
     margin-right: 5px;
   }
 }
 
 .ko-quote__profession {
-  font-weight: 400;
-  margin-left: 13px + $_indent;
+  @extend %ko-font--bold;
+  margin-left: 13px + $_ko-quote-indent;
 }

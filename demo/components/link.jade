@@ -1,7 +1,22 @@
 extends ../template
 
 block variables
-    - var url = '../components/list.html';
+    - var url = '../components/link.html';
 
 block component-name
-    | List
+    | Link
+
+    h4.title Default Link
+    :jade
+        p
+            | Lorem ipsum dolor sit amet, sed do eiusmod
+            a(class='ko-link', href='somelink.com') click here
+            |  tempor.
+
+    h4.title Success Link
+    :jade
+        a(class='ko-link--succes', href='#') Click here
+
+    h4.title Danger Link
+    :jade
+        a(class='ko-link--danger', href='#') Click here
