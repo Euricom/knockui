@@ -1,0 +1,39 @@
+.ko-table {
+  border: 2px solid $ko-color-gray;
+  border-radius: 5px;
+  padding: 0px 30px;
+  @extend %ko-font--base;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  display: block;
+}
+
+tr {
+  text-align: left;
+  vertical-align: middle;
+  display: table-row;
+  align-content: center;
+  height: 70px;
+}
+
+//td:last-of-type {
+//  text-align: right;
+//}
+
+td {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:20px;
+  //padding-left:20px;
+  border-top: 1px solid $ko-color-gray;
+}
+
+td:first-child {
+  //padding-left:20px;
+  padding-right:0;
+}
+
+tr:first-of-type td{
+  border-top: none;
+}
