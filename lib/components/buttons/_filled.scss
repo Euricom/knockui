@@ -1,0 +1,96 @@
+%ko-button {
+  @extend %ko-background--gray;
+
+  border: 0;
+  border-radius: $ko-border-radius;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 1;
+  outline: 0;
+  padding: 10px;
+  transition-duration: $ko-button-transition-duration;
+  transition-property: background, color;
+  transition-timing-function: $ko-transition-easing;
+
+  &:disabled,
+  &:disabled:hover {
+    @extend %ko-background--light-gray;
+    cursor: not-allowed;
+  }
+}
+
+.ko-button {
+  @extend %ko-button;
+
+  &:hover {
+    @include ko-darken-background($ko-color-gray);
+  }
+}
+
+%ko-button--primary {
+  @extend %ko-button;
+  @extend %ko-background--primary;
+}
+
+.ko-button--primary {
+  @extend %ko-button--primary;
+
+  &:hover {
+    @include ko-darken-background($ko-color-primary);
+  }
+}
+
+%ko-button--info {
+  @extend %ko-button;
+  @extend %ko-background--info;
+}
+
+.ko-button--info {
+  @extend %ko-button--info;
+
+  &:hover {
+    @include ko-darken-background($ko-color-info, 10);
+  }
+}
+
+%ko-button--warning {
+  @extend %ko-button;
+  @extend %ko-background--warning;
+}
+
+.ko-button--warning {
+  @extend %ko-button--warning;
+
+  &:hover {
+    @include ko-darken-background($ko-color-warning, 10);
+  }
+}
+
+%ko-button--danger {
+  @extend %ko-button;
+  @extend %ko-background--danger;
+}
+
+.ko-button--danger {
+  @extend %ko-button--danger;
+
+  &:hover {
+    @include ko-darken-background($ko-color-danger);
+  }
+}
+
+%ko-button--success {
+  @extend %ko-button;
+  @extend %ko-background--success;
+}
+
+.ko-button--success {
+  @extend %ko-button--success;
+
+  &:hover {
+    @include ko-darken-background($ko-color-success);
+  }
+}
