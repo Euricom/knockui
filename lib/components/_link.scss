@@ -27,3 +27,9 @@
   @extend %ko-font--danger;
   @include _ko-link-border-color($ko-color-danger);
 }
+
+.ko-link--disabled {
+  @extend %ko-font--primary;
+  color: $ko-color-dark-gray;
+  text-decoration: none;
+}
