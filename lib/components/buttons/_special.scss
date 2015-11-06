@@ -1,0 +1,84 @@
+.ko-button--special-primary {
+  @extend .ko-button--primary;
+  @extend %ko-special-button;
+  color: $ko-color-primary;
+}
+
+.ko-button--special-primary,
+.ko-button--special-success,
+.ko-button--special-warning,
+.ko-button--special-info,
+.ko-button--special-danger {
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.ko-button__icon--primary {
+  @extend .ko-button--outline-primary;
+  @extend %ko-button__icon;
+}
+
+.ko-button--special-primary:hover .ko-button__icon--primary {
+  @extend .ko-button--primary;
+}
+
+.ko-button--special-success {
+  @extend .ko-button--success;
+  @extend %ko-special-button;
+  color: $ko-color-success;
+}
+
+.ko-button__icon--success {
+  @extend .ko-button--outline-success;
+  @extend %ko-button__icon;
+}
+
+.ko-button--special-success:hover .ko-button__icon--success {
+  @extend .ko-button--success;
+}
+
+.ko-button--special-warning {
+  @extend .ko-button--warning;
+  @extend %ko-special-button;
+  color: $ko-color-warning;
+}
+
+.ko-button__icon--warning {
+  @extend .ko-button--outline-warning;
+  @extend %ko-button__icon;
+}
+
+.ko-button--special-warning:hover .ko-button__icon--warning {
+  @extend .ko-button--warning;
+}
+
+.ko-button--special-info {
+  @extend .ko-button--info;
+  @extend %ko-special-button;
+  color: $ko-color-info;
+}
+
+.ko-button__icon--info {
+  @extend .ko-button--outline-info;
+  @extend %ko-button__icon;
+}
+
+.ko-button--special-info:hover .ko-button__icon--info {
+  @extend .ko-button--info;
+}
+
+.ko-button--special-danger {
+  @extend .ko-button--danger;
+  @extend %ko-special-button;
+  color: $ko-color-danger;
+}
+
+.ko-button__icon--danger {
+  @extend .ko-button--outline-danger;
+  @extend %ko-button__icon;
+}
+
+.ko-button--special-danger:hover .ko-button__icon--danger {
+  @extend .ko-button--danger;
+}

@@ -11,6 +11,7 @@ $ko-color-info: #8f16c7 !default;
 
 // Layout
 $ko-page-width: 960px !default;
+$ko-border-radius : 4px !default;
 
 // Grid
 $ko-grid-cells: 12 !default;
@@ -30,8 +31,8 @@ $ko-font-warning: $ko-color-warning !default;
 $ko-font-info: $ko-color-info !default;
 $ko-font-size-base: 16px !default;
 $ko-font-size-small: ceil(($ko-font-size-base * .85)) !default;
-$ko-font-size-large: ceil(($ko-font-size-base * 1.25)) !default; 
-$ko-font-size-giant: ceil(($ko-font-size-base * 3.15)) !default; 
+$ko-font-size-large: ceil(($ko-font-size-base * 1.25)) !default;
+$ko-font-size-giant: ceil(($ko-font-size-base * 3.15)) !default;
 $ko-font-line-height-base: 1.5 !default;
 $ko-font-line-height-header: 1 !default;
 $ko-font-bold: 500 !default;
@@ -46,7 +47,6 @@ $ko-font-header-size-xs: ceil(($ko-font-size-base * 0.85)) !default;
 $ko-font-path: '../fonts/' !default;
 
 // Buttons
-$ko-button-border-radius : 4px !default;
 $ko-button-color : $ko-color-primary !default;
 $ko-button-text-color : $ko-color-white !default;
 $ko-button-color-success : $ko-color-success !default;

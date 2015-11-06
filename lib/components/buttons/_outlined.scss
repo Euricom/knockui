@@ -1,0 +1,44 @@
+.ko-button--outline-primary {
+  @extend .ko-button--primary;
+  @extend %ko-outline--primary;
+}
+
+.ko-button--outline-primary:hover {
+  @extend .ko-button--primary;
+}
+
+.ko-button--outline-success {
+  @extend .ko-button--primary;
+  @extend %ko-outline--success;
+}
+
+.ko-button--outline-success:hover {
+  @extend .ko-button--success;
+}
+
+.ko-button--outline-warning {
+  @extend .ko-button--primary;
+  @extend %ko-outline--warning;
+}
+
+.ko-button--outline-warning:hover {
+  @extend .ko-button--warning;
+}
+
+.ko-button--outline-danger {
+  @extend .ko-button--primary;
+  @extend %ko-outline--danger;
+}
+
+.ko-button--outline-danger:hover {
+  @extend .ko-button--danger;
+}
+
+.ko-button--outline-info {
+  @extend .ko-button--primary;
+  @extend %ko-outline--info;
+}
+
+.ko-button--outline-info:hover {
+  @extend .ko-button--info;
+}

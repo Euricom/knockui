@@ -1,0 +1,3 @@
+@mixin darken-background($color, $amount : 5) {
+  background-color: darken($color, $amount);
+}

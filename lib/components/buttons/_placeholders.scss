@@ -1,0 +1,40 @@
+%ko-button__icon {
+  border-radius: $ko-border-radius;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+%ko-special-button {
+  background-color: transparent;
+  border: 0;
+}
+
+%ko-outline--primary {
+  background-color: transparent;
+  border: 1px $ko-color-primary solid;
+  color: $ko-color-primary;
+}
+
+%ko-outline--success {
+  background-color: transparent;
+  border: 1px $ko-color-success solid;
+  color: $ko-color-success;
+}
+
+%ko-outline--danger {
+  background-color: transparent;
+  border: 1px $ko-color-danger solid;
+  color: $ko-color-danger;
+}
+
+%ko-outline--warning {
+  background-color: transparent;
+  border: 1px $ko-color-warning solid;
+  color: $ko-color-warning;
+}
+
+%ko-outline--info {
+  background-color: transparent;
+  border: 1px $ko-color-info solid;
+  color: $ko-color-info;
+}
