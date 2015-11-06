@@ -23,6 +23,9 @@ $ko-grid-breakpoints: (
         'l' : '(min-width : 1024px)'
 ) !default;
 
+// Layout
+$ko-page-width: 960px !default;
+
 // Fonts
 $ko-font-primary: $ko-color-primary !default;
 $ko-font-success: $ko-color-success !default;
