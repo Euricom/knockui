@@ -10,7 +10,7 @@
   }
 
   @for $i from 1 through $ko-grid-cells {
-    $size: 100% / $ko-grid-cells*$i;
+    $size: 100% / $ko-grid-cells * $i;
 
     @if ($breakpoint-name != 'd') {
       %ko-grid__cell_#{$breakpoint-name}--#{$i} {
