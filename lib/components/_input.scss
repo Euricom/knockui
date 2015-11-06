@@ -73,3 +73,33 @@
     box-shadow: inset 0 1px 1px rgba($ko-color-info, .3), 0 0 8px rgba($ko-color-info, .2);
   }
 }
+
+//textarea
+%ko-textarea {
+  @extend %ko-input;
+  resize: none;
+}
+
+.ko-textarea {
+  @extend %ko-textarea;
+}
+
+.ko-textarea--success {
+  @extend %ko-textarea;
+  @extend .ko-input--success;
+}
+
+.ko-textarea--danger {
+  @extend %ko-textarea;
+  @extend .ko-input--danger;
+}
+
+.ko-textarea--warning {
+  @extend %ko-textarea;
+  @extend .ko-input--warning;
+}
+
+.ko-textarea--info {
+  @extend %ko-textarea;
+  @extend .ko-input--info;
+}
