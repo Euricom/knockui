@@ -53,8 +53,8 @@
 .ko-popover--top-right::after {
   @extend %ko-popover-arrow;
   left: auto;
-  top: -$ko-popover-arrow-size / 2;
   right: $ko-popover-arrow-size;
+  top: -$ko-popover-arrow-size / 2;
   transform: rotate(-45deg);
 }
 

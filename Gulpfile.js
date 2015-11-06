@@ -68,6 +68,7 @@ gulp.task('iconfont', function(){
             cssClass: 'ko-icon'
         }))
         .pipe(iconfont({
+            formats: ['ttf', 'eot', 'woff', 'svg'],
             fontName: fontName
         }))
         .pipe(gulp.dest('lib/fonts/'));
