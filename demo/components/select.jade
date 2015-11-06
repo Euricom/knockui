@@ -1,0 +1,42 @@
+extends ../template
+block variables
+    - var url = '../components/select.html';
+block component-name
+    | Select
+block component
+    h4.title Default Select
+    :jade
+        label.ko-select
+            select
+                option default option 1
+                option default option 2
+                option default option 3
+    h4.title Disabled Select
+    :jade
+        label.ko-select
+            select(disabled="disabled")
+                option disabled option 1
+                option disabled option 2
+                option disabled option 3
+    h4.title Select states
+    :jade
+        label.ko-select--success
+            select
+                option success option 1
+                option success option 2
+                option success option 3
+        label.ko-select--danger
+            select
+                option danger option 1
+                option danger option 2
+                option danger option 3
+        label.ko-select--warning
+            select
+                option warning option 1
+                option warning option 2
+                option warning option 3
+        label.ko-select--info
+            select
+                option info option 1
+                option info option 2
+                option info option 3
