@@ -1,3 +1,13 @@
+%ko-background--light-gray {
+  background-color: $ko-color-light-gray;
+  color: $ko-color-white;
+}
+
+%ko-background--gray {
+  background-color: $ko-color-dark-gray;
+  color: $ko-color-white;
+}
+
 %ko-background--primary {
   background-color: $ko-color-primary;
   color: $ko-color-white;

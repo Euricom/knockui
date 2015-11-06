@@ -58,6 +58,7 @@ gulp.task('styles', function () {
 });
 
 var fontName = 'ko-icon';
+var runTimestamp = Math.round(Date.now()/1000);
 gulp.task('iconfont', function(){
     gulp.src(['assets/**/*.svg'])
         .pipe(iconfontCss({
@@ -69,37 +70,45 @@ gulp.task('iconfont', function(){
         }))
         .pipe(iconfont({
             formats: ['ttf', 'eot', 'woff', 'svg'],
-            fontName: fontName
+            fontName: fontName,
+            timestamp: runTimestamp
         }))
         .pipe(gulp.dest('lib/fonts/'));
 });
 
+var tidyOptions = {
+    'show-body-only': 'auto',
+    hideComments: false,
+    indent: true,
+    'drop-empty-elements': false,
+    'drop-empty-paras': false,
+    'merge-divs': false,
+    'merge-emphasis': false,
+    'merge-spans': false,
+    'output-html': true
+};
+
 jade.filters.jade =  function(content){
-    var htmlContent = jade.render(content);
+    var renderedContent = jade.render(content, {
+        debug: false
+    });
+    var htmlContent = renderedContent;
     var done = false;
-    tidy(htmlContent, {
-        'show-body-only': 'auto',
-        hideComments: false,
-        indent: true
-    }, function(err, html) {
+    tidy(htmlContent, tidyOptions, function(err, html) {
         htmlContent = html;
         done = true;
     });
-
     deasync.loopWhile(function(){
         return !done;
     });
-    return '<div class="example">' + jade.render(content) + '</div><pre class="code"><span class="code__copy">copy to clipboard</span><code class="html">' + escape(htmlContent) + '</code></pre>';
+    htmlContent = escape(htmlContent);
+    return '<div class="example">' + renderedContent + '</div><pre class="code"><span class="code__copy">copy to clipboard</span><code class="html">' + htmlContent + '</code></pre>';
 };
 
 jade.filters.html =  function(content){
     var htmlContent = content;
     var done = false;
-    tidy(htmlContent, {
-        'show-body-only': 'auto',
-        hideComments: false,
-        indent: true
-    }, function(err, html) {
+    tidy(htmlContent, tidyOptions, function(err, html) {
         htmlContent = html;
         done = true;
     });
@@ -107,7 +116,8 @@ jade.filters.html =  function(content){
     deasync.loopWhile(function(){
         return !done;
     });
-    return '<div class="example">' + content + '</div><pre class="code"><span class="code__copy">copy to clipboard</span><code class="html">' + escape(htmlContent) + '</code></pre>';
+    htmlContent = escape(htmlContent);
+    return '<div class="example">' + content + '</div><pre class="code"><span class="code__copy">copy to clipboard</span><code class="html">' + htmlContent + '</code></pre>';
 };
 
 jade.filters.scss =  function(content){
