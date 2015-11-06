@@ -39,7 +39,6 @@ $ko-font-regular: 400 !default;
 $ko-font-thin: 300 !default;
 $ko-font-header-size-xxl: ceil(($ko-font-size-base * 2.6)) !default;
 $ko-font-header-size-xl: ceil(($ko-font-size-base * 2.15)) !default;
-<<<<<<< HEAD
 $ko-font-header-size-lg: ceil(($ko-font-size-base * 1.7)) !default;
 $ko-font-header-size-md: ceil(($ko-font-size-base * 1.35)) !default;
 $ko-font-header-size-sm: $ko-font-size-base !default;
@@ -58,16 +57,10 @@ $ko-button-color-warning : $ko-color-warning !default;
 $ko-button-text-color-warning : $ko-color-white !default;
 $ko-button-color-info : $ko-color-info !default;
 $ko-button-text-color-info : $ko-color-white !default;
-=======
-$ko-font-header-size-lg: ceil(($ko-font-size-base * 1.7)) !default; 
-$ko-font-header-size-md: ceil(($ko-font-size-base * 1.35)) !default; 
-$ko-font-header-size-sm: $ko-font-size-base !default;                
-$ko-font-header-size-xs: ceil(($ko-font-size-base * .85)) !default;
-$ko-font-path: '../fonts/' !default;
 
 // Popover
 $ko-popover-background-color: $ko-color-white !default;
 $ko-popover-border-color: darken($ko-color-gray, 15%) !default;
 $ko-popover-arrow-size: 5px !default;
 $ko-popover-border-width: 3px !default;
->>>>>>> 0f98d3b18846f238f9a9859ae2e8daee7c4959b8
+
