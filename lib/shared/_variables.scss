@@ -48,5 +48,5 @@ $ko-font-path: '../fonts/' !default;
 // Popover
 $ko-popover-background-color: $ko-color-white !default;
 $ko-popover-border-color: darken($ko-color-gray, 15%) !default;
-$ko-popover-arrow-size: 5px !default;
-$ko-popover-border-width: 3px !default;
+$ko-popover-arrow-size: 14px !default; // should always be even
+$ko-popover-border-width: 1px !default;
