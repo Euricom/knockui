@@ -18,7 +18,7 @@ $ko-border-radius : 4px !default;
 // Grid
 $ko-grid-cells: 12 !default;
 $ko-grid-gutter: 10px !default;
-$ko-grid-breakpoints: (
+$ko-grid-breakpoints:(
   'd' : 'default',
   's' : '(max-width : 768px)',
   'm' : '(min-width : 768px) and (max-width : 1024px)',
