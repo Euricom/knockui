@@ -151,7 +151,7 @@ $_ko-popover-arrow-border: $ko-popover-border-width + $ko-popover-border-width;
 .ko-popover--left-top {
   @include _ko-arrowpos() {
     right: 100%;
-    top: 0px;
+    top: 0;
   };
 }
 

@@ -1,28 +1,32 @@
-.ko-input {
+%ko-input {
   border: 1px solid $ko-color-dark-gray;
   border-radius: 2px;
   line-height: 1.1em;
   outline: 0;
-  padding: 5px 5px;
+  padding: 5px;
+}
+
+.ko-input {
+  @extend %ko-input;
 }
 
 .ko-input--success {
-  @extend .ko-input;
+  @extend %ko-input;
   border-color: $ko-color-success;
 }
 
 
 .ko-input--danger {
-  @extend .ko-input;
+  @extend %ko-input;
   border-color: $ko-color-danger;
 }
 
 .ko-input--warning {
-  @extend .ko-input;
+  @extend %ko-input;
   border-color: $ko-color-warning;
 }
 
 .ko-input--info {
-  @extend .ko-input;
+  @extend %ko-input;
   border-color: $ko-color-info;
 }
