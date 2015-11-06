@@ -22,3 +22,15 @@
   background-color: $ko-color-info;
   color: $ko-color-white;
 }
+
+%ko-text--align-center {
+  text-align: center;
+}
+
+%ko-text--align-left {
+  text-align: left;
+}
+
+%ko-text--align-right {
+  text-align: right;
+}

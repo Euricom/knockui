@@ -7,40 +7,58 @@ block component-name
     | Extends
 
 block component
+    h3.title Text Alignment
+    :jade
+        .align-element-1 Text
+        .align-element-2 Text
+        .align-element-3 Text
+    :scss
+        .align-element-1 {
+            @extend %ko-text--align-left;
+        }
+
+        .align-element-2 {
+            @extend %ko-text--align-center;
+        }
+
+        .align-element-3 {
+            @extend %ko-text--align-right;
+        }
+
     h3.title Background Colors
     :jade
-        .custom-element-1 My background is primary
-        .custom-element-2 My background is success
-        .custom-element-3 My background is warning
-        .custom-element-4 My background is danger
-        .custom-element-5 My background is info
+        .background-element-1 My background is primary
+        .background-element-2 My background is success
+        .background-element-3 My background is warning
+        .background-element-4 My background is danger
+        .background-element-5 My background is info
     :scss
-        %custom-element {
+        %background-element {
             padding: 20px;
             margin-bottom: 10px;
         }
 
-        .custom-element-1 {
+        .background-element-1 {
             @extend %ko-background--primary;
-            @extend %custom-element;
+            @extend %background-element;
         }
 
-        .custom-element-2 {
+        .background-element-2 {
             @extend %ko-background--success;
-            @extend %custom-element;
+            @extend %background-element;
         }
 
-        .custom-element-3 {
+        .background-element-3 {
             @extend %ko-background--warning;
-            @extend %custom-element;
+            @extend %background-element;
         }
 
-        .custom-element-4 {
+        .background-element-4 {
             @extend %ko-background--danger;
-            @extend %custom-element;
+            @extend %background-element;
         }
 
-        .custom-element-5 {
+        .background-element-5 {
             @extend %ko-background--info;
-            @extend %custom-element;
+            @extend %background-element;
         }
