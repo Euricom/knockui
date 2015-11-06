@@ -7,31 +7,31 @@ block component-name
     | Definition
     h4.title Default Definition
     :jade
-        .definition
-            h5.definition-title
+        .ko-definition
+            h5.ko-definition__title
                 | Example
             p
                 | Bacon ipsum dolor amet shank aute frankfurter nulla. Tempor short ribs brisket, tri-tip dolore consequat ham hock pork chop do incididunt fugiat nostrud enim alcatra. Cillum enim occaecat, velit ut ground round magna do aute strip steak. Pariatur hamburger enim occaecat prosciutto. Boudin chuck t-bone est adipisicing, aute porchetta duis.
     :scss
-        .definition-title {
+        .ko-definition__title {
             @extend %ko-font--success;
         }
     h4.title Two Columns Definition
     :jade
-        .definition-align
-            h5.definition-title__aligned
+        .ko-definition--aligned
+            h5.ko-definition__title--aligned
                 | Example
-            p.definition-text__aligned
+            p.ko-definition__text--aligned
                 | Bacon ipsum dolor amet shank aute frankfurter nulla. Tempor short ribs brisket, tri-tip dolore consequat ham hock pork chop do incididunt fugiat nostrud enim alcatra. Cillum enim occaecat, velit ut ground round magna do aute strip steak. Pariatur hamburger enim occaecat prosciutto. Boudin chuck t-bone est adipisicing, aute porchetta duis.
         .my-definition-align
-            h5.definition-title__aligned
+            h5.ko-definition__title--aligned
                 | Example Long Title
-            p.definition-text__aligned
+            p.ko-definition__text--aligned
                 | Bacon ipsum dolor amet shank aute frankfurter nulla. Tempor short ribs brisket, tri-tip dolore consequat ham hock pork chop do incididunt fugiat nostrud enim alcatra. Cillum enim occaecat, velit ut ground round magna do aute strip steak. Pariatur hamburger enim occaecat prosciutto. Boudin chuck t-bone est adipisicing, aute porchetta duis.
     :scss
-        .definition-title__aligned {
+        .ko-definition__title--aligned {
             @extend %ko-font--success;
         }
         .my-definition-align {
-            @extend %definition-align;
+            @extend %ko-definition--aligned;
         }
