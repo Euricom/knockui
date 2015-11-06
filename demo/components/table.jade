@@ -15,7 +15,8 @@ block component-name
     p   If you want more complex styling, use the following syntax for getting the basic styling & content alignment:
     :scss
         .your-class {
-            @extend %ko-table;
+            @extend .ko-table;
+            @extend %ko-table--hover;
             @extend %ko-table__aligned--bottom;
         }
     :jade
