@@ -6,7 +6,7 @@ $ko-progress-overlay-color: $ko-color-white !default;
   background-color: $ko-progress-circle-color;
   border: 1px solid $ko-progress-circle-color;
   border-radius: 50%;
-  display: block;
+  display: table;
   height: 100px;
   margin-right: 30px;
   position: relative;
@@ -16,15 +16,15 @@ $ko-progress-overlay-color: $ko-color-white !default;
 .progress-circle__overlay {
   background-color: $ko-progress-overlay-color;
   border-radius: 50%;
-  color : $ko-progress-color;
+  color: $ko-progress-color;
   font-size: 16px;
-  height: 80px;
-  line-height: 80px;
-  margin-left: 10px;
-  margin-top: 10px;
+  height: 80%;
+  //line-height: .8;
+  margin-left: 10%;
+  margin-top: 10%;
   position: absolute;
   text-align: center;
-  width: 80px;
+  width: 80%;
 }
 
 $step: 5;
