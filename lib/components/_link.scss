@@ -31,5 +31,6 @@
 .ko-link--disabled {
   @extend %ko-font--primary;
   color: $ko-color-dark-gray;
+  cursor: not-allowed;
   text-decoration: none;
 }
