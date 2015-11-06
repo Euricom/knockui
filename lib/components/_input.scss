@@ -6,6 +6,23 @@
   outline: 0;
 }
 
-.ko-input--succes {
+.ko-input--success {
+  @extend .ko-input;
   border-color: $ko-color-success;
+}
+
+
+.ko-input--danger {
+  @extend .ko-input;
+  border-color: $ko-color-danger;
+}
+
+.ko-input--warning {
+  @extend .ko-input;
+  border-color: $ko-color-warning;
+}
+
+.ko-input--info {
+  @extend .ko-input;
+  border-color: $ko-color-info;
 }
