@@ -1,0 +1,22 @@
+%ko-breadcrumbs__item {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+
+
+.ko-breadcrumbs__item {
+  @extend %ko-breadcrumbs__item;
+  @extend %ko-font-header-size-xs;
+  text-decoration: underline;
+}
+
+
+.ko-breadcrumbs__item--active {
+  @extend %ko-breadcrumbs__item;
+  @extend %ko-font--bold;
+}
+
+.ko-breadcrumbs__icon {
+  margin: 0 10px;
+}
