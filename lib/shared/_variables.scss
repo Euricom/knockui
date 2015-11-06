@@ -12,6 +12,16 @@ $ko-color-info: #8f16c7;
 // Layout
 $ko-page-width: 960px !default;
 
+// Grid
+$ko-grid-cells: 12 !default;
+$ko-grid-gutter: 10px !default;
+$ko-grid-breakpoints: (
+  'd' : 'default',
+  's' : '(max-width : 768px)',
+  'm' : '(min-width : 768px) and (max-width : 1024px)',
+  'l' : '(min-width : 1024px)'
+) !default;
+
 // Fonts
 $ko-font-primary: $ko-color-primary !default;
 $ko-font-success: $ko-color-success !default;
