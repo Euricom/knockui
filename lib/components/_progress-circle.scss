@@ -1,0 +1,45 @@
+$ko-progress-color: $ko-color-primary !default;
+$ko-progress-circle-color: lighten($ko-progress-color, 40);
+$ko-progress-overlay-color: $ko-color-white !default;
+
+%progress-radial {
+  background-color: $ko-progress-circle-color;
+  border: 1px solid $ko-progress-circle-color;
+  border-radius: 50%;
+  display: block;
+  height: 100px;
+  margin-right: 30px;
+  position: relative;
+  width: 100px;
+}
+
+.progress-circle__overlay {
+  background-color: $ko-progress-overlay-color;
+  border-radius: 50%;
+  color : $ko-progress-color;
+  font-size: 16px;
+  height: 80px;
+  line-height: 80px;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: absolute;
+  text-align: center;
+  width: 80px;
+}
+
+$step: 5;
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+@for $i from 0 through $loops {
+  .progress-circle--#{$i * $step} {
+    @extend %progress-radial;
+    @if $i < $half {
+      $nextdeg: 90deg + $increment * $i;
+      background-image: linear-gradient(90deg, $ko-progress-circle-color 50%, transparent 50%, transparent), linear-gradient($nextdeg, $ko-progress-color 50%, $ko-progress-circle-color 50%, $ko-progress-circle-color);
+    } @else {
+      $nextdeg: -90deg + $increment * ($i - $half);
+      background-image: linear-gradient($nextdeg, $ko-progress-color 50%, transparent 50%, transparent), linear-gradient(270deg, $ko-progress-color 50%, $ko-progress-circle-color 50%, $ko-progress-circle-color);
+    }
+  }
+}
