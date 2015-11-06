@@ -1,0 +1,30 @@
+.definition {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.definition-title{
+  margin-bottom: 10px;
+}
+
+.definition-align {
+  @extend .definition;
+  display: flex;
+}
+
+%definition-align {
+  @extend .definition;
+  display: flex;
+}
+
+.definition-text__aligned {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 80%;
+}
+
+.definition-title__aligned {
+  text-align: right;
+  line-height: $ko-font-line-height-base;
+  width: 20%;
+}
