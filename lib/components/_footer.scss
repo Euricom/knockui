@@ -1,14 +1,12 @@
-.ko-footer__icon{
+.ko-footer__icon {
   display: block;
   margin: 50px auto auto;
-  max-width: 100%;
   max-height: 100%;
+  max-width: 100%;
 }
 
-.ko-footer{
-  border-color: #2092d1;
-  border-style: solid;
-  border-top-width: 5px;
-  height:auto;
+.ko-footer {
+  border-top: solid 5px $ko-color-primary;
+  height: auto;
   width: auto;
 }

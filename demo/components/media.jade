@@ -5,3 +5,15 @@ block variables
 
 block component-name
     | Media
+
+block component
+    h4.title Media block
+    :jade
+        div.ko-media
+            img(class='ko-media__img' src='http://ecx.images-amazon.com/images/I/41LsqcfxGbL._SX258_BO1,204,203,200_.jpg')
+            p.ko-media__info
+                a(class='ko-link', href='http://somelink.com') Dependency injection in .NET
+                span.ko-media__text
+                    | Mark Seemann
+                span.ko-media__text
+                    | October 2011

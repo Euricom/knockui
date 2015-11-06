@@ -1,3 +1,13 @@
+%ko-background--light-gray {
+  background-color: $ko-color-light-gray;
+  color: $ko-color-white;
+}
+
+%ko-background--gray {
+  background-color: $ko-color-dark-gray;
+  color: $ko-color-white;
+}
+
 %ko-background--primary {
   background-color: $ko-color-primary;
   color: $ko-color-white;
@@ -21,4 +31,16 @@
 %ko-background--info {
   background-color: $ko-color-info;
   color: $ko-color-white;
+}
+
+%ko-text--align-center {
+  text-align: center;
+}
+
+%ko-text--align-left {
+  text-align: left;
+}
+
+%ko-text--align-right {
+  text-align: right;
 }

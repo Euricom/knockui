@@ -2,7 +2,7 @@
   border-bottom: 1px solid $color;
 }
 
-.ko-link {
+%ko-link {
   @extend %ko-font--primary;
   @include _ko-link-border-color($ko-color-primary);
   text-decoration: none;
@@ -12,14 +12,24 @@
   }
 }
 
+.ko-link {
+  @extend %ko-link;
+}
+
 .ko-link--succes {
-  @extend .ko-link;
+  @extend %ko-link;
   @extend %ko-font--success;
   @include _ko-link-border-color($ko-color-success);
 }
 
 .ko-link--danger {
-  @extend .ko-link;
+  @extend %ko-link;
   @extend %ko-font--danger;
   @include _ko-link-border-color($ko-color-danger);
+}
+
+.ko-link--disabled {
+  @extend %ko-font--primary;
+  color: $ko-color-dark-gray;
+  text-decoration: none;
 }
