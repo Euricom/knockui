@@ -1,30 +1,36 @@
-$_ko-popover-arrow-border: $ko-popover-border-width + 1;
+$_ko-popover-arrow-border: $ko-popover-border-width + $ko-popover-border-width;
 
 @mixin _ko-arrowpos() {
-  &::after, &::before {
+  &::after,
+  &::before {
     @content;
   }
 }
 
 // default (no arrow)
-.ko-popover {
+%ko-popover {
   background: $ko-color-white;
   border: $ko-popover-border-width solid $ko-popover-border-color;
   border-radius: 5px;
-  box-shadow: 1px 2px 3px rgba($ko-popover-border-color, 0.5);
+  box-shadow: 1px 2px 3px rgba($ko-popover-border-color, .5);
   display: inline-block;
   padding: 10px;
   position: relative;
 }
 
+.ko-popover {
+  @extend %ko-popover;
+}
+
 // placeholder for arrows
 %ko-popover--arrow {
-  &::before, &::after {
+  &::before,
+  &::after {
     border: solid transparent;
     content: '';
     height: 0;
-    position: absolute;
     pointer-events: none;
+    position: absolute;
     width: 0;
   }
 
@@ -38,8 +44,10 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
 }
 
 // states
-.ko-popover--top-left, .ko-popover--top-middle, .ko-popover--top-right {
-  @extend .ko-popover;
+.ko-popover--top-left,
+.ko-popover--top-middle,
+.ko-popover--top-right {
+  @extend %ko-popover;
   @extend %ko-popover--arrow;
 
   &::before {
@@ -53,8 +61,10 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
   }
 }
 
-.ko-popover--left-top, .ko-popover--left-middle, .ko-popover--left-bottom {
-  @extend .ko-popover;
+.ko-popover--left-top,
+.ko-popover--left-middle,
+.ko-popover--left-bottom {
+  @extend %ko-popover;
   @extend %ko-popover--arrow;
 
   &::before {
@@ -68,8 +78,10 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
   }
 }
 
-.ko-popover--bottom-left, .ko-popover--bottom-middle, .ko-popover--bottom-right {
-  @extend .ko-popover;
+.ko-popover--bottom-left,
+.ko-popover--bottom-middle,
+.ko-popover--bottom-right {
+  @extend %ko-popover;
   @extend %ko-popover--arrow;
 
   &::before {
@@ -83,8 +95,10 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
   }
 }
 
-.ko-popover--right-top, .ko-popover--right-middle, .ko-popover--right-bottom {
-  @extend .ko-popover;
+.ko-popover--right-top,
+.ko-popover--right-middle,
+.ko-popover--right-bottom {
+  @extend %ko-popover;
   @extend %ko-popover--arrow;
 
   &::before {
@@ -98,29 +112,30 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
   }
 }
 
-.ko-popover--left-bottom, .ko-popover--right-bottom {
+.ko-popover--left-bottom,
+.ko-popover--right-bottom {
   &::before {
-    margin-top: 0;
     margin-bottom: -$ko-popover-arrow-size;
+    margin-top: 0;
   }
 
   &::after {
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
 .ko-popover--top-left {
   @include _ko-arrowpos() {
-    left: 15px;
     bottom: 100%;
+    left: 10%;
   };
 }
 
 .ko-popover--top-middle {
   @include _ko-arrowpos() {
-    left: 50%;
     bottom: 100%;
+    left: 50%;
     margin-left: 0;
     transform: translateX(-50%);
   };
@@ -128,9 +143,8 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
 
 .ko-popover--top-right {
   @include _ko-arrowpos() {
-    left: auto;
-    right: 15px;
     bottom: 100%;
+    left: 90%;
   };
 }
 
@@ -143,9 +157,9 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
 
 .ko-popover--left-middle {
   @include _ko-arrowpos() {
+    margin: 0;
     right: 100%;
     top: 50%;
-    margin: 0;
     transform: translateY(-50%);
   };
 }
@@ -167,8 +181,8 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
 .ko-popover--bottom-middle {
   @include _ko-arrowpos() {
     left: 50%;
-    top: 100%;
     margin-left: 0;
+    top: 100%;
     transform: translateX(-50%);
   };
 }
@@ -190,8 +204,8 @@ $_ko-popover-arrow-border: $ko-popover-border-width + 1;
 .ko-popover--right-middle {
   @include _ko-arrowpos() {
     left: 100%;
-    top: 50%;
     margin: 0;
+    top: 50%;
     transform: translateY(-50%);
   };
 }
