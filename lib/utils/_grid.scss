@@ -15,7 +15,7 @@ $ko-grid-breakpoints: (
 @mixin _ko-grid($breakpoint-name) {
   %ko-grid__cell--#{$breakpoint-name} {
     box-sizing: border-box;
-    margin : $ko-grid-gutter / 2;
+    margin: $ko-grid-gutter / 2;
   }
 
   @for $i from 1 through $ko-grid-cells {
