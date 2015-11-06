@@ -5,3 +5,111 @@ block variables
 
 block component-name
     | Table
+
+    h4.title Default Table
+    :jade
+        .ko-table
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+
+    h4.title Hover Table
+    :jade
+        .ko-table--hover
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+
+    h4.title Alternated Table
+    :jade
+        .ko-table--alternated
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+
+    h4.title Spaced Table
+    :jade
+        .ko-table--spaced
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+
+
+    h4.title Custom Table
+    :jade
+        .custom-table
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+    :scss
+        .custom-table {
+            @extend %ko-table;
+            @extend %ko-table--hover;
+            @extend %ko-table--alternated;
+        }
+
+    h4.title Cell Alignment
+    :jade
+        .ko-table
+            .ko-table__row
+                .ko-table__cell.top Cell content
+                .ko-table__cell.middle Cell content
+                .ko-table__cell.bottom Cell content
+    :scss
+        .top {
+            @extend %ko-table--align-top;
+            height: 100px;
+        }
+
+        .middle {
+            @extend %ko-table--align-middle;
+        }
+
+        .bottom {
+            @extend %ko-table--align-bottom;
+        }

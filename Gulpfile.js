@@ -68,6 +68,7 @@ gulp.task('iconfont', function(){
             cssClass: 'ko-icon'
         }))
         .pipe(iconfont({
+            formats: ['ttf', 'eot', 'woff', 'svg'],
             fontName: fontName
         }))
         .pipe(gulp.dest('lib/fonts/'));
@@ -139,12 +140,16 @@ gulp.task('views', function () {
 
 gulp.task('compile', function (cb) {
     run('clean', [
-        'iconfont',
         'lint',
         'styles',
         'views'
     ], cb);
 });
+
+gulp.task('build', [
+    'iconfont',
+    'compile'
+]);
 
 gulp.task('serve', ['compile'], function () {
     gulp.watch(paths.demo.views, ['styles', 'views']);
