@@ -1,6 +1,5 @@
 .ko-definition {
-  width: 100%;
-  padding: 20px 0;
+  @extend %ko-grid;
 }
 
 .ko-definition__title{
@@ -9,22 +8,18 @@
 
 .ko-definition--aligned {
   @extend .definition;
-  display: flex;
 }
 
 %ko-definition--aligned {
   @extend .ko-definition;
-  display: flex;
 }
 
 .ko-definition__text--aligned {
-  box-sizing: border-box;
-  padding: 0 20px;
-  width: 80%;
+  @extend %ko-grid__cell--8;
 }
 
 .ko-definition__title--aligned {
-  text-align: right;
+  @extend %ko-grid__cell--4;
   line-height: $ko-font-line-height-base;
-  width: 20%;
+  text-align: right;
 }
