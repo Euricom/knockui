@@ -108,11 +108,12 @@
   &::after {
     display: block;
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1em;
+    margin-top: -5px;
     pointer-events: none;
     position: absolute;
     right: 20px;
-    top: 0;
+    top: 50%;
   }
 }
 
