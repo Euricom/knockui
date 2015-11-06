@@ -7,96 +7,109 @@ block component-name
     | Table
 
     h4.title Default Table
-    br
-    p   You can use simple CSS classes:
-    :scss
-        .ko-table .ko-table--hover .ko-table--spaced .ko-table--alternated
-    br
-    p   If you want more complex styling, use the following syntax for getting the basic styling & content alignment:
-    :scss
-        .your-class {
-            @extend .ko-table;
-            @extend %ko-table--hover;
-            @extend %ko-table__aligned--bottom;
-        }
     :jade
-        div.my-table
-            div.ko-table__row
-                div.ko-table__cell
-                    | icon
-                div.ko-table__cell
-                    h5
-                        | General resume
-                    p
-                        | Kristof Peters
-                div.ko-table__cell
-                    | Edited 2 days ago
-            div.ko-table__row
-                div.ko-table__cell
-                    | icon
-                div.ko-table__cell
-                    h5
-                        | Development resume
-                div.ko-table__cell
-                    | Edited 2 days ago
-    :scss
-        .my-table {
-            @extend .ko-table;
-            @extend %ko-table--hover;
-        }
-    h4.title Spaced Table
-        :jade
-            div.my-table-spaced
-                div.ko-table__row
-                    div.ko-table__cell
-                        | icon
-                    div.ko-table__cell
-                        h5
-                            | General resume
-                        p
-                            | Kristof Peters
-                    div.ko-table__cell
-                        | Edited 2 days ago
-                div.ko-table__row
-                    div.ko-table__cell
-                        | icon
-                    div.ko-table__cell
-                        h5
-                            | Development resume
-                    div.ko-table__cell
-                        | Edited 2 days ago
-        :scss
-            .my-table-spaced {
-                @extend .ko-table;
-                @extend %ko-table--spaced;
-            }
-    h4.title Alternated Table
-        :jade
-            div.my-table-alt
-                div.ko-table__row
-                    div.ko-table__cell
-                        | icon
-                    div.ko-table__cell
-                        h5
-                            | General resume
-                        p
-                            | Kristof Peters
-                    div.ko-table__cell
-                        | Edited 2 days ago
-                div.ko-table__row
-                    div.ko-table__cell
-                        | icon
-                    div.ko-table__cell
-                        h5
-                            | Development resume
-                        p    Created by Ksenia
-                        p    Edited by Bjorn
-                    div.ko-table__cell
-                        | Edited 2 days ago
+        .ko-table
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
 
-        :scss
-            .my-table-alt {
-                @extend %ko-table__aligned--bottom;
-                @extend .ko-table;
-                @extend %ko-table--alternated;
-            }
+    h4.title Hover Table
+    :jade
+        .ko-table--hover
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+
+    h4.title Alternated Table
+    :jade
+        .ko-table--alternated
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+
+    h4.title Spaced Table
+    :jade
+        .ko-table--spaced
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+
+
+    h4.title Custom Table
+    :jade
+        .custom-table
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+            .ko-table__row
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+                .ko-table__cell Cell content
+    :scss
+        .custom-table {
+            @extend %ko-table;
+            @extend %ko-table--hover;
+            @extend %ko-table--alternated;
+        }
+
+    h4.title Cell Alignment
+    :jade
+        .ko-table
+            .ko-table__row
+                .ko-table__cell.top Cell content
+                .ko-table__cell.middle Cell content
+                .ko-table__cell.bottom Cell content
+    :scss
+        .top {
+            @extend %ko-table--align-top;
+            height: 100px;
+        }
+
+        .middle {
+            @extend %ko-table--align-middle;
+        }
+
+        .bottom {
+            @extend %ko-table--align-bottom;
+        }

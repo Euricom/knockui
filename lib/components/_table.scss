@@ -64,14 +64,14 @@
   @extend %ko-table--hover;
 }
 
-%ko-table__aligned--middle {
+%ko-table--align-middle {
   vertical-align: middle;
 }
 
-%ko-table__aligned--top {
+%ko-table--align-top {
   vertical-align: top;
 }
 
-%ko-table__aligned--bottom {
+%ko-table--align-bottom {
   vertical-align: bottom;
 }
