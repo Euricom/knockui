@@ -1,3 +1,6 @@
+$ko-progress-duration : 2s !default;
+$ko-progress-border : 5px !default;
+
 @keyframes move {
   0% {
     max-width: 0;
@@ -9,7 +12,7 @@
 
 .ko-progress-bar {
   background-color: $ko-color-gray;
-  height: 20px; // Can be anything
+  height: 20px;
   position: relative;
 }
 
@@ -20,14 +23,14 @@
 
 .ko-progress-bar--rounded {
   @extend .ko-progress-bar;
-  border-radius: 5px;
+  border-radius: $ko-progress-border;
 
   .ko-progress-bar__progress,
   .ko-progress-bar__progress--danger,
   .ko-progress-bar__progress--info,
   .ko-progress-bar__progress--success,
   .ko-progress-bar__progress--warning {
-    border-radius: 5px;
+    border-radius: $ko-progress-border;
   }
 }
 
@@ -39,7 +42,7 @@
   .ko-progress-bar__progress--info,
   .ko-progress-bar__progress--success,
   .ko-progress-bar__progress--warning {
-    animation: move 2s linear;
+    animation: move $ko-progress-duration linear;
   }
 }
 
