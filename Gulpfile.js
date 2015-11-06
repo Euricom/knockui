@@ -147,7 +147,7 @@ gulp.task('compile', function (cb) {
 });
 
 gulp.task('serve', ['compile'], function () {
-    gulp.watch(paths.demo.views, ['views']);
+    gulp.watch(paths.demo.views, ['styles', 'views']);
     gulp.watch(paths.demo.styles, ['styles']);
     gulp.watch(paths.lib, ['lint', 'styles']);
 
