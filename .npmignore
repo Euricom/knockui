@@ -1,4 +1,5 @@
-scsslinst.yml
+scsslint.yml
 Gulpfile.js
 demo
 bower.json
+.npmignore
