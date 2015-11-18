@@ -30,7 +30,8 @@ var paths = {
 };
 
 var ports = {
-    tmp: 50000
+    tmp: 50000,
+    reload: 50001
 };
 
 // Compilation
@@ -187,7 +188,9 @@ gulp.task('serve', ['compile'], function () {
     connect.server({
         root: [paths.tmp, './'],
         port: ports.tmp,
-        livereload: true
+        livereload: {
+            port: ports.reload
+        }
     });
 });
 

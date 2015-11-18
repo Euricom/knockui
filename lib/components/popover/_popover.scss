@@ -12,92 +12,184 @@
 .ko-popover--left-center,
 .ko-popover--left-bottom {
   @extend %ko-popover;
+
+  min-width: 150px;
+  opacity: 1;
+  position: absolute;
+  transition: opacity $ko-transition-duration $ko-transition-easing;
+  z-index: 100;
 }
 
-.ko-popover--top-left::after {
-  @extend %ko-popover-arrow;
-  left: $ko-popover-arrow-size;
-  top: -$ko-popover-arrow-size / 2;
-  transform: rotate(-45deg);
+.ko-popover--closed {
+  opacity: 0;
 }
 
-.ko-popover--top-center::after {
-  @extend %ko-popover-arrow;
-  left: calc(50% - #{$ko-popover-arrow-size / 2});
-  top: -$ko-popover-arrow-size / 2;
-  transform: rotate(-45deg);
+.ko-popover__container {
+  position: relative;
 }
 
-.ko-popover--top-right::after {
-  @extend %ko-popover-arrow;
-  left: auto;
-  right: $ko-popover-arrow-size;
-  top: -$ko-popover-arrow-size / 2;
-  transform: rotate(-45deg);
+.ko-popover {
+  right: -$ko-popover-arrow-size;
+  top: 50%;
+  transform: translateX(100%) translateY(-50%);
 }
 
-.ko-popover--right-top::after {
-  @extend %ko-popover-arrow;
-  right: -$ko-popover-arrow-size / 2;
-  top: $ko-popover-arrow-size / 2;
-  transform: rotate(45deg);
+.ko-popover--bottom-right {
+  bottom: 0-$ko-popover-arrow-size;
+  left: 50%;
+  transform: translateY(100%) translateX(-$ko-popover-arrow-size*1.5);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    left: $ko-popover-arrow-size;
+    top: -$ko-popover-arrow-size / 2;
+    transform: rotate(-45deg);
+  }
 }
 
-.ko-popover--right-center::after {
-  @extend %ko-popover-arrow;
-  right: -$ko-popover-arrow-size / 2;
-  top: calc(50% - #{$ko-popover-arrow-size / 2});
-  transform: rotate(45deg);
+.ko-popover--bottom-center {
+  bottom: 0-$ko-popover-arrow-size;
+  left: 50%;
+  transform: translateY(100%) translateX(-50%);
+
+  ::after {
+    @extend %ko-popover-arrow;
+    left: calc(50% - #{$ko-popover-arrow-size / 2});
+    top: -$ko-popover-arrow-size / 2;
+    transform: rotate(-45deg);
+  }
 }
 
-.ko-popover--right-bottom::after {
-  @extend %ko-popover-arrow;
-  bottom: $ko-popover-arrow-size / 2;
-  right: -$ko-popover-arrow-size / 2;
-  top: auto;
-  transform: rotate(45deg);
+.ko-popover--bottom-left {
+  bottom: 0-$ko-popover-arrow-size;
+  right: 50%;
+  transform: translateY(100%) translateX($ko-popover-arrow-size*1.5);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    left: auto;
+    right: $ko-popover-arrow-size;
+    top: -$ko-popover-arrow-size / 2;
+    transform: rotate(-45deg);
+  }
 }
 
-.ko-popover--bottom-left::after {
-  @extend %ko-popover-arrow;
-  bottom: -$ko-popover-arrow-size / 2;
-  left: $ko-popover-arrow-size;
-  transform: rotate(135deg);
+.ko-popover--left-bottom {
+  left: -$ko-popover-arrow-size;
+  top: 50%;
+  transform: translateX(-100%) translateY(-$ko-popover-arrow-size);
+
+  ::after {
+    @extend %ko-popover-arrow;
+    right: -$ko-popover-arrow-size / 2;
+    top: $ko-popover-arrow-size / 2;
+    transform: rotate(45deg);
+  }
 }
 
-.ko-popover--bottom-center::after {
-  @extend %ko-popover-arrow;
-  bottom: -$ko-popover-arrow-size / 2;
-  left: calc(50% - #{$ko-popover-arrow-size / 2});
-  transform: rotate(135deg);
+.ko-popover--left-center {
+  left: -$ko-popover-arrow-size;
+  top: 50%;
+  transform: translateX(-100%) translateY(-50%);
+
+  ::after {
+    @extend %ko-popover-arrow;
+    right: -$ko-popover-arrow-size / 2;
+    top: calc(50% - #{$ko-popover-arrow-size / 2});
+    transform: rotate(45deg);
+  }
 }
 
-.ko-popover--bottom-right::after {
-  @extend %ko-popover-arrow;
-  bottom: -$ko-popover-arrow-size / 2;
-  left: auto;
-  right: $ko-popover-arrow-size;
-  transform: rotate(135deg);
+.ko-popover--left-top {
+  bottom: 50%;
+  left: -$ko-popover-arrow-size;
+  transform: translateX(-100%) translateY($ko-popover-arrow-size);
+
+  ::after {
+    @extend %ko-popover-arrow;
+    bottom: $ko-popover-arrow-size / 2;
+    right: -$ko-popover-arrow-size / 2;
+    top: auto;
+    transform: rotate(45deg);
+  }
 }
 
-.ko-popover--left-top::after {
-  @extend %ko-popover-arrow;
-  left: -$ko-popover-arrow-size / 2;
-  top: $ko-popover-arrow-size / 2;
-  transform: rotate(225deg);
+.ko-popover--top-right {
+  left: 50%;
+  top: -$ko-popover-arrow-size;
+  transform: translateY(-100%) translateX(-$ko-popover-arrow-size*1.5);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    bottom: -$ko-popover-arrow-size / 2;
+    left: $ko-popover-arrow-size;
+    transform: rotate(135deg);
+  }
 }
 
-.ko-popover--left-center::after {
-  @extend %ko-popover-arrow;
-  left: -$ko-popover-arrow-size / 2;
-  top: calc(50% - #{$ko-popover-arrow-size / 2});
-  transform: rotate(225deg);
+.ko-popover--top-center {
+  left: 50%;
+  top: -$ko-popover-arrow-size;
+  transform: translateY(-100%) translateX(-50%);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    bottom: -$ko-popover-arrow-size / 2;
+    left: calc(50% - #{$ko-popover-arrow-size / 2});
+    transform: rotate(135deg);
+  }
 }
 
-.ko-popover--left-bottom::after {
-  @extend %ko-popover-arrow;
-  bottom: $ko-popover-arrow-size / 2;
-  left: -$ko-popover-arrow-size / 2;
-  top: auto;
-  transform: rotate(225deg);
+.ko-popover--top-left {
+  right: 50%;
+  top: -$ko-popover-arrow-size;
+  transform: translateY(-100%) translateX($ko-popover-arrow-size*1.5);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    bottom: -$ko-popover-arrow-size / 2;
+    left: auto;
+    right: $ko-popover-arrow-size;
+    transform: rotate(135deg);
+  }
+}
+
+.ko-popover--right-bottom {
+  right: -$ko-popover-arrow-size;
+  top: 50%;
+  transform: translateY(-$ko-popover-arrow-size) translateX(100%);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    left: -$ko-popover-arrow-size / 2;
+    top: $ko-popover-arrow-size / 2;
+    transform: rotate(225deg);
+  }
+}
+
+.ko-popover--right-center {
+  bottom: 50%;
+  right: -$ko-popover-arrow-size;
+  transform: translateY(50%) translateX(100%);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    left: -$ko-popover-arrow-size / 2;
+    top: calc(50% - #{$ko-popover-arrow-size / 2});
+    transform: rotate(225deg);
+  }
+}
+
+.ko-popover--right-top {
+  bottom: 50%;
+  right: -$ko-popover-arrow-size;
+  transform: translateY($ko-popover-arrow-size) translateX(100%);
+
+  &::after {
+    @extend %ko-popover-arrow;
+    bottom: $ko-popover-arrow-size / 2;
+    left: -$ko-popover-arrow-size / 2;
+    top: auto;
+    transform: rotate(225deg);
+  }
 }
