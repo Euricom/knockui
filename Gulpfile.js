@@ -75,6 +75,22 @@ gulp.task('iconfont', function(){
         }))
         .pipe(gulp.dest('lib/fonts/'));
 });
+gulp.task('iconfont-placeholders', function(){
+    gulp.src(['assets/**/*.svg'])
+        .pipe(iconfontCss({
+            path: 'assets/placeholders.template',
+            fontName: fontName,
+            targetPath: '../shared/placeholders/_icons.scss',
+            fontPath: '#{$ko-font-path}',
+            cssClass: 'ko-icon'
+        }))
+        .pipe(iconfont({
+            formats: ['ttf', 'eot', 'woff', 'svg'],
+            fontName: fontName,
+            timestamp: runTimestamp
+        }))
+        .pipe(gulp.dest('lib/fonts/'));
+});
 
 var tidyOptions = {
     'show-body-only': 'auto',
@@ -158,6 +174,7 @@ gulp.task('compile', function (cb) {
 
 gulp.task('build', [
     'iconfont',
+    'iconfont-placeholders',
     'compile'
 ]);
 

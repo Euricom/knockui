@@ -1,0 +1,8 @@
+%ko-link {
+  @extend %ko-font--primary;
+  @include _ko-link-border-color($ko-color-primary);
+
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}

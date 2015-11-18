@@ -1,0 +1,19 @@
+%ko-menu__item {
+  @extend %ko-font--uppercase;
+  @extend %ko-font--primary;
+  @extend %ko-font-header--md;
+
+  box-sizing: border-box;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+%ko-menu__item--horizontal {
+  padding: 10px 20px;
+  text-align: right;
+  width: 100%;
+}
+
+%ko-menu__item--vertical {
+  padding-right: 20px;
+}

@@ -1,0 +1,126 @@
+%ko-button {
+  @extend %ko-background--gray;
+
+  border: 0;
+  border-radius: $ko-border-radius;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 1;
+  outline: 0;
+  padding: 10px;
+  transition-duration: $ko-button-transition-duration;
+  transition-property: background, color;
+  transition-timing-function: $ko-transition-easing;
+
+  &:disabled,
+  &:disabled:hover {
+    @extend %ko-background--light-gray;
+    cursor: not-allowed;
+  }
+}
+
+%ko-button--primary {
+  @extend %ko-button;
+  @extend %ko-background--primary;
+}
+
+%ko-button--info {
+  @extend %ko-button;
+  @extend %ko-background--info;
+}
+
+%ko-button--warning {
+  @extend %ko-button;
+  @extend %ko-background--warning;
+}
+
+%ko-button--danger {
+  @extend %ko-button;
+  @extend %ko-background--danger;
+}
+
+%ko-button--success {
+  @extend %ko-button;
+  @extend %ko-background--success;
+}
+
+%ko-icon-button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: transparent;
+    color: $ko-color-light-gray;
+    cursor: not-allowed;
+
+    .ko-button__icon {
+      @extend %ko-outline--light-gray;
+      cursor: inherit;
+    }
+  }
+}
+
+%ko-button--outline {
+  @extend %ko-button;
+  @extend %ko-outline--gray;
+
+  &:hover {
+    @extend %ko-background--gray;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    @extend %ko-outline--light-gray;
+    cursor: not-allowed;
+  }
+}
+
+%ko-button--outline-primary {
+  @extend %ko-button;
+  @extend %ko-outline--primary;
+
+  &:hover {
+    @extend %ko-background--primary;
+  }
+}
+
+%ko-button--outline-success {
+  @extend %ko-button;
+  @extend %ko-outline--success;
+
+  &:hover {
+    @extend %ko-background--success;
+  }
+}
+
+%ko-button--outline-warning {
+  @extend %ko-button;
+  @extend %ko-outline--warning;
+
+  &:hover {
+    @extend %ko-background--warning;
+  }
+}
+
+%ko-button--outline-danger {
+  @extend %ko-button;
+  @extend %ko-outline--danger;
+
+  &:hover {
+    @extend %ko-background--danger;
+  }
+}
+
+%ko-button--outline-info {
+  @extend %ko-button--primary;
+  @extend %ko-outline--info;
+
+  &:hover {
+    @extend %ko-background--info;
+  }
+}

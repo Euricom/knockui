@@ -1,0 +1,9 @@
+@mixin ko-darken-background($color, $amount: 10%) {
+  background-color: darken($color, $amount);
+}
+
+@mixin _ko-link-border-color($color) {
+  &:hover {
+    border-bottom: 1px solid $color;
+  }
+}

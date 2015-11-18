@@ -1,0 +1,23 @@
+.ko-button--outline {
+  @extend %ko-button--outline;
+}
+
+.ko-button--outline-primary {
+  @extend %ko-button--outline-primary;
+}
+
+.ko-button--outline-success {
+  @extend %ko-button--outline-success;
+}
+
+.ko-button--outline-warning {
+  @extend %ko-button--outline-warning;
+}
+
+.ko-button--outline-danger {
+  @extend %ko-button--outline-danger;
+}
+
+.ko-button--outline-info {
+  @extend %ko-button--outline-info;
+}

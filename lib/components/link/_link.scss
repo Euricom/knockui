@@ -1,0 +1,21 @@
+.ko-link {
+  @extend %ko-link;
+}
+
+.ko-link--succes {
+  @extend %ko-link;
+  @extend %ko-font--success;
+  @include _ko-link-border-color($ko-color-success);
+}
+
+.ko-link--danger {
+  @extend %ko-link;
+  @extend %ko-font--danger;
+  @include _ko-link-border-color($ko-color-danger);
+}
+
+.ko-link--disabled {
+  color: $ko-color-dark-gray;
+  cursor: not-allowed;
+  text-decoration: none;
+}

@@ -1,0 +1,24 @@
+.ko-checkbox {
+  position: relative;
+}
+
+.ko-checkbox__input {
+  @extend %ko-checkbox;
+  margin-left: 12px;
+}
+
+.ko-checkbox__label {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ko-checkbox--disabled {
+  opacity: .5;
+  position: relative;
+
+  .ko-checkbox__label,
+  .ko-checkbox__input::after {
+    cursor: not-allowed;
+  }
+}
