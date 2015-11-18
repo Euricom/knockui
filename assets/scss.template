@@ -19,8 +19,16 @@
 }
 
 <% _.each(glyphs, function(glyph) { %>.<%= cssClass%>--<%= glyph.fileName %> {
-  @extend %_<%= cssClass%>;
   &::after {
+    @extend %_<%= cssClass%>;
+    content: '\<%= glyph.codePoint %>';
+  }
+}
+<% }); %>
+
+<% _.each(glyphs, function(glyph) { %>%<%= cssClass%>--<%= glyph.fileName %> {
+  &::after {
+    @extend %_<%= cssClass%>;
     content: '\<%= glyph.codePoint %>';
   }
 }

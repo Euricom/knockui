@@ -10,6 +10,7 @@ $ko-color-danger: #d41212 !default;
 $ko-color-warning: #fc5b19 !default;
 $ko-color-info: #8f16c7 !default;
 $ko-color-night: #142736 !default;
+$ko-color-panel: #f7f9fa !default;
 
 // Layout
 $ko-page-width: 960px !default;
@@ -18,7 +19,7 @@ $ko-border-radius : 4px !default;
 // Grid
 $ko-grid-cells: 12 !default;
 $ko-grid-gutter: 10px !default;
-$ko-grid-breakpoints: (
+$ko-grid-breakpoints:(
   'd' : 'default',
   's' : '(max-width : 768px)',
   'm' : '(min-width : 768px) and (max-width : 1024px)',
@@ -26,6 +27,7 @@ $ko-grid-breakpoints: (
 ) !default;
 
 // Fonts
+$ko-font: 'Ubuntu', sans-serif;
 $ko-font-base: #4c4c4c;
 $ko-font-primary: $ko-color-primary !default;
 $ko-font-success: $ko-color-success !default;
