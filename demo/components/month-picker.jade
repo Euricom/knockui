@@ -4,6 +4,41 @@ block variables
     - var url = '../components/month-picker.html';
 
 block component-name
-    | Month Picker
+    | Month-picker
 
 block component
+    :jade
+        .ko-monthpicker
+            p <a href="somelink.com" class="ko-monthpicker__present">Present</a>
+            hr.ko-divider
+
+            .ko-monthpicker__yeartitle
+                button.year-back test
+                h4.ko-monthpicker__year 2015
+                button.year-next test
+
+            .ko-monthpicker__months
+                .ko-monthcontainer
+                    a(class='ko-month', href='') January
+                .ko-monthcontainer
+                    a(class='ko-month', href='') February
+                .ko-monthcontainer
+                    a(class='ko-month', href='') March
+                .ko-monthcontainer
+                    a(class='ko-month', href='') April
+                .ko-monthcontainer
+                    a(class='ko-month', href='') May
+                .ko-monthcontainer
+                    a(class='ko-month', href='') June
+                .ko-monthcontainer
+                    a(class='ko-month--inactive', href='') July
+                .ko-monthcontainer
+                    a(class='ko-month--inactive', href='') August
+                .ko-monthcontainer
+                    a(class='ko-month--inactive', href='') September
+                .ko-monthcontainer
+                    a(class='ko-month--inactive', href='') October
+                .ko-monthcontainer
+                    a(class='ko-month--inactive', href='') November
+                .ko-monthcontainer
+                    a(class='ko-month--inactive', href='') December
