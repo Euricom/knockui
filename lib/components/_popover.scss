@@ -1,3 +1,17 @@
+%ko-popover {
+  background-color: $ko-popover-background-color;
+  border: $ko-popover-border-width solid $ko-popover-border-color;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px rgba($ko-color-black, .2);
+  display: inline-block;
+  @if $ko-popover-arrow-size > 20 {
+    padding: ($ko-popover-arrow-size / 2) + 4;
+  } @else {
+    padding: 12px;
+  }
+  position: relative;
+}
+
 .ko-popover,
 .ko-popover--top-left,
 .ko-popover--top-center,
@@ -11,17 +25,7 @@
 .ko-popover--left-top,
 .ko-popover--left-center,
 .ko-popover--left-bottom {
-  background-color: $ko-popover-background-color;
-  border: $ko-popover-border-width solid $ko-popover-border-color;
-  border-radius: 4px;
-  box-shadow: 1px 2px 3px rgba($ko-color-black, .2);
-  display: inline-block;
-  @if $ko-popover-arrow-size > 20 {
-    padding: ($ko-popover-arrow-size / 2) + 4;
-  } @else {
-    padding: 12px;
-  }
-  position: relative;
+  @extend %ko-popover;
 }
 
 %ko-popover-arrow {

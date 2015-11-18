@@ -1,0 +1,113 @@
+extends ../template
+
+block variables
+    - var url = '../components/date-picker.html';
+
+block component-name
+    | Date Picker
+
+block component
+    h4.title Date Picker
+    :jade
+        .ko-popover--top-center.ko-date-picker
+            .ko-date-picker__row
+                .ko-date-picker__label Date
+                .ko-select.ko-date-picker__select
+                    select
+                        option Year
+                        option 2015
+                        option 2016
+                        option ...
+                .ko-select.ko-date-picker__select
+                    select
+                        option Month
+                        option Januari
+                        option Februari
+                        option ...
+                .ko-select.ko-date-picker__select
+                    select
+                        option Day
+                        option 1
+                        option 2
+                        option ...
+            .ko-divider
+            .ko-date-picker__footer
+                button.ko-button Cancel
+                button.ko-button--primary Save
+
+
+    h4.title Month Picker
+    :jade
+        .ko-popover--top-center.ko-date-picker
+            .ko-date-picker__row
+                .ko-date-picker__label Month
+                .ko-select.ko-date-picker__select
+                    select
+                        option Year
+                        option 2015
+                        option 2016
+                        option ...
+                .ko-select.ko-date-picker__select
+                    select
+                        option Month
+                        option Januari
+                        option Februari
+                        option ...
+            .ko-divider
+            .ko-date-picker__footer
+                button.ko-button Cancel
+                button.ko-button--primary Save
+
+    h4.title Year Picker
+    :jade
+        .ko-popover--top-center.ko-date-picker
+            .ko-date-picker__row
+                .ko-date-picker__label Year
+                .ko-select.ko-date-picker__select
+                    select
+                        option Year
+                        option 2015
+                        option 2016
+                        option ...
+            .ko-divider
+            .ko-date-picker__footer
+                button.ko-button Cancel
+                button.ko-button--primary Save
+
+    h4.title Month Range Picker
+    :jade
+        .ko-popover--top-center.ko-date-picker
+            .ko-date-picker__row
+                .ko-date-picker__label From
+                .ko-select.ko-date-picker__select
+                    select
+                        option Year
+                        option 2015
+                        option 2016
+                        option ...
+                .ko-select.ko-date-picker__select
+                    select
+                        option Month
+                        option Januari
+                        option Februari
+                        option ...
+            .ko-divider
+            .ko-date-picker__row
+                .ko-date-picker__label Untill
+                .ko-select.ko-date-picker__select
+                    select
+                        option Year
+                        option present
+                        option 2015
+                        option 2016
+                        option ...
+                .ko-select.ko-date-picker__select
+                    select
+                        option Month
+                        option Januari
+                        option Februari
+                        option ...
+            .ko-divider
+            .ko-date-picker__footer
+                button.ko-button Cancel
+                button.ko-button--primary Save
