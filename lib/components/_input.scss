@@ -118,3 +118,76 @@
   @extend %ko-textarea;
   @extend %ko-input--info;
 }
+
+%ko-select {
+  position: relative;
+
+  select {
+    @extend %ko-input;
+    -webkit-appearance: none;
+    padding: 10px 50px 10px 10px;
+
+    &:read-only {
+      background-color: transparent;
+      color: $ko-font-base;
+    }
+
+    &:read-only:focus {
+      background-color: transparent;
+      color: $ko-font-base;
+    }
+
+    &:disabled {
+      background-color: $ko-color-light-gray;
+      color: $ko-color-dark-gray;
+      cursor: not-allowed;
+    }
+  }
+
+  &::after {
+    display: block;
+    font-size: 1em;
+    line-height: 1em;
+    margin-top: -5px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+  }
+}
+
+.ko-select {
+  @extend %ko-select;
+}
+
+.ko-select--success {
+  @extend %ko-select;
+
+  select {
+    @extend .ko-input--success;
+  }
+}
+
+.ko-select--danger {
+  @extend %ko-select;
+
+  select {
+    @extend .ko-input--danger;
+  }
+}
+
+.ko-select--warning {
+  @extend %ko-select;
+
+  select {
+    @extend .ko-input--warning;
+  }
+}
+
+.ko-select--info {
+  @extend %ko-select;
+
+  select {
+    @extend .ko-input--info;
+  }
+}
