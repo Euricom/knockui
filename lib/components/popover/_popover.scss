@@ -52,7 +52,7 @@
   left: 50%;
   transform: translateY(100%) translateX(-50%);
 
-  ::after {
+  &::after {
     @extend %ko-popover-arrow;
     left: calc(50% - #{$ko-popover-arrow-size / 2});
     top: -$ko-popover-arrow-size / 2;
@@ -79,7 +79,7 @@
   top: 50%;
   transform: translateX(-100%) translateY(-$ko-popover-arrow-size);
 
-  ::after {
+  &::after {
     @extend %ko-popover-arrow;
     right: -$ko-popover-arrow-size / 2;
     top: $ko-popover-arrow-size / 2;
@@ -92,7 +92,7 @@
   top: 50%;
   transform: translateX(-100%) translateY(-50%);
 
-  ::after {
+  &::after {
     @extend %ko-popover-arrow;
     right: -$ko-popover-arrow-size / 2;
     top: calc(50% - #{$ko-popover-arrow-size / 2});
@@ -105,7 +105,7 @@
   left: -$ko-popover-arrow-size;
   transform: translateX(-100%) translateY($ko-popover-arrow-size);
 
-  ::after {
+  &::after {
     @extend %ko-popover-arrow;
     bottom: $ko-popover-arrow-size / 2;
     right: -$ko-popover-arrow-size / 2;
