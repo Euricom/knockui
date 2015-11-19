@@ -1,3 +1,7 @@
+.ko-media {
+  @extend %ko-grid;
+}
+
 .ko-media__img,
 .ko-media__info {
   display: inline-block;
