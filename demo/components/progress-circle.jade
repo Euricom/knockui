@@ -7,3 +7,28 @@ block component-name
     | Progress Circle
 
 block component
+
+    style.
+        .example div {
+            margin-bottom: 20px;
+        }
+
+    :jade
+        .progress-circle--10
+            .progress-circle__overlay
+                span.progress-circle__value 10%
+        .progress-circle--20
+            .progress-circle__overlay
+                span.progress-circle__value 20%
+        .progress-circle--30
+            .progress-circle__overlay
+                span.progress-circle__value 30%
+        .progress-circle--40
+            .progress-circle__overlay
+                span.progress-circle__value 40%
+        .progress-circle--50
+            .progress-circle__overlay
+                span.progress-circle__value 50%
+        .progress-circle--60
+            .progress-circle__overlay
+                span.progress-circle__value 60%
