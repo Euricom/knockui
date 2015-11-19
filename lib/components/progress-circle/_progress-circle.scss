@@ -1,53 +1,69 @@
-$ko-progress-color: $ko-color-primary !default;
-$ko-progress-circle-color: lighten($ko-progress-color, 40);
-$ko-progress-overlay-color: $ko-color-white !default;
+// VARS
+$ko-progress-circle-border-width: 6px !default;
+$ko-progress-circle-size: 100px !default;
 
-%progress-radial {
-  background-color: $ko-progress-circle-color;
-  border: 1px solid $ko-progress-circle-color;
-  border-radius: 50%;
-  display: table;
-  height: 100px;
-  margin-right: 30px;
-  position: relative;
-  width: 100px;
-}
+$ko-progress-circle-steps: 5 !default;
 
-.progress-circle__overlay {
-  background-color: $ko-progress-overlay-color;
-  border-radius: 50%;
-  color: $ko-progress-color;
-  font-size: 16px;
-  height: 80%;
-  margin-left: 10%;
-  margin-top: 10%;
+$ko-progress-circle-color-line: $ko-color-danger !default;
+$ko-progress-circle-color-outer: $ko-color-gray !default;
+$ko-progress-circle-color-overlay: $ko-color-white !default;
+
+// PLACEHOLDERS
+@import 'placeholders';
+
+.ko-progress-circle__overlay {
+  @extend %ko-font--large;
+  color: $ko-progress-circle-color-line;
+  display: block;
+  font-size: 20px;
+  left: 0;
   position: absolute;
   text-align: center;
-  width: 80%;
-}
-
-.progress-circle__value {
-  left: 0;
-  margin: 0 10%;
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 80%;
+  width: 100%;
+  z-index: 1;
 }
 
-$step: 5;
-$loops: round(100 / $step);
-$increment: 360 / $loops;
-$half: round($loops / 2);
-@for $i from 0 through $loops {
-  .progress-circle--#{$i * $step} {
-    @extend %progress-radial;
-    @if $i < $half {
-      $nextdeg: 90deg + $increment * $i;
-      background-image: linear-gradient(90deg, $ko-progress-circle-color 50%, transparent 50%, transparent), linear-gradient($nextdeg, $ko-progress-color 50%, $ko-progress-circle-color 50%, $ko-progress-circle-color);
-    } @else {
-      $nextdeg: -90deg + $increment * ($i - $half);
-      background-image: linear-gradient($nextdeg, $ko-progress-color 50%, transparent 50%, transparent), linear-gradient(270deg, $ko-progress-color 50%, $ko-progress-circle-color 50%, $ko-progress-circle-color);
+.ko-progress-circle__slice {
+  clip: rect(0, $ko-progress-circle-size, $ko-progress-circle-size, ($ko-progress-circle-size / 2));
+  clip-path: rect(0, $ko-progress-circle-size, $ko-progress-circle-size, ($ko-progress-circle-size / 2));
+  height: $ko-progress-circle-size;
+  position: absolute;
+  width: $ko-progress-circle-size;
+}
+
+.ko-progress-circle__bar {
+  @extend %ko-progress-circle-pie;
+}
+
+$_pc-loops: 100 / $ko-progress-circle-steps;
+$_pc-increment: 360 / $_pc-loops;
+
+@for $i from 0 through $_pc-loops {
+  $_pc-actual-value: $i * $ko-progress-circle-steps;
+  $_pc-degree: $_pc-increment * $i;
+
+  .ko-progress-circle--#{$_pc-actual-value} {
+    @extend %ko-progress-circle;
+
+    @if $_pc-actual-value > 50{
+      .ko-progress-circle__slice {
+        @extend %ko-progress-circle-rect-auto;
+      }
+
+      .ko-progress-circle__bar::after {
+        @extend %ko-progress-circle-fill;
+      }
+
+      .ko-progress-circle__fill {
+        @extend %ko-progress-circle-pie;
+        @extend %ko-progress-circle-fill;
+      }
+    }
+
+    .ko-progress-circle__bar {
+      transform: rotate(#{$_pc-degree}deg);
     }
   }
 }
