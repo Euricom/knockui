@@ -26,6 +26,6 @@
   }
 
   &:checked::after {
-    background-color: $ko-color-danger;
+    background-color: $ko-checkbox-bg-color;
   }
 }
