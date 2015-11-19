@@ -1,3 +1,7 @@
+.ko-media {
+  @extend %ko-grid;
+}
+
 .ko-media__img,
 .ko-media__info {
   display: inline-block;
@@ -5,13 +9,18 @@
 }
 
 .ko-media__img {
+  @extend %ko-grid__cell--4;
   margin: 5px 10px 0 0;
-  width: 65px;
+  max-width: 200px;
 }
 
 .ko-media__text {
   @extend %ko-font--small;
   display: block;
+}
+
+.ko-media__info {
+  @extend %ko-grid__cell--8;
 }
 
 .ko-media__text:first-of-type {
