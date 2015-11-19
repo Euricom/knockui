@@ -13,7 +13,7 @@
 
     margin-right: 0;
     text-decoration: none;
-    
+
     &::after {
       display: none;
     }
@@ -22,9 +22,9 @@
   &::after {
     font-size: 10px;
     position: absolute;
+    right: 0;
     top: 6px;
     transform: translateX(15px);
-    right: 0;
   }
 }
 
