@@ -27,6 +27,15 @@ $ko-progress-overlay-color: $ko-color-white !default;
   width: 80%;
 }
 
+.progress-circle__value {
+  left: 0;
+  margin: 0 10%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+}
+
 $step: 5;
 $loops: round(100 / $step);
 $increment: 360 / $loops;
