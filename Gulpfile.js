@@ -30,7 +30,8 @@ var paths = {
 };
 
 var ports = {
-    tmp: 50000
+    tmp: 50000,
+    reload: 50001
 };
 
 // Compilation
@@ -65,6 +66,22 @@ gulp.task('iconfont', function(){
             path: 'assets/scss.template',
             fontName: fontName,
             targetPath: '../utils/_icons.scss',
+            fontPath: '#{$ko-font-path}',
+            cssClass: 'ko-icon'
+        }))
+        .pipe(iconfont({
+            formats: ['ttf', 'eot', 'woff', 'svg'],
+            fontName: fontName,
+            timestamp: runTimestamp
+        }))
+        .pipe(gulp.dest('lib/fonts/'));
+});
+gulp.task('iconfont-placeholders', function(){
+    gulp.src(['assets/**/*.svg'])
+        .pipe(iconfontCss({
+            path: 'assets/placeholders.template',
+            fontName: fontName,
+            targetPath: '../shared/placeholders/_icons.scss',
             fontPath: '#{$ko-font-path}',
             cssClass: 'ko-icon'
         }))
@@ -158,6 +175,7 @@ gulp.task('compile', function (cb) {
 
 gulp.task('build', [
     'iconfont',
+    'iconfont-placeholders',
     'compile'
 ]);
 
@@ -170,7 +188,9 @@ gulp.task('serve', ['compile'], function () {
     connect.server({
         root: [paths.tmp, './'],
         port: ports.tmp,
-        livereload: true
+        livereload: {
+            port: ports.reload
+        }
     });
 });
 

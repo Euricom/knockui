@@ -1,26 +1,4 @@
-@import 'shared/reset';
-@import 'shared/variables';
-@import 'shared/placeholders';
-
-@import 'utils/icons';
-@import 'utils/layout';
-@import 'utils/grid';
-@import 'utils/typography';
-
-@import 'components/button';
-@import 'components/quote';
-@import 'components/avatar';
-@import 'components/popover';
-@import 'components/progress-bar';
-@import 'components/divider';
-@import 'components/menu';
-@import 'components/input';
-@import 'components/footer';
-@import 'components/header';
-@import 'components/section-header';
-@import 'components/tag';
-@import 'components/list';
-@import 'components/link';
-@import 'components/table';
-@import 'components/progress-circle';
-@import 'components/definition';
+@import 'reset';
+@import 'shared/index';
+@import 'utils/index';
+@import 'components/index';

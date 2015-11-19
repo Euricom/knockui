@@ -1,7 +1,20 @@
-extends ../template
+extends ../_template
 
 block variables
     - var url = '../components/checkbox.html';
 
 block component-name
     | Checkbox
+    h4.title Default Checkbox
+    :jade
+        div.ko-checkbox
+            label.ko-checkbox__label
+                input(type="checkbox" class="ko-checkbox__input")
+                | Remember me
+
+    h4.title Checkbox disabled
+    :jade
+        div.ko-checkbox--disabled
+            label.ko-checkbox__label
+                input(type="checkbox" class="ko-checkbox__input" disabled="disabled")
+                | Remember me

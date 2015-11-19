@@ -1,4 +1,4 @@
-extends ../template
+extends ../_template
 
 block variables
     - var url = '../components/table.html';
@@ -6,6 +6,7 @@ block variables
 block component-name
     | Table
 
+block component
     h4.title Default Table
     :jade
         .ko-table

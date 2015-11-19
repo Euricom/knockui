@@ -1,0 +1,31 @@
+%_ko-checkbox-center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%ko-checkbox {
+  height: 12px;
+  visibility: hidden;
+  width: 12px;
+
+  &::after {
+    background-color: $ko-color-panel;
+    border: solid 1px $_ko-checkbox-border-color;
+    border-radius: 4px;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    height: 12px;
+    left: 6px;
+    position: absolute;
+    top: 7px;
+    vertical-align: middle;
+    visibility: visible;
+    width: 12px;
+  }
+
+  &:checked::after {
+    background-color: $ko-color-danger;
+  }
+}

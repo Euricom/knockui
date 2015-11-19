@@ -1,0 +1,13 @@
+%ko-progress-bar {
+  background-color: $ko-color-gray;
+  height: 20px;
+  position: relative;
+}
+
+%ko-progress-bar__progress {
+  background-color: $ko-color-primary;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}

@@ -1,4 +1,4 @@
-extends ../template
+extends ../_template
 
 block variables
     - var url = '../components/tag.html';
@@ -6,6 +6,7 @@ block variables
 block component-name
     | Tag
 
+block component
     h4.title Default Tag
     :jade
         span.ko-tag

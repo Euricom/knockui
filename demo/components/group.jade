@@ -1,7 +1,73 @@
-extends ../template
+extends ../_template
 
 block variables
     - var url = '../components/group.html';
 
 block component-name
     | Group
+
+block component
+    h4.title Default Group
+    :jade
+        .ko-group
+            a(class='ko-link ko-group__item', href='#') Edit
+            a(class='ko-link--succes ko-group__item', href='#') Download
+            a(class='ko-link ko-group__item', href='#') Duplicate
+            a(class='ko-link--danger ko-group__item', href='#') Delete
+    h4.title Dotted Group
+    :jade
+        .ko-group
+            .ko-group__item--dotted
+                a(class='ko-link', href='#') Edit
+            .ko-group__item--dotted
+                a(class='ko-link--succes', href='#') Download
+            .ko-group__item--dotted
+                a(class='ko-link', href='#') Duplicate
+            .ko-group__item--dotted
+                a(class='ko-link--danger', href='#') Delete
+    h4.title Framed Group
+    :jade
+        .ko-group--framed
+            .ko-group__item--framed
+                a(class='ko-link', href='#') Edit
+            .ko-group__item--framed
+               a(class='ko-link--succes', href='#') Download
+            .ko-group__item--framed
+               a(class='ko-link', href='#') Duplicate
+            .ko-group__item--framed
+               a(class='ko-link--danger', href='#') Delete
+    h4.title Aligned Group
+    :jade
+        .wrapper
+            .ko-group--aligned
+                .ko-group__col
+                    .ko-group__item
+                        a(class='ko-link', href='#') January
+                    .ko-group__item
+                       a(class='ko-link', href='#') February
+                    .ko-group__item
+                       a(class='ko-link', href='#') March
+                    .ko-group__item
+                       a(class='ko-link', href='#') April
+                    .ko-group__item
+                        a(class='ko-link', href='#') May
+                    .ko-group__item
+                       a(class='ko-link', href='#') June
+                .ko-group__col
+                    .ko-group__item
+                       a(class='ko-link', href='#') July
+                    .ko-group__item
+                       a(class='ko-link', href='#') August
+                    .ko-group__item
+                        a(class='ko-link', href='#') September
+                    .ko-group__item
+                       a(class='ko-link', href='#') October
+                    .ko-group__item
+                       a(class='ko-link', href='#') November
+                    .ko-group__item
+                       a(class='ko-link', href='#') December
+
+    :scss
+        .wrapper {
+           width: 200px;
+        }

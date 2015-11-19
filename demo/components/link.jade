@@ -1,4 +1,4 @@
-extends ../template
+extends ../_template
 
 block variables
     - var url = '../components/link.html';
@@ -6,12 +6,10 @@ block variables
 block component-name
     | Link
 
+block component
     h4.title Default Link
     :jade
-        p
-            | Lorem ipsum dolor sit amet, sed do eiusmod
-            a(class='ko-link', href='somelink.com') click here
-            |  tempor.
+        a(class='ko-link', href='somelink.com') Click here
 
     h4.title Success Link
     :jade
@@ -20,6 +18,7 @@ block component-name
     h4.title Danger Link
     :jade
         a(class='ko-link--danger', href='#') Click here
+
     h4.title Disabled Link
     :jade
         a(class='ko-link--disabled', href='#') Click here

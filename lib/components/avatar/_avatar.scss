@@ -1,0 +1,11 @@
+.ko-avatar {
+  @extend %ko-avatar;
+}
+
+.ko-avatar--small {
+  @extend %ko-avatar--small;
+}
+
+.ko-avatar--large {
+  @extend %ko-avatar--large;
+}

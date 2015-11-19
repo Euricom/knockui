@@ -4,8 +4,9 @@
 scss_files: "**/*.scss"
 
 exclude:
-  - 'lib/shared/_reset.scss'
+  - 'lib/_reset.scss'
   - 'lib/utils/_icons.scss'
+  - 'lib/shared/placeholders/_icons.scss'
 
 linters:
   NameFormat:

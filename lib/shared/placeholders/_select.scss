@@ -1,0 +1,21 @@
+%ko-select {
+  @extend %ko-icon--chevron-down;
+  margin-bottom: 10px;
+  position: relative;
+
+  select {
+    @extend %ko-form-element;
+    @extend %ko-icon--chevron-down;
+    -webkit-appearance: none;
+    margin-bottom: 0;
+    padding-right: 30px;
+  }
+
+  &::after {
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

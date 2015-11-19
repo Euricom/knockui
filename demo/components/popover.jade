@@ -1,4 +1,4 @@
-extends ../template
+extends ../_template
 
 block variables
     - var url = '../components/popover.html';
@@ -7,55 +7,118 @@ block component-name
     | Popover
 
 block component
+    h4.title API
+    p.text.
+        You can control the popover by toggling the .ko-popover--closed class as shown in the examples below.
+
     h4.title Default Popover (no arrow)
     :jade
-        .ko-popover
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover
+                p lorem ipsum
+        script.
+            function togglePopover(target) {
+                var popover = document.querySelector(target);
+                popover.classList.toggle('ko-popover--closed');
+            }
+    :scss
+        .demo-example {
+            background: linear-gradient($ko-color-primary 50%, $ko-color-success 50%);
+            height: 200px;
+            width: 400px;
+            margin: 50px auto;
+
+            &::after {
+                content: '';
+                background: linear-gradient($ko-color-success 50%, $ko-color-primary 50%);
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 50%;
+            }
+        }
+
     h4.title Popover Top Left
     :jade
-        .ko-popover--top-left
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--top-left')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--top-left
+                p lorem ipsum
+
     h4.title Popover Top Center
     :jade
-        .ko-popover--top-center
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--top-center')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--top-center
+                p lorem ipsum
+
     h4.title Popover Top Right
     :jade
-        .ko-popover--top-right
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--top-right')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--top-right
+                p lorem ipsum
+
     h4.title Popover Right Top
     :jade
-        .ko-popover--right-top
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--right-top')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--right-top
+                p lorem ipsum
+
     h4.title Popover Right Center
     :jade
-        .ko-popover--right-center
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--right-center')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--right-center
+                p lorem ipsum
+
     h4.title Popover Right Bottom
     :jade
-        .ko-popover--right-bottom
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--right-bottom')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--right-bottom
+                p lorem ipsum
+
     h4.title Popover Bottom Left
     :jade
-        .ko-popover--bottom-left
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--bottom-left')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--bottom-left
+                p lorem ipsum
+
     h4.title Popover Bottom Center
     :jade
-        .ko-popover--bottom-center
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--bottom-center')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--bottom-center
+                p lorem ipsum
+
     h4.title Popover Bottom Right
     :jade
-        .ko-popover--bottom-right
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--bottom-right')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--bottom-right
+                p lorem ipsum
+
     h4.title Popover Left Top
     :jade
-        .ko-popover--left-top
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--left-top')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--left-top
+                p lorem ipsum
+
     h4.title Popover Left Center
     :jade
-        .ko-popover--left-center
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--left-center')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--left-center
+                p lorem ipsum
     h4.title Popover Left Bottom
     :jade
-        .ko-popover--left-bottom
-            p lorem ipsum
+        button.ko-button--primary(onclick="togglePopover('.ko-popover--left-bottom')") Toggle Popover
+        .demo-example.ko-popover__container
+            .ko-popover--left-bottom
+                p lorem ipsum
