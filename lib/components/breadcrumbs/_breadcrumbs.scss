@@ -4,16 +4,16 @@
   box-sizing: border-box;
   color: inherit;
   display: inline-block;
-  margin-right: 20px;
+  margin-left: 20px;
   position: relative;
   text-decoration: underline;
 
-  &:last-child {
+  &:first-child {
     @extend %ko-font--bold;
 
-    margin-right: 0;
+    margin-left: 0;
     text-decoration: none;
-    
+
     &::after {
       display: none;
     }
@@ -22,8 +22,9 @@
   &::after {
     font-size: 10px;
     position: absolute;
+    left: 0;
     top: 6px;
-    transform: translateX(5px);
+    transform: translateX(-15px);
   }
 }
 

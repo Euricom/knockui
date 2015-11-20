@@ -1,0 +1,40 @@
+%ko-progress-circle-rect-auto {
+  clip: rect(auto, auto, auto, auto);
+  clip-path: rect(auto, auto, auto, auto);
+}
+
+%ko-progress-circle-pie {
+  border: $ko-progress-circle-border-width solid $ko-progress-circle-color-line;
+  border-radius: 50%;
+  clip: rect(0, ($ko-progress-circle-size / 2), $ko-progress-circle-size, 0);
+  clip-path: rect(0, ($ko-progress-circle-size / 2), $ko-progress-circle-size, 0);
+  height: $ko-progress-circle-size - ($ko-progress-circle-border-width * 2);
+  position: absolute;
+  transform: rotate(0deg);
+  width: $ko-progress-circle-size - ($ko-progress-circle-border-width * 2);
+}
+
+%ko-progress-circle-fill {
+  transform: rotate(180deg);
+}
+
+%ko-progress-circle {
+  background-color: $ko-progress-circle-color-outer;
+  border-radius: 50%;
+  height: $ko-progress-circle-size;
+  margin: 0 ($ko-progress-circle-size / $ko-progress-circle-border-width) ($ko-progress-circle-size / $ko-progress-circle-border-width) 0;
+  position: relative;
+  width: $ko-progress-circle-size;
+
+  &::after {
+    background-color: $ko-progress-circle-color-overlay;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: $ko-progress-circle-size - ($ko-progress-circle-border-width * 2);
+    left: $ko-progress-circle-border-width;
+    position: absolute;
+    top: $ko-progress-circle-border-width;
+    width: $ko-progress-circle-size - ($ko-progress-circle-border-width * 2);
+  }
+}
