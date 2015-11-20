@@ -1,0 +1,28 @@
+%ko-section-header {
+  @extend %ko-font--uppercase;
+  @extend %ko-font-header--md;
+  @extend %ko-font--primary;
+  @extend %ko-font--uppercase;
+
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  &::before,
+  &::after {
+    background-color: $ko-color-gray;
+    content: '';
+    height: 4px;
+    position: absolute;
+    top: 47%;
+    width: 50%;
+  }
+
+  &::before {
+    margin-left: -51%;
+  }
+
+  &::after {
+    margin-left: 1%;
+  }
+}
