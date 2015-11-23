@@ -1,24 +1,52 @@
 .ko-checkbox {
-  position: relative;
+  display: inline-block;
 }
 
 .ko-checkbox__input {
-  @extend %ko-checkbox;
-  margin-left: 12px;
+  @extend %ko-icon--tick;
+  color: $ko-color-primary;
+  height: 15px;
+  margin-right: 10px;
+  visibility: hidden;
+  width: 15px;
+
+  &::after {
+    border: solid 1px $ko-color-dark-gray;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: 0;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    transition: font-size .1s $ko-transition-easing;
+    visibility: visible;
+    width: 15px;
+  }
+
+  &:checked::after {
+    font-size: 13px;
+  }
+
+  &:disabled {
+    color: $ko-color-dark-gray;
+    cursor: not-allowed;
+
+    &::after {
+      background-color: $ko-color-light-gray;
+      cursor: not-allowed;
+    }
+
+    + .ko-checkbox__label {
+      color: $ko-color-dark-gray;
+      cursor: not-allowed;
+    }
+  }
 }
 
 .ko-checkbox__label {
   cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.ko-checkbox--disabled {
-  opacity: .5;
-  position: relative;
-
-  .ko-checkbox__label,
-  .ko-checkbox__input::after {
-    cursor: not-allowed;
-  }
+  height: 15px;
+  line-height: 15px;
 }

@@ -1,6 +1,7 @@
 .example {
   border: solid thin $demo-color-shade-20;
   margin-top: 20px;
+  overflow-wrap: break-word;
   padding: 20px;
 
   + .code {

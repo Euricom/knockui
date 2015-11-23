@@ -7,16 +7,19 @@ block component-name
     | Layout
 
 block component
+    h4.title Page layout
+    p.text The page layout adds a maximum width to your application and makes sure that the content is always center aligned.
     :jade
         body
             .custom-topbar
                 .ko-page__layout
                     | Header Content
-            .custom-page.ko-page__layout
-                .custom-sidebar
-                    | Sidebar Content
-                .custom-content
-                    | Actual Content
+            .ko-page__layout
+                .custom-page
+                    .custom-sidebar
+                        | Sidebar Content
+                    .custom-content
+                        | Actual Content
     :scss
         .custom-topbar {
             background-color: $ko-color-primary;

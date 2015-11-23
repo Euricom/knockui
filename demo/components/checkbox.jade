@@ -5,16 +5,24 @@ block variables
 
 block component-name
     | Checkbox
-    h4.title Default Checkbox
+
+block component
+    h4.title Checkbox
     :jade
         div.ko-checkbox
-            label.ko-checkbox__label
-                input(type="checkbox" class="ko-checkbox__input")
-                | Remember me
+            input.ko-checkbox__input(type="checkbox" id="default-checkbox")
+            label.ko-checkbox__label(for="default-checkbox") Remember me
+        br
+        div.ko-checkbox
+            input.ko-checkbox__input(type="checkbox" id="default-checked-checkbox" checked)
+            label.ko-checkbox__label(for="default-checked-checkbox") Remember me
 
-    h4.title Checkbox disabled
+    h4.title Disabled Checkbox
     :jade
-        div.ko-checkbox--disabled
-            label.ko-checkbox__label
-                input(type="checkbox" class="ko-checkbox__input" disabled="disabled")
-                | Remember me
+        div.ko-checkbox
+            input.ko-checkbox__input(type="checkbox" id="disabled-checked-checkbox" disabled="disabled")
+            label.ko-checkbox__label(for="disabled-checked-checkbox") Remember me
+        br
+        div.ko-checkbox
+            input.ko-checkbox__input(type="checkbox" id="disabled-checked-checkbox" disabled="disabled" checked)
+            label.ko-checkbox__label(for="disabled-checked-checkbox") Remember me

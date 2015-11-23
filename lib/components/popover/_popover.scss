@@ -28,6 +28,30 @@
   position: relative;
 }
 
+.ko-popover__footer {
+  display: flex;
+  justify-content: space-between;
+
+  .ko-button,
+  .ko-button--primary,
+  .ko-button--info,
+  .ko-button--success,
+  .ko-button--warning,
+  .ko-button--danger {
+    flex-basis: 100%;
+    margin: 0 5px;
+    text-align: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .ko-popover {
   right: -$ko-popover-arrow-size;
   top: 50%;
