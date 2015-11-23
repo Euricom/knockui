@@ -94,6 +94,7 @@ gulp.task('iconfont-placeholders', function(){
 });
 
 var tidyOptions = {
+    'input-xml': true,
     'show-body-only': 'auto',
     hideComments: false,
     indent: true,
