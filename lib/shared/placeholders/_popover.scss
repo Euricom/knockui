@@ -3,7 +3,10 @@
   border: $ko-popover-border-width solid $ko-popover-border-color;
   border-radius: 4px;
   box-shadow: 1px 2px 3px rgba($ko-color-black, .2);
+  color: $ko-font-base;
   display: inline-block;
+  font-size: $ko-font-size-base;
+  line-height: $ko-font-line-height-base;
   @if $ko-popover-arrow-size > 20 {
     padding: ($ko-popover-arrow-size / 2) + 4;
   } @else {
