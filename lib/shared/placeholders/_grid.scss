@@ -1,6 +1,7 @@
 %ko-grid {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 @mixin _ko-grid($breakpoint-name) {

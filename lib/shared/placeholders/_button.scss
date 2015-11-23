@@ -20,6 +20,10 @@
     @extend %ko-background--light-gray;
     cursor: not-allowed;
   }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 %ko-button--primary {

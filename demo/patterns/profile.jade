@@ -1,0 +1,47 @@
+extends ../_template
+
+block variables
+    - var url = '../patterns/profile.html';
+
+block component-name
+    | Profile
+
+block component
+    :jade
+        form.ko-form
+            .ko-form__header Edit Profile
+            .ko-form__content
+                .pattern
+                    .pattern-picture
+                        img(src="https://s3.amazonaws.com/uifaces/faces/twitter/abinav_t/128.jpg").ko-avatar--stretch
+                        input(type="file")
+                    .pattern-info
+                        .ko-form__label First Name
+                        input.ko-input(placeholder="First Name")
+                        .ko-form__label Last Name
+                        input.ko-input(placeholder="Last Name")
+                .ko-form__label Email
+                input.ko-input(placeholder="Email")
+                .ko-form__label LinkedIn
+                input.ko-input(placeholder="LinkedIn")
+                .ko-form__label Facebook
+                input.ko-input(placeholder="Facebook")
+                .ko-form__label Twitter
+                input.ko-input(placeholder="Twitter")
+            .ko-form__actions
+                button.ko-button--primary Save Profile
+                button.ko-link Cancel
+
+    :scss
+        .pattern {
+            @extend %ko-grid;
+        }
+
+        .pattern-picture {
+            @extend %ko-grid__cell--4;
+            padding: 20px;
+        }
+
+        .pattern-info {
+            @extend %ko-grid__cell--8;
+        }

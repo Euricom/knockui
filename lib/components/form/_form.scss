@@ -1,0 +1,31 @@
+.ko-form {
+  background-color: $ko-color-white;
+  border: solid thin $ko-color-light-gray;
+  border-radius: $ko-border-radius;
+  margin: 0 auto;
+  max-width: 760px;
+  overflow: hidden;
+}
+
+.ko-form__header,
+.ko-form__content,
+.ko-form__actions {
+  padding: 0 20px;
+}
+
+.ko-form__header {
+  @extend %ko-font-header--md;
+  padding: 30px 20px 10px;
+}
+
+.ko-form__actions {
+  background-color: $ko-color-super-light-gray;
+  border-top: solid thin $ko-color-light-gray;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.ko-form__label {
+  font-weight: $ko-font-bold;
+  margin: 20px 0 10px;
+}

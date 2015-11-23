@@ -37,7 +37,19 @@
   .ko-button--info,
   .ko-button--success,
   .ko-button--warning,
-  .ko-button--danger {
+  .ko-button--danger,
+  .ko-button--outline,
+  .ko-button--outline-primary,
+  .ko-button--outline-info,
+  .ko-button--outline-success,
+  .ko-button--outline-warning,
+  .ko-button--outline-danger,
+  .ko-button--icon,
+  .ko-button--icon-primary,
+  .ko-button--icon-info,
+  .ko-button--icon-success,
+  .ko-button--icon-warning,
+  .ko-button--icon-danger {
     flex-basis: 100%;
     margin: 0 5px;
     text-align: center;

@@ -1,0 +1,22 @@
+extends ../_template
+
+block variables
+    - var url = '../components/form.html';
+
+block component-name
+    | Form
+
+block component
+    h4.title Default Form
+    :jade
+        form.ko-form
+            .ko-form__header Edit Profile
+            .ko-form__content
+                .ko-form__label Username
+                input.ko-input(type="text" placeholder="Username")
+            .ko-form__content
+                .ko-form__label Password
+                input.ko-input(type="password" placeholder="Password")
+            .ko-form__actions
+                button.ko-button--primary Save
+                button.ko-link Cancel

@@ -9,3 +9,9 @@
 .ko-avatar--large {
   @extend %ko-avatar--large;
 }
+
+.ko-avatar--stretch {
+  @extend %ko-avatar;
+  height: auto;
+  width: 100%;
+}
