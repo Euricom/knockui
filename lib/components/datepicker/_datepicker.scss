@@ -17,9 +17,12 @@
 }
 
 .ko-date-picker__footer {
+  display: inline-block;
   text-align: right;
+  width: 100%;
 
   button {
+    float: left;
     width: 49%;
 
     &:only-child {
