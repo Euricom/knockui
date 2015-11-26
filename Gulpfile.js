@@ -23,7 +23,7 @@ var iconfontCss = require('gulp-iconfont-css');
 var git = require('gulp-git');
 var bump = require('gulp-bump');
 var args = require('yargs').argv;
-var tag-version = require('gulp-tag-version');
+var tag = require('gulp-tag-version');
 
 // Config
 var paths = {
@@ -223,7 +223,7 @@ gulp.task('merge', function(){
 
 gulp.task('deploy', ['bump', 'merge'], function(){
   return gulp.src(['./package.json'])
-    .pipe(tag_version());
+    .pipe(tag());
     .pipe(git.push('origin', 'master', function(err){
       handleError(err);
     });
