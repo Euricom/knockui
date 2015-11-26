@@ -247,8 +247,8 @@ function handleError(err) {
 gulp.task('build', [
     'iconfont',
     'iconfont-placeholders',
-    'compile'
-    'prepare-sass'
+    'compile',
+    'prepare-sass',
     'prepare-css'
 ], function(done) {
   var stream = gulp.src(['./demo/**/*', './lib/**/*'])
