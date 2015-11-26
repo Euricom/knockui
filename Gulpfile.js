@@ -223,7 +223,7 @@ gulp.task('merge', function(){
 
 gulp.task('deploy', ['bump', 'merge'], function(){
   return gulp.src(['./package.json'])
-    .pipe(tag());
+    .pipe(tag())
     .pipe(git.push('origin', 'master', function(err){
       handleError(err);
     });
