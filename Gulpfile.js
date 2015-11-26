@@ -207,13 +207,10 @@ gulp.task('prepare-sass', function(){
 });
 
 gulp.task('prepare-css', function(done){
-  var compileSass = gulp.src('lib/**/*.scss')
-    .pipe(replace(/(@extend %ko)/g, '@extend .ko-util'))
+  var copySass = gulp.src('lib/**/*.scss')
+    .pipe(replace(/(@extend %ko)/g, '@extend .ko'))
     .pipe(replace(/(%ko)/g, '.ko-util'))
-    .pipe(sass())
-    .pipe(autoprefixer())
     .pipe(replace(/\.\.\/fonts\//g, './fonts/'))
-    .pipe(cssMin())
     .pipe(gulp.dest('dist/css'));
   var compileSassDone = false;
 
@@ -221,15 +218,23 @@ gulp.task('prepare-css', function(done){
     .pipe(gulp.dest('dist/css'));
   var copyAssetsDone = false;
 
-  compileSass.on('end', function() {
-    compileSassDone = true;
+  copySass.on('end', function() {
+    var compileSass = gulp.src('dist/css/**/*.scss')
+      .pipe(sass())
+      .pipe(autoprefixer())
+      //.pipe(cssMin())
+      .pipe(gulp.dest('dist/css'));
 
-    del.sync('dist/css/**/*.scss');
-    cleanUpDirectories('dist');
+    compileSass.on('end', function() {
+      compileSassDone = true;
 
-    if (copyAssetsDone && compileSassDone) {
-      done();
-    }
+      del.sync('dist/css/**/*.scss');
+      cleanUpDirectories('dist');
+
+      if (copyAssetsDone && compileSassDone) {
+        done();
+      }
+    });
   });
 
   copyAssets.on('end', function() {
