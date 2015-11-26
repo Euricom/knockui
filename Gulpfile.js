@@ -201,14 +201,6 @@ function handleError(err) {
   if (err) throw err;
 }
 
-gulp.task('bump', function(){
-  var type = args.type || 'patch';
-  gulp.src(['./bower.json', './package.json'])
-    .pipe(bump({type: type}))
-    .pipe(gulp.dest('./'))
-    .pipe(git.commit('bumps package version'));
-});
-
 gulp.task('merge', function(){
   git.fetch('origin', '', function(err){
     handleError(err);
@@ -221,13 +213,26 @@ gulp.task('merge', function(){
   })
 })
 
-gulp.task('deploy', ['bump', 'merge'], function(){
+gulp.task('bump', function(){
+  var type = args.type || 'patch';
+  gulp.src(['./bower.json', './package.json'])
+    .pipe(bump({type: type}))
+    .pipe(gulp.dest('./'))
+});
+
+gulp.task('tag', function(){
   return gulp.src(['./package.json'])
     .pipe(tag())
-    .pipe(git.push('origin', 'master', function(err){
-      handleError(err);
-    }));
-});
+})
+
+gulp.task('push', function(){
+  git.commit('created new release');
+  git.push('origin', 'master', function(err){
+    handleError(err);
+  });
+})
+
+gulp.task('deploy', ['merge', 'bump', 'tag', 'push']);
 
 // Default Task
 gulp.task('default', [
