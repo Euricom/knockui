@@ -202,7 +202,10 @@ gulp.task('build', [
     'iconfont',
     'iconfont-placeholders',
     'compile'
-]);
+], function() {
+  return gulp.src(['./demo/**/*', './lib/**/*'])
+    .pipe(git.commit('build new version'))
+});
 
 function handleError(err) {
   if (err) throw err;
