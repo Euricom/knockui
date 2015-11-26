@@ -226,7 +226,7 @@ gulp.task('deploy', ['bump', 'merge'], function(){
     .pipe(tag())
     .pipe(git.push('origin', 'master', function(err){
       handleError(err);
-    });
+    }));
 });
 
 // Default Task
