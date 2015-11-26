@@ -1,24 +1,17 @@
 {
   "name": "knockui",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "homepage": "https://github.com/Euricom/knockui",
   "authors": [
     "Wart Claes <wart.claes@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "highlightjs": "~8.8.0"
-  },
-  "ignore": [
     "*",
     "!dist/",
     "!dist/*"
-  ]
+  ],
+  "dependencies": {
+    "highlightjs": "~8.8.0"
+  }
 }
