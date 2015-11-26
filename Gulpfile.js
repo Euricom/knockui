@@ -202,20 +202,18 @@ function handleError(err) {
 }
 
 function inc(importance) {
-  gulp.task('merge', function(){
-    git.fetch('origin', '', function(err){
+  git.fetch('origin', '', function(err){
+    handleError(err);
+    git.checkout('master', function(err){
       handleError(err);
-      git.checkout('master', function(err){
+      git.merge('develop', function(err){
         handleError(err);
-        git.merge('develop', function(err){
-          handleError(err);
-          gulp.src(['./package.json', './bower.json'])
-              .pipe(bump({type: importance}))
-              .pipe(gulp.dest('./'))
-              .pipe(git.commit('bumps package version'))
-              .pipe(filter('package.json'))
-              .pipe(tag());
-        })
+        gulp.src(['./package.json', './bower.json'])
+            .pipe(bump({type: importance}))
+            .pipe(gulp.dest('./'))
+            .pipe(git.commit('bumps package version'))
+            .pipe(filter('package.json'))
+            .pipe(tag());
       })
     })
   })
