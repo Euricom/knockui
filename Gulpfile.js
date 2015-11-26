@@ -208,7 +208,7 @@ gulp.task('prepare-sass', function(){
 
 gulp.task('prepare-css', function(done){
   var copySass = gulp.src('lib/**/*.scss')
-    .pipe(replace(/(@extend %ko)/g, '@extend .ko'))
+    .pipe(replace(/(@extend %ko)/g, '@extend .ko-util'))
     .pipe(replace(/(%ko)/g, '.ko-util'))
     .pipe(replace(/\.\.\/fonts\//g, './fonts/'))
     .pipe(gulp.dest('dist/css'));
