@@ -201,12 +201,18 @@ gulp.task('serve', ['compile'], function () {
 });
 
 // Prepare dist folder
-gulp.task('prepare-sass', function(){
+gulp.task('prepare', [
+  'iconfont',
+  'iconfont-placeholders',
+  'compile'
+]);
+
+gulp.task('prepare-sass', ['prepare'], function(){
   return gulp.src('lib/**/*')
     .pipe(gulp.dest('dist/sass'));
 });
 
-gulp.task('prepare-css', function(done){
+gulp.task('prepare-css', ['prepare-sass'], function(done){
   var copySass = gulp.src('lib/**/*.scss')
     .pipe(replace(/(@extend %ko)/g, '@extend .ko'))
     .pipe(replace(/(%ko)/g, '.ko'))
@@ -245,17 +251,15 @@ gulp.task('prepare-css', function(done){
   });
 });
 
+gulp.task('build', ['prepare-css']);
+
 // Deployment
 function handleError(err) {
   if (err) throw err;
 }
 
-gulp.task('build', [
-    'iconfont',
-    'iconfont-placeholders',
-    'compile',
-    'prepare-sass',
-    'prepare-css'
+gulp.task('push-build', [
+    'build'
 ], function(done) {
   var stream = gulp.src(['./demo/**/*', './lib/**/*', './dist/**/*'])
     .pipe(git.commit('build new version'));
@@ -293,9 +297,9 @@ function release(importance, done) {
   })
 }
 
-gulp.task('patch', ['build'], function(done) { release('patch', done); })
-gulp.task('minor', ['build'], function(done) { release('minor', done); })
-gulp.task('major', ['build'], function(done) { release('major', done); })
+gulp.task('patch', ['push-build'], function(done) { release('patch', done); })
+gulp.task('minor', ['push-build'], function(done) { release('minor', done); })
+gulp.task('major', ['push-build'], function(done) { release('major', done); })
 
 // Default Task
 gulp.task('default', [
