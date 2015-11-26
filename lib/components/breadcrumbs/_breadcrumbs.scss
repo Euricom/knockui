@@ -8,11 +8,13 @@
   position: relative;
   text-decoration: underline;
 
-  &:first-child {
+  &:last-child {
     @extend %ko-font--bold;
-
-    margin-left: 0;
     text-decoration: none;
+  }
+
+  &:first-child {
+    margin-left: 0;
 
     &::after {
       display: none;
