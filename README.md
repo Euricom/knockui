@@ -46,9 +46,9 @@ Each one of these tasks will:
 - create a new tag
 - push changes to the remote repository
 
- **note: make sure before creating a version, that all your required changes are merged into the develop branch**
+**note: make sure before creating a version, that all your required changes are merged into the develop branch**
 
- Available tasks:
- - `gulp patch`: creates a new patch version (0.0.X)
- - `gulp minor`: creates a new minor version (0.X.0)
- - `gulp major`: creates a new major version (X.0.0)
+Available tasks:
+- `gulp patch`: creates a new patch version (0.0.X)
+- `gulp minor`: creates a new minor version (0.X.0)
+- `gulp major`: creates a new major version (X.0.0)
