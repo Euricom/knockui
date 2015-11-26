@@ -198,18 +198,25 @@ gulp.task('serve', ['compile'], function () {
 });
 
 // Deployment
+function handleError(err) {
+  if (err) throw err;
+}
+
 gulp.task('build', [
     'iconfont',
     'iconfont-placeholders',
     'compile'
-], function() {
-  return gulp.src(['./demo/**/*', './lib/**/*'])
-    .pipe(git.commit('build new version'))
-});
+], function(done) {
+  var stream = gulp.src(['./demo/**/*', './lib/**/*'])
+    .pipe(git.commit('build new version'));
 
-function handleError(err) {
-  if (err) throw err;
-}
+  stream.on('end', function() {
+    git.push('origin', 'develop', function(err){
+      handleError(err);
+      done();
+    });
+  });
+});
 
 function release(importance, done) {
   git.fetch('origin', '', function(err){
