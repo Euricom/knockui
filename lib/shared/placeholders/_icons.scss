@@ -63,57 +63,69 @@
     content: '\E009';
   }
 }
-%ko-icon--linkedin {
+%ko-icon--facebook {
   &::after {
     @extend %_ko-icon;
     content: '\E00A';
   }
 }
-%ko-icon--lock-closed {
+%ko-icon--github {
   &::after {
     @extend %_ko-icon;
     content: '\E00B';
   }
 }
-%ko-icon--lock-open {
+%ko-icon--linkedin {
   &::after {
     @extend %_ko-icon;
     content: '\E00C';
   }
 }
-%ko-icon--mail {
+%ko-icon--lock-closed {
   &::after {
     @extend %_ko-icon;
     content: '\E00D';
   }
 }
-%ko-icon--plus {
+%ko-icon--lock-open {
   &::after {
     @extend %_ko-icon;
     content: '\E00E';
   }
 }
-%ko-icon--tick {
+%ko-icon--mail {
   &::after {
     @extend %_ko-icon;
     content: '\E00F';
   }
 }
-%ko-icon--twitter {
+%ko-icon--plus {
   &::after {
     @extend %_ko-icon;
     content: '\E010';
   }
 }
-%ko-icon--user {
+%ko-icon--tick {
   &::after {
     @extend %_ko-icon;
     content: '\E011';
   }
 }
-%ko-icon--web {
+%ko-icon--twitter {
   &::after {
     @extend %_ko-icon;
     content: '\E012';
+  }
+}
+%ko-icon--user {
+  &::after {
+    @extend %_ko-icon;
+    content: '\E013';
+  }
+}
+%ko-icon--web {
+  &::after {
+    @extend %_ko-icon;
+    content: '\E014';
   }
 }
