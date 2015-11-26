@@ -9,7 +9,7 @@
   "ignore": [
     "*",
     "!dist/",
-    "!dist/*"
+    "!dist/**/*"
   ],
   "dependencies": {
     "highlightjs": "~8.8.0"
