@@ -210,9 +210,9 @@ gulp.task('prepare-css', function(done){
   var compileSass = gulp.src('lib/**/*.scss')
     .pipe(replace(/(@extend %ko)/g, '@extend .ko-util'))
     .pipe(replace(/(%ko)/g, '.ko-util'))
-    .pipe(replace('../fonts/', './fonts/'))
     .pipe(sass())
     .pipe(autoprefixer())
+    .pipe(replace(/\.\.\/fonts\//g, './fonts/'))
     .pipe(cssMin())
     .pipe(gulp.dest('dist/css'));
   var compileSassDone = false;
