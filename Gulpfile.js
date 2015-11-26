@@ -252,7 +252,7 @@ gulp.task('build', [
     'prepare-sass',
     'prepare-css'
 ], function(done) {
-  var stream = gulp.src(['./demo/**/*', './lib/**/*'])
+  var stream = gulp.src(['./demo/**/*', './lib/**/*', './dist/**/*'])
     .pipe(git.commit('build new version'));
 
   stream.on('end', function() {
