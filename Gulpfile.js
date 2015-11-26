@@ -198,6 +198,12 @@ gulp.task('serve', ['compile'], function () {
 });
 
 // Deployment
+gulp.task('build', [
+    'iconfont',
+    'iconfont-placeholders',
+    'compile'
+]);
+
 function handleError(err) {
   if (err) throw err;
 }
@@ -227,9 +233,9 @@ function release(importance, done) {
   })
 }
 
-gulp.task('patch', function(done) { release('patch', done); })
-gulp.task('minor', function(done) { release('minor', done); })
-gulp.task('major', function(done) { release('major', done); })
+gulp.task('patch', ['build'], function(done) { release('patch', done); })
+gulp.task('minor', ['build'], function(done) { release('minor', done); })
+gulp.task('major', ['build'], function(done) { release('major', done); })
 
 // Default Task
 gulp.task('default', [
