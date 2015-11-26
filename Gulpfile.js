@@ -2,6 +2,7 @@ var gulp = require('gulp');
 
 // Tools
 var del = require('del');
+var cleanUpDirectories = require('remove-empty-directories');
 var connect = require('gulp-connect');
 var run = require('gulp-run-sequence');
 var plumber = require('gulp-plumber');
@@ -9,6 +10,7 @@ var escape = require('escape-html');
 var tidy = require('htmltidy2').tidy;
 var deasync = require('deasync');
 var filter = require('gulp-filter');
+var replace = require('gulp-replace');
 
 // Compilation
 var jade = require('jade');
@@ -19,6 +21,7 @@ var scsslint = require('gulp-scss-lint');
 var nodesass = require('node-sass');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
+var cssMin = require('gulp-cssmin');
 
 // Deployment
 var git = require('gulp-git');
@@ -197,6 +200,45 @@ gulp.task('serve', ['compile'], function () {
     });
 });
 
+// Prepare dist folder
+gulp.task('prepare-sass', function(){
+  return gulp.src('lib/**/*')
+    .pipe(gulp.dest('dist/sass'));
+});
+
+gulp.task('prepare-css', function(done){
+  var compileSass = gulp.src('lib/**/*.scss')
+    .pipe(replace(/(@extend %ko)/g, '@extend .ko-util'))
+    .pipe(replace(/(%ko)/g, '.ko-util'))
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(cssMin())
+    .pipe(gulp.dest('dist/css'));
+  var compileSassDone = false;
+
+  var copyAssets = gulp.src('lib/**/*.{!scss}')
+    .pipe(gulp.dest('dist/css'));
+  var copyAssetsDone = false;
+
+  compileSass.on('end', function() {
+    compileSassDone = true;
+
+    del.sync('dist/css/**/*.scss');
+    cleanUpDirectories('dist');
+
+    if (copyAssetsDone && compileSassDone) {
+      done();
+    }
+  });
+
+  copyAssets.on('end', function() {
+    copyAssetsDone = true;
+    if (copyAssetsDone && compileSassDone) {
+      done();
+    }
+  });
+});
+
 // Deployment
 function handleError(err) {
   if (err) throw err;
@@ -206,6 +248,8 @@ gulp.task('build', [
     'iconfont',
     'iconfont-placeholders',
     'compile'
+    'prepare-sass'
+    'prepare-css'
 ], function(done) {
   var stream = gulp.src(['./demo/**/*', './lib/**/*'])
     .pipe(git.commit('build new version'));

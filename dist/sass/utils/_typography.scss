@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:800);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,500);
+
+body {
+  color: $ko-font-base;
+  font-family: $ko-font;
+  font-size: $ko-font-size-base;
+  line-height: $ko-font-line-height-base;
+}
+
+h1 {
+  @extend %ko-font-header--xxl;
+}
+
+h2 {
+  @extend %ko-font-header--xl;
+}
+
+h3 {
+  @extend %ko-font-header--lg;
+}
+
+h4 {
+  @extend %ko-font-header--md;
+}
+
+h5 {
+  @extend %ko-font-header--sm;
+}
+
+h6 {
+  @extend %ko-font-header--xs;
+}

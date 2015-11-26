@@ -1,0 +1,55 @@
+.ko-select {
+  @extend %ko-select;
+
+  &::after {
+    color: $ko-color-gray;
+  }
+}
+
+.ko-select--success {
+  @extend %ko-select;
+
+  select {
+    @extend %ko-form-element--success;
+  }
+
+  &::after {
+    color: $ko-color-success;
+  }
+}
+
+.ko-select--danger {
+  @extend %ko-select;
+
+  select {
+    @extend %ko-form-element--danger;
+  }
+
+  &::after {
+    color: $ko-color-danger;
+  }
+}
+
+.ko-select--warning {
+  @extend %ko-select;
+
+  select {
+    @extend %ko-form-element--warning;
+  }
+
+  &::after {
+    color: $ko-color-warning;
+  }
+}
+
+.ko-select--info {
+  @extend %ko-select;
+
+  select {
+    @extend %ko-form-element--info;
+  }
+
+  &::after {
+    color: $ko-color-info;
+  }
+}

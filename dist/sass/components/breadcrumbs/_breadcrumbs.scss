@@ -1,0 +1,35 @@
+.ko-breadcrumbs__item {
+  @extend %ko-icon--chevron-right;
+
+  box-sizing: border-box;
+  color: inherit;
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  text-decoration: underline;
+
+  &:last-child {
+    @extend %ko-font--bold;
+    text-decoration: none;
+  }
+
+  &:first-child {
+    margin-left: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    font-size: 10px;
+    left: 0;
+    position: absolute;
+    top: 6px;
+    transform: translateX(-15px);
+  }
+}
+
+.ko-breadcrumbs__icon {
+  margin: 0 10px;
+}

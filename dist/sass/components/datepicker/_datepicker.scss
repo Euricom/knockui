@@ -1,0 +1,18 @@
+.ko-date-picker__row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  .ko-date-picker__select {
+    margin-bottom: 0;
+    margin-left: 10px;
+    width: 100px;
+  }
+}
+
+.ko-date-picker__label {
+  font-weight: $ko-font-bold;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 70px;
+}

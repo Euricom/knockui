@@ -1,0 +1,56 @@
+.ko-progress-circle__overlay {
+  @extend %ko-font--large;
+  color: $ko-progress-circle-color-line;
+  display: block;
+  font-size: 20px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.ko-progress-circle__slice {
+  clip: rect(0, $ko-progress-circle-size, $ko-progress-circle-size, ($ko-progress-circle-size / 2));
+  clip-path: rect(0, $ko-progress-circle-size, $ko-progress-circle-size, ($ko-progress-circle-size / 2));
+  height: $ko-progress-circle-size;
+  position: absolute;
+  width: $ko-progress-circle-size;
+}
+
+.ko-progress-circle__bar {
+  @extend %ko-progress-circle-pie;
+}
+
+$_pc-loops: 100 / $ko-progress-circle-steps;
+$_pc-increment: 360 / $_pc-loops;
+
+@for $i from 0 through $_pc-loops {
+  $_pc-actual-value: $i * $ko-progress-circle-steps;
+  $_pc-degree: $_pc-increment * $i;
+
+  .ko-progress-circle--#{$_pc-actual-value} {
+    @extend %ko-progress-circle;
+
+    @if $_pc-actual-value > 50{
+      .ko-progress-circle__slice {
+        @extend %ko-progress-circle-rect-auto;
+      }
+
+      .ko-progress-circle__bar::after {
+        @extend %ko-progress-circle-fill;
+      }
+
+      .ko-progress-circle__fill {
+        @extend %ko-progress-circle-pie;
+        @extend %ko-progress-circle-fill;
+      }
+    }
+
+    .ko-progress-circle__bar {
+      transform: rotate(#{$_pc-degree}deg);
+    }
+  }
+}

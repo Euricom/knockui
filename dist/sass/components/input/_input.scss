@@ -1,0 +1,43 @@
+.ko-input {
+  @extend %ko-input;
+}
+
+.ko-input--success {
+  @extend %ko-input--success;
+}
+
+.ko-input--danger {
+  @extend %ko-input--danger;
+}
+
+.ko-input--warning {
+  @extend %ko-input--warning;
+}
+
+.ko-input--info {
+  @extend %ko-input--info;
+}
+
+.ko-textarea {
+  @extend %ko-textarea;
+}
+
+.ko-textarea--success {
+  @extend %ko-textarea;
+  @extend %ko-input--success;
+}
+
+.ko-textarea--danger {
+  @extend %ko-textarea;
+  @extend %ko-input--danger;
+}
+
+.ko-textarea--warning {
+  @extend %ko-textarea;
+  @extend %ko-input--warning;
+}
+
+.ko-textarea--info {
+  @extend %ko-textarea;
+  @extend %ko-input--info;
+}

@@ -13,13 +13,29 @@ block component
     pre.code
         code.bash.
             bower install https://github.com/Euricom/knockui.git --save
+            
+    h4.title CSS
+    p.text. 
+      KnockUI is also available as a CSS framework. You're able to use the SCSS placeholder classes as normal CSS classes.
+    h5.substitle Example
+    pre.code 
+      code.scss.
+          @import '../bower_components/knockui/dist/lib/knockui';
+          
+          .my-element {
+            @extends: %ko-grid;
+          }
+    p.text becomes 
+    pre.code 
+      code.html.
+        &lt;div class="my-element ko-grid"&gt;...&lt;/div&gt;
 
-    h4.title Including
+    h4.title SASS
     p.text.
         After installing KnockUI, we can now include it into our own .scss files. For example, in our app.scss file.
     pre.code
         code.scss.
-            @import '../bower_components/knockui/lib/knockui';
+            @import '../bower_components/knockui/dist/lib/knockui';
 
     h4.title Usage
     p.text.
@@ -33,7 +49,7 @@ block component
     h5.subtitle Variables
     pre.code
         code.scss.
-            @import '../bower_components/knockui/lib/knockui';
+            @import '../bower_components/knockui/dist/lib/knockui';
 
             .custom__element {
                 background-color: $ko-primary-color;
@@ -44,12 +60,12 @@ block component
         code.scss.
             $ko-primary-color: #bada55;
 
-            @import '../bower_components/knockui/lib/knockui';
+            @import '../bower_components/knockui/dist/lib/knockui';
 
     h5.subtitle Mixins
     pre.code
         code.scss.
-            @import '../bower_components/knockui/lib/knockui';
+            @import '../bower_components/knockui/dist/lib/knockui';
 
             .custom__element {
                 @include ko-mixin;
@@ -58,9 +74,8 @@ block component
     h5.subtitle Placeholder Classes
     pre.code
         code.scss.
-            @import '../bower_components/knockui/lib/knockui';
+            @import '../bower_components/knockui/dist/lib/knockui';
 
             .custom__element {
                 @extend ko-col-sm-12, ko-col-md-6, ko-col-l-4;
             }
-

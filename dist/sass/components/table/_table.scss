@@ -1,0 +1,34 @@
+.ko-table {
+  @extend %ko-table;
+}
+
+.ko-table__row {
+  display: table-row;
+  vertical-align: inherit;
+}
+
+.ko-table__row:last-child .ko-table__cell {
+  border-bottom: 0;
+}
+
+.ko-table__cell {
+  border-bottom: solid thin $ko-color-gray;
+  display: table-cell;
+  padding: 20px;
+  vertical-align: inherit;
+}
+
+.ko-table--spaced {
+  @extend %ko-table;
+  @extend %ko-table--spaced;
+}
+
+.ko-table--alternated {
+  @extend %ko-table;
+  @extend %ko-table--alternated;
+}
+
+.ko-table--hover {
+  @extend %ko-table;
+  @extend %ko-table--hover;
+}

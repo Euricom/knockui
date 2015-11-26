@@ -1,0 +1,10 @@
+.ko-panel {
+  @extend %ko-panel;
+  background-color: $ko-color-panel;
+}
+
+.ko-panel--transparent {
+  @extend %ko-panel;
+  background-color: transparent;
+
+}

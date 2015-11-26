@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'ko-icon';
+  src:  url('#{$ko-font-path}ko-icon.eot');
+  src:  url('#{$ko-font-path}ko-icon.eot?#iefix') format('eot'),
+        url('#{$ko-font-path}ko-icon.woff') format('woff'),
+        url('#{$ko-font-path}ko-icon.ttf') format('truetype'),
+        url('#{$ko-font-path}ko-icon.svg#ko-icon') format('svg');
+}
+
+.ko-icon--arrow-down {
+  @extend %ko-icon--arrow-down;
+}
+.ko-icon--arrow-left {
+  @extend %ko-icon--arrow-left;
+}
+.ko-icon--arrow-right {
+  @extend %ko-icon--arrow-right;
+}
+.ko-icon--arrow-up {
+  @extend %ko-icon--arrow-up;
+}
+.ko-icon--chevron-down {
+  @extend %ko-icon--chevron-down;
+}
+.ko-icon--chevron-left {
+  @extend %ko-icon--chevron-left;
+}
+.ko-icon--chevron-right {
+  @extend %ko-icon--chevron-right;
+}
+.ko-icon--chevron-up {
+  @extend %ko-icon--chevron-up;
+}
+.ko-icon--eye {
+  @extend %ko-icon--eye;
+}
+.ko-icon--facebook {
+  @extend %ko-icon--facebook;
+}
+.ko-icon--github {
+  @extend %ko-icon--github;
+}
+.ko-icon--linkedin {
+  @extend %ko-icon--linkedin;
+}
+.ko-icon--lock-closed {
+  @extend %ko-icon--lock-closed;
+}
+.ko-icon--lock-open {
+  @extend %ko-icon--lock-open;
+}
+.ko-icon--mail {
+  @extend %ko-icon--mail;
+}
+.ko-icon--plus {
+  @extend %ko-icon--plus;
+}
+.ko-icon--tick {
+  @extend %ko-icon--tick;
+}
+.ko-icon--twitter {
+  @extend %ko-icon--twitter;
+}
+.ko-icon--user {
+  @extend %ko-icon--user;
+}
+.ko-icon--web {
+  @extend %ko-icon--web;
+}

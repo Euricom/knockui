@@ -1,0 +1,30 @@
+%ko-popover {
+  background-color: $ko-popover-background-color;
+  border: $ko-popover-border-width solid $ko-popover-border-color;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px rgba($ko-color-black, .2);
+  color: $ko-font-base;
+  display: inline-block;
+  font-family: $ko-font;
+  font-size: $ko-font-size-base;
+  line-height: $ko-font-line-height-base;
+  @if $ko-popover-arrow-size > 20 {
+    padding: ($ko-popover-arrow-size / 2) + 4;
+  } @else {
+    padding: 12px;
+  }
+  position: relative;
+  text-transform: none;
+}
+
+%ko-popover-arrow {
+  background-color: $ko-popover-background-color;
+  border: $ko-popover-border-width solid $ko-popover-border-color;
+  border-bottom-color: $ko-popover-background-color;
+  border-left-color: $ko-popover-background-color;
+  box-sizing: border-box;
+  content: '';
+  height: $ko-popover-arrow-size;
+  position: absolute;
+  width: $ko-popover-arrow-size;
+}
