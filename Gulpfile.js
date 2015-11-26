@@ -215,6 +215,7 @@ function inc(importance) {
             .pipe(git.commit('bumps package version'))
             .pipe(filter('package.json'))
             .pipe(tag());
+            .pipe(git.push('origin', 'master', {args: '--follow-tags'}))
       })
     })
   })
