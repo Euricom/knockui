@@ -15,5 +15,10 @@
   ],
   "dependencies": {
     "highlightjs": "~8.8.0"
-  }
+  },
+  "ignore": [
+    "*",
+    "!dist/",
+    "!dist/*"
+  ]
 }
