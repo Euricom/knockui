@@ -202,7 +202,7 @@ function handleError(err) {
   if (err) throw err;
 }
 
-function inc(importance, done) {
+function release(importance, done) {
   git.fetch('origin', '', function(err){
     handleError(err);
     git.checkout('master', function(err){
@@ -227,9 +227,9 @@ function inc(importance, done) {
   })
 }
 
-gulp.task('patch', function(done) { inc('patch', done); })
-gulp.task('feature', function(done) { inc('minor', done); })
-gulp.task('release', function(done) { inc('major', done); })
+gulp.task('patch', function(done) { release('patch', done); })
+gulp.task('minor', function(done) { release('minor', done); })
+gulp.task('major', function(done) { release('major', done); })
 
 // Default Task
 gulp.task('default', [
