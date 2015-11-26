@@ -202,28 +202,34 @@ function handleError(err) {
   if (err) throw err;
 }
 
-function inc(importance) {
+function inc(importance, done) {
   git.fetch('origin', '', function(err){
     handleError(err);
     git.checkout('master', function(err){
       handleError(err);
       git.merge('develop', function(err){
         handleError(err);
-        gulp.src(['./package.json', './bower.json'])
+        var stream = gulp.src(['./package.json', './bower.json'])
             .pipe(bump({type: importance}))
             .pipe(gulp.dest('./'))
             .pipe(git.commit('bumps package version'))
             .pipe(filter('package.json'))
-            .pipe(tag())
-            .pipe(git.push('origin', 'master', {args: '--follow-tags'}))
+            .pipe(tag());
+
+        stream.on('end', function() {
+          git.push('origin', 'master', {args: '--follow-tags'}, function(err){
+            handleError(err);
+            done();
+          });
+        });
       })
     })
   })
 }
 
-gulp.task('patch', function() { inc('patch'); })
-gulp.task('feature', function() { inc('minor'); })
-gulp.task('release', function() { inc('major'); })
+gulp.task('patch', function(done) { inc('patch', done); })
+gulp.task('feature', function(done) { inc('minor', done); })
+gulp.task('release', function(done) { inc('major', done); })
 
 // Default Task
 gulp.task('default', [
