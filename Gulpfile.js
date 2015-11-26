@@ -222,7 +222,7 @@ gulp.task('prepare-css', function(done){
     var compileSass = gulp.src('dist/css/**/*.scss')
       .pipe(sass())
       .pipe(autoprefixer())
-      //.pipe(cssMin())
+      .pipe(cssMin())
       .pipe(gulp.dest('dist/css'));
 
     compileSass.on('end', function() {
