@@ -8,6 +8,7 @@ var plumber = require('gulp-plumber');
 var escape = require('escape-html');
 var tidy = require('htmltidy2').tidy;
 var deasync = require('deasync');
+var filter = require('gulp-filter');
 
 // Compilation
 var jade = require('jade');
