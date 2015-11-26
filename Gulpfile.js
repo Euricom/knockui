@@ -19,6 +19,12 @@ var nodesass = require('node-sass');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
 
+// Deployment
+var git = require('gulp-git');
+var bump = require('gulp-bump');
+var args = require('yargs').argv;
+var tag-version = require('gulp-tag-version');
+
 // Config
 var paths = {
     demo: {
@@ -174,12 +180,7 @@ gulp.task('compile', function (cb) {
     ], cb);
 });
 
-gulp.task('build', [
-    'iconfont',
-    'iconfont-placeholders',
-    'compile'
-]);
-
+// Serve
 gulp.task('serve', ['compile'], function () {
     gulp.watch(paths.demo.views, ['styles', 'views']);
     gulp.watch(paths.demo.styles, ['styles']);
@@ -192,6 +193,39 @@ gulp.task('serve', ['compile'], function () {
         livereload: {
             port: ports.reload
         }
+    });
+});
+
+// Deployment
+function handleError(err) {
+  if (err) throw err;
+}
+
+gulp.task('bump', function(){
+  var type = args.type || 'patch';
+  gulp.src(['./bower.json', './package.json'])
+    .pipe(bump({type: type}))
+    .pipe(gulp.dest('./'))
+    .pipe(git.commit('bumps package version'));
+});
+
+gulp.task('merge', function(){
+  git.fetch('origin', '', function(err){
+    handleError(err);
+    git.checkout('master', function(err){
+      handleError(err);
+      git.merge('develop', function(err){
+        handleError(err);
+      })
+    })
+  })
+})
+
+gulp.task('deploy', ['bump', 'merge'], function(){
+  return gulp.src(['./package.json'])
+    .pipe(tag_version());
+    .pipe(git.push('origin', 'master', function(err){
+      handleError(err);
     });
 });
 
