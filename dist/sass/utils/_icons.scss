@@ -19,6 +19,12 @@
 .ko-icon--arrow-up {
   @extend %ko-icon--arrow-up;
 }
+.ko-icon--cake {
+  @extend %ko-icon--cake;
+}
+.ko-icon--car {
+  @extend %ko-icon--car;
+}
 .ko-icon--chevron-down {
   @extend %ko-icon--chevron-down;
 }
@@ -39,6 +45,9 @@
 }
 .ko-icon--github {
   @extend %ko-icon--github;
+}
+.ko-icon--house {
+  @extend %ko-icon--house;
 }
 .ko-icon--linkedin {
   @extend %ko-icon--linkedin;

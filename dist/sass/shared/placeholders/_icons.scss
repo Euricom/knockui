@@ -33,99 +33,117 @@
     content: '\E004';
   }
 }
-%ko-icon--chevron-down {
+%ko-icon--cake {
   &::after {
     @extend %_ko-icon;
     content: '\E005';
   }
 }
-%ko-icon--chevron-left {
+%ko-icon--car {
   &::after {
     @extend %_ko-icon;
     content: '\E006';
   }
 }
-%ko-icon--chevron-right {
+%ko-icon--chevron-down {
   &::after {
     @extend %_ko-icon;
     content: '\E007';
   }
 }
-%ko-icon--chevron-up {
+%ko-icon--chevron-left {
   &::after {
     @extend %_ko-icon;
     content: '\E008';
   }
 }
-%ko-icon--eye {
+%ko-icon--chevron-right {
   &::after {
     @extend %_ko-icon;
     content: '\E009';
   }
 }
-%ko-icon--facebook {
+%ko-icon--chevron-up {
   &::after {
     @extend %_ko-icon;
     content: '\E00A';
   }
 }
-%ko-icon--github {
+%ko-icon--eye {
   &::after {
     @extend %_ko-icon;
     content: '\E00B';
   }
 }
-%ko-icon--linkedin {
+%ko-icon--facebook {
   &::after {
     @extend %_ko-icon;
     content: '\E00C';
   }
 }
-%ko-icon--lock-closed {
+%ko-icon--github {
   &::after {
     @extend %_ko-icon;
     content: '\E00D';
   }
 }
-%ko-icon--lock-open {
+%ko-icon--house {
   &::after {
     @extend %_ko-icon;
     content: '\E00E';
   }
 }
-%ko-icon--mail {
+%ko-icon--linkedin {
   &::after {
     @extend %_ko-icon;
     content: '\E00F';
   }
 }
-%ko-icon--plus {
+%ko-icon--lock-closed {
   &::after {
     @extend %_ko-icon;
     content: '\E010';
   }
 }
-%ko-icon--tick {
+%ko-icon--lock-open {
   &::after {
     @extend %_ko-icon;
     content: '\E011';
   }
 }
-%ko-icon--twitter {
+%ko-icon--mail {
   &::after {
     @extend %_ko-icon;
     content: '\E012';
   }
 }
-%ko-icon--user {
+%ko-icon--plus {
   &::after {
     @extend %_ko-icon;
     content: '\E013';
   }
 }
-%ko-icon--web {
+%ko-icon--tick {
   &::after {
     @extend %_ko-icon;
     content: '\E014';
+  }
+}
+%ko-icon--twitter {
+  &::after {
+    @extend %_ko-icon;
+    content: '\E015';
+  }
+}
+%ko-icon--user {
+  &::after {
+    @extend %_ko-icon;
+    content: '\E016';
+  }
+}
+%ko-icon--web {
+  &::after {
+    @extend %_ko-icon;
+    content: '\E017';
   }
 }
