@@ -220,9 +220,9 @@ gulp.task('prepare-css', ['prepare-sass'], function(done){
     .pipe(gulp.dest('dist/css'));
   var compileSassDone = false;
 
-  var copyAssets = gulp.src('lib/**/*.{!scss}')
-    .pipe(gulp.dest('dist/css'));
-  var copyAssetsDone = false;
+  var copyFonts = gulp.src('lib/fonts/**/*')
+    .pipe(gulp.dest('dist/css/fonts'));
+  var copyFontsDone = false;
 
   copySass.on('end', function() {
     var compileSass = gulp.src('dist/css/**/*.scss')
@@ -237,15 +237,15 @@ gulp.task('prepare-css', ['prepare-sass'], function(done){
       del.sync('dist/css/**/*.scss');
       cleanUpDirectories('dist');
 
-      if (copyAssetsDone && compileSassDone) {
+      if (copyFontsDone && compileSassDone) {
         done();
       }
     });
   });
 
-  copyAssets.on('end', function() {
-    copyAssetsDone = true;
-    if (copyAssetsDone && compileSassDone) {
+  copyFonts.on('end', function() {
+    copyFontsDone = true;
+    if (copyFontsDone && compileSassDone) {
       done();
     }
   });
