@@ -297,9 +297,9 @@ function release(importance, done) {
   })
 }
 
-gulp.task('patch', ['push-build'], function(done) { release('patch', done); })
-gulp.task('minor', ['push-build'], function(done) { release('minor', done); })
-gulp.task('major', ['push-build'], function(done) { release('major', done); })
+gulp.task('patch', ['push-build'], function(done) { release('patch', done); });
+gulp.task('minor', ['push-build'], function(done) { release('minor', done); });
+gulp.task('major', ['push-build'], function(done) { release('major', done); });
 
 // Default Task
 gulp.task('default', [

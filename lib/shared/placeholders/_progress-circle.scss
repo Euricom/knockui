@@ -11,11 +11,13 @@
   height: $ko-progress-circle-size - ($ko-progress-circle-border-width * 2);
   position: absolute;
   transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
   width: $ko-progress-circle-size - ($ko-progress-circle-border-width * 2);
 }
 
 %ko-progress-circle-fill {
   transform: rotate(180deg);
+  transition: transform 1s ease-in-out;
 }
 
 %ko-progress-circle {
