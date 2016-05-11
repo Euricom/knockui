@@ -23,7 +23,7 @@ $_transition-length: 1s;
   .ko-progress-circle--#{$_pc-actual-value} {
     @extend %ko-progress-circle;
 
-    .full,
+    .ko-progress-circle__full,
     .ko-progress-circle__fill {
       transform: rotate(#{$_pc-degree}deg);
     }
