@@ -99,57 +99,63 @@
     content: '\E00F';
   }
 }
-%ko-icon--linkedin {
+%ko-icon--language_1 {
   &::after {
     @extend %_ko-icon;
     content: '\E010';
   }
 }
-%ko-icon--lock-closed {
+%ko-icon--linkedin {
   &::after {
     @extend %_ko-icon;
     content: '\E011';
   }
 }
-%ko-icon--lock-open {
+%ko-icon--lock-closed {
   &::after {
     @extend %_ko-icon;
     content: '\E012';
   }
 }
-%ko-icon--mail {
+%ko-icon--lock-open {
   &::after {
     @extend %_ko-icon;
     content: '\E013';
   }
 }
-%ko-icon--plus {
+%ko-icon--mail {
   &::after {
     @extend %_ko-icon;
     content: '\E014';
   }
 }
-%ko-icon--tick {
+%ko-icon--plus {
   &::after {
     @extend %_ko-icon;
     content: '\E015';
   }
 }
-%ko-icon--twitter {
+%ko-icon--tick {
   &::after {
     @extend %_ko-icon;
     content: '\E016';
   }
 }
-%ko-icon--user {
+%ko-icon--twitter {
   &::after {
     @extend %_ko-icon;
     content: '\E017';
   }
 }
-%ko-icon--web {
+%ko-icon--user {
   &::after {
     @extend %_ko-icon;
     content: '\E018';
+  }
+}
+%ko-icon--web {
+  &::after {
+    @extend %_ko-icon;
+    content: '\E019';
   }
 }
